@@ -11,31 +11,20 @@
 <meta property="og:description" content="Lifestyle, cultura, amor y la mejor escena queer del Pacífico mexicano.">
 <meta property="og:url" content="https://vallartaqueer.com/">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_MX">
-<meta property="og:locale:alternate" content="en_US">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Magazine",
-  "name": "She Lives PV",
-  "description": "La primera revista digital lésbica de Puerto Vallarta",
-  "url": "https://vallartaqueer.com",
-  "inLanguage": ["es", "en"],
-  "audience": {"@type": "Audience", "audienceType": "Lesbian women, LGBTQ+ travelers"},
-  "publisher": {"@type": "Organization", "name": "She Lives PV", "url": "https://vallartaqueer.com"}
-}
+{"@context":"https://schema.org","@type":"Magazine","name":"She Lives PV","description":"La primera revista digital lésbica de Puerto Vallarta","url":"https://vallartaqueer.com","inLanguage":["es","en"],"audience":{"@type":"Audience","audienceType":"Lesbian women, LGBTQ+ travelers"}}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+/* ── TOKENS ── */
 :root {
   --ocean:    #1B2A4A;
-  --ocean-dk: #0D1A30;
   --talavera: #C1440E;
   --selva:    #3D6B4F;
   --copal:    #F2C078;
   --paper:    #F8F7F4;
-  --paper-md: #F1EFE9;
+  --paper-md: #F2F0EA;
   --border:   #E4E1DA;
   --muted:    #8A8378;
   --body:     #2A2420;
@@ -51,519 +40,426 @@ body { font-family: var(--ff-u); background: var(--paper); color: var(--body); -
 .lang-es [data-en], .lang-en [data-es] { display: none !important; }
 .lang-es [data-es], .lang-en [data-en] { display: initial; }
 span[data-es], span[data-en] { display: inline; }
-div[data-es], div[data-en], p[data-es], p[data-en],
-h1[data-es], h1[data-en], h2[data-es], h2[data-en],
-h3[data-es], h3[data-en], a[data-es], a[data-en] { display: block; }
+div[data-es],div[data-en],p[data-es],p[data-en],
+h1[data-es],h1[data-en],h2[data-es],h2[data-en],
+h3[data-es],h3[data-en],a[data-es],a[data-en],
+li[data-es],li[data-en] { display: block; }
 
 /* ── TOPBAR ── */
 .topbar {
-  background: var(--ocean-dk);
-  padding: 7px 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: var(--paper-md);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 56px;
+  display: flex; align-items: center; justify-content: space-between;
 }
 .topbar-left {
   font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 1.5px; color: rgba(255,255,255,.25);
+  letter-spacing: 1.5px; color: var(--muted);
 }
-.topbar-right { display: flex; align-items: center; gap: 20px; }
+.topbar-right { display: flex; align-items: center; gap: 24px; }
 .topbar-link {
   font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 1.5px; color: rgba(255,255,255,.25);
+  letter-spacing: 1.5px; color: var(--muted);
   text-decoration: none; transition: color .2s;
 }
-.topbar-link:hover { color: rgba(255,255,255,.65); }
-.lang-toggle { display: flex; border: 1px solid rgba(255,255,255,.12); border-radius: 3px; overflow: hidden; }
+.topbar-link:hover { color: var(--talavera); }
+.lang-toggle { display: flex; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
 .lang-btn {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 2px; font-weight: 500;
-  padding: 5px 12px; background: transparent;
-  border: none; cursor: pointer;
-  color: rgba(255,255,255,.35); transition: all .2s;
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 2px; font-weight: 500;
+  padding: 5px 12px; background: transparent; border: none; cursor: pointer;
+  color: var(--muted); transition: all .2s;
 }
 .lang-btn.active { background: var(--talavera); color: white; }
 
 /* ── NAV ── */
 .main-nav {
   position: sticky; top: 0; z-index: 100;
-  background: var(--ocean);
-  height: 54px;
+  background: var(--paper);
+  border-bottom: 2px solid var(--ocean);
+  height: 58px;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 56px;
-  border-bottom: 1px solid rgba(255,255,255,.05);
 }
 .nav-logo {
-  font-family: var(--ff-d); font-size: 20px;
-  color: white; text-decoration: none;
-  display: flex; align-items: center; gap: 8px;
+  font-family: var(--ff-d); font-size: 21px;
+  color: var(--ocean); text-decoration: none;
+  display: flex; align-items: center; gap: 10px; font-weight: 400;
 }
 .nav-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--talavera); }
-.nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
-.nav-links li { position: relative; }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
 .nav-links a {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 1.8px; text-transform: uppercase;
-  color: rgba(255,255,255,.38); text-decoration: none; transition: color .2s;
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color .2s;
 }
-.nav-links a:hover { color: white; }
+.nav-links a:hover { color: var(--ocean); }
 .nav-cta {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  background: var(--talavera); color: white !important;
-  padding: 8px 16px; border-radius: 2px; transition: background .2s;
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  border: 1.5px solid var(--ocean); color: var(--ocean) !important;
+  padding: 8px 18px; border-radius: 2px; transition: all .2s;
 }
-.nav-cta:hover { background: #a83800 !important; }
-
-/* Mobile hamburger */
+.nav-cta:hover { background: var(--ocean); color: white !important; }
 .nav-hamburger {
-  display: none;
-  flex-direction: column; gap: 4px;
+  display: none; flex-direction: column; gap: 4px;
   cursor: pointer; padding: 8px; background: none; border: none;
 }
-.nav-hamburger span {
-  display: block; width: 22px; height: 2px;
-  background: rgba(255,255,255,.7); border-radius: 2px;
-  transition: all .2s;
-}
+.nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--ocean); }
 .mobile-menu {
-  display: none;
-  position: fixed; top: 54px; left: 0; right: 0;
-  background: var(--ocean-dk);
-  z-index: 99; padding: 20px 24px;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  flex-direction: column; gap: 0;
+  display: none; position: fixed; top: 58px; left: 0; right: 0;
+  background: var(--paper); z-index: 99; padding: 20px 24px;
+  border-bottom: 1px solid var(--border); flex-direction: column;
 }
 .mobile-menu.open { display: flex; }
 .mobile-menu a {
-  font-family: var(--ff-u); font-size: 12px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(255,255,255,.5); text-decoration: none;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,.05);
-  transition: color .2s;
+  font-family: var(--ff-u); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; padding: 14px 0;
+  border-bottom: 1px solid var(--border); transition: color .2s;
 }
-.mobile-menu a:hover { color: white; }
-.mobile-menu a.m-cta {
-  color: var(--talavera); border-bottom: none;
-  margin-top: 8px;
-}
+.mobile-menu a:hover { color: var(--ocean); }
+.mobile-menu a.m-cta { color: var(--talavera); border-bottom: none; margin-top: 8px; }
 
 /* ── HERO ── */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 88px);
-  background: var(--ocean);
-  position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 90px);
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+  position: relative;
 }
 
-/* Hero slideshow background */
-.hero-slides {
-  position: absolute; inset: 0;
-  z-index: 0;
-}
-.hero-slide {
-  position: absolute; inset: 0;
-  opacity: 0; transition: opacity 1.2s ease-in-out;
-  background-size: cover; background-position: center;
-}
-.hero-slide.active { opacity: 1; }
-
-/* Slide 1 — Pride colors gradient (placeholder hasta tener foto real) */
-.slide-1 {
-  background: linear-gradient(135deg, #1B2A4A 0%, #3D1A30 30%, #1B2A4A 60%, #1A3A2A 100%);
-}
-.slide-1::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 80%, rgba(193,68,14,.25) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(61,107,79,.2) 0%, transparent 50%),
-    radial-gradient(circle at 60% 70%, rgba(242,192,120,.1) 0%, transparent 40%);
-}
-
-/* Slide 2 — Ocean night */
-.slide-2 {
-  background: linear-gradient(160deg, #0D1A30 0%, #1B2A4A 40%, #2A1A40 100%);
-}
-.slide-2::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    radial-gradient(ellipse at 70% 40%, rgba(193,68,14,.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 60%, rgba(242,192,120,.08) 0%, transparent 45%);
-}
-
-/* Slide 3 — Selva tropical */
-.slide-3 {
-  background: linear-gradient(145deg, #1B2A4A 0%, #2A4A35 50%, #0D1A30 100%);
-}
-.slide-3::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    radial-gradient(circle at 50% 30%, rgba(61,107,79,.3) 0%, transparent 60%),
-    radial-gradient(circle at 80% 80%, rgba(27,42,74,.5) 0%, transparent 40%);
-}
-
-/* Pride dots / confetti overlay */
-.hero-confetti {
-  position: absolute; inset: 0; z-index: 1; pointer-events: none;
-  overflow: hidden;
-}
-.hero-confetti span {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0;
-  animation: confetti-float 8s ease-in-out infinite;
-}
-@keyframes confetti-float {
-  0%   { opacity: 0; transform: translateY(0) rotate(0deg); }
-  15%  { opacity: .6; }
-  85%  { opacity: .15; }
-  100% { opacity: 0; transform: translateY(-120px) rotate(360deg); }
-}
-
-/* Hero left */
+/* Lado izquierdo — texto puro, limpio */
 .hero-left {
-  position: relative; z-index: 3;
-  display: flex; flex-direction: column; justify-content: center;
   padding: 80px 56px 80px 72px;
-}
-.hero-eyebrow {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 3px; text-transform: uppercase;
-  color: var(--talavera); margin-bottom: 28px; font-weight: 500;
-  display: flex; align-items: center; gap: 10px;
-}
-.hero-eyebrow::before {
-  content: ''; display: block;
-  width: 24px; height: 1.5px; background: var(--talavera);
-}
-.hero-h1 {
-  font-family: var(--ff-d);
-  font-size: clamp(44px, 5.5vw, 80px);
-  line-height: .96; color: white;
-  font-weight: 400; margin-bottom: 24px;
-}
-.hero-h1 em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.45); }
-.hero-rule { width: 40px; height: 2px; background: var(--talavera); margin-bottom: 24px; }
-.hero-desc {
-  font-family: var(--ff-b); font-size: 15px;
-  line-height: 1.85; color: rgba(255,255,255,.38);
-  max-width: 420px; margin-bottom: 44px; font-style: italic;
-}
-.hero-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-.btn-solid {
-  font-family: var(--ff-u); font-size: 11px;
-  letter-spacing: 2px; text-transform: uppercase;
-  background: var(--talavera); color: white;
-  padding: 13px 26px; text-decoration: none;
-  border-radius: 2px; font-weight: 500; transition: background .2s;
-  display: inline-block;
-}
-.btn-solid:hover { background: #a83800; }
-.btn-ghost {
-  font-family: var(--ff-u); font-size: 11px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(255,255,255,.35); text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.12); padding-bottom: 2px;
-  transition: all .2s;
-}
-.btn-ghost:hover { color: rgba(255,255,255,.7); }
-
-/* Hero right — cover card */
-.hero-right {
-  position: relative; z-index: 3;
-  display: flex; flex-direction: column;
-  justify-content: flex-end;
-  padding: 0;
-}
-.hero-cover-card {
-  background: rgba(13,26,48,.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-left: 1px solid rgba(255,255,255,.07);
-  padding: 44px 52px;
-  height: 100%;
-  display: flex; flex-direction: column; justify-content: flex-end;
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid var(--border);
 }
 .hero-vol {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2px; color: rgba(255,255,255,.18);
-  margin-bottom: auto; padding-top: 32px;
+  font-family: var(--ff-u); font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 32px;
+  display: flex; align-items: center; gap: 12px;
 }
-.cover-pride-badge {
+.hero-vol::before { content: ''; display: block; width: 32px; height: 1px; background: var(--border); }
+.hero-h1 {
+  font-family: var(--ff-d);
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: .94; color: var(--ocean); font-weight: 400; margin-bottom: 28px;
+}
+.hero-h1 em { font-style: italic; font-weight: 300; color: var(--talavera); }
+.hero-rule { width: 40px; height: 2px; background: var(--talavera); margin-bottom: 24px; }
+.hero-desc {
+  font-family: var(--ff-b); font-size: 16px; line-height: 1.85;
+  color: var(--muted); max-width: 400px; margin-bottom: 44px; font-style: italic;
+}
+.hero-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.btn-primary {
+  font-family: var(--ff-u); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  background: var(--talavera); color: white; padding: 14px 28px;
+  text-decoration: none; border-radius: 2px; font-weight: 500; transition: background .2s;
+}
+.btn-primary:hover { background: #a83800; }
+.btn-outline {
+  font-family: var(--ff-u); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ocean); text-decoration: none;
+  border-bottom: 1.5px solid var(--ocean); padding-bottom: 2px; transition: all .2s;
+}
+.btn-outline:hover { color: var(--talavera); border-color: var(--talavera); }
+
+/* Lado derecho — portada del número actual */
+.hero-right {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 44px 52px; background: var(--paper-md);
+  position: relative;
+}
+.hero-pride-tag {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(193,68,14,.15);
-  border: 1px solid rgba(193,68,14,.3);
-  padding: 6px 12px; border-radius: 2px;
-  margin-bottom: 20px; align-self: flex-start;
+  border: 1px solid var(--border); padding: 7px 14px; border-radius: 2px;
+  margin-bottom: 32px; align-self: flex-start;
 }
-.cover-pride-text {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2px; text-transform: uppercase;
+.hero-pride-text {
+  font-family: var(--ff-u); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
   color: var(--talavera); font-weight: 500;
 }
-.cover-meta {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 3px; text-transform: uppercase;
-  color: var(--talavera); margin-bottom: 12px;
+.cover-section {
+  font-family: var(--ff-u); font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--talavera); margin-bottom: 14px;
 }
 .cover-title {
-  font-family: var(--ff-d); font-size: clamp(22px, 2.8vw, 34px);
-  line-height: 1.08; color: white;
-  font-weight: 400; margin-bottom: 14px;
+  font-family: var(--ff-d); font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.05; color: var(--ocean); font-weight: 400; margin-bottom: 14px;
 }
-.cover-title em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.5); }
+.cover-title em { font-style: italic; font-weight: 300; color: var(--muted); }
 .cover-rule { width: 28px; height: 1.5px; background: var(--talavera); margin-bottom: 14px; }
 .cover-desc {
-  font-family: var(--ff-b); font-size: 13px;
-  color: rgba(255,255,255,.32); line-height: 1.65; font-style: italic;
-  max-width: 320px;
+  font-family: var(--ff-b); font-size: 14px; color: var(--muted);
+  line-height: 1.7; font-style: italic; max-width: 340px; margin-bottom: 20px;
 }
+.cover-author {
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 16px; border-top: 1px solid var(--border);
+}
+.cover-avatar {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--paper);
+  border: 1.5px solid var(--selva); display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-d); font-size: 15px; font-style: italic; color: var(--selva); flex-shrink: 0;
+}
+.cover-byline-name { font-family: var(--ff-u); font-size: 11px; color: var(--ocean); font-weight: 500; }
+.cover-byline-role { font-family: var(--ff-u); font-size: 10px; color: var(--muted); }
 
-/* Slide indicators */
+/* Slide dots */
 .slide-dots {
-  position: absolute; bottom: 20px; left: 50%;
-  transform: translateX(-50%);
-  display: flex; gap: 8px; z-index: 4;
+  position: absolute; bottom: 20px; right: 52px;
+  display: flex; gap: 6px;
 }
 .dot {
   width: 6px; height: 6px; border-radius: 50%;
-  background: rgba(255,255,255,.2); cursor: pointer;
-  transition: background .3s;
+  background: var(--border); cursor: pointer; transition: background .3s; border: none;
 }
 .dot.active { background: var(--talavera); }
 
 /* ── TICKER ── */
 .ticker {
-  background: var(--talavera);
-  padding: 9px 0; overflow: hidden; white-space: nowrap;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 10px 0; overflow: hidden; white-space: nowrap; background: var(--paper);
 }
-.ticker-track { display: inline-flex; animation: tick 32s linear infinite; }
+.ticker-track { display: inline-flex; animation: tick 34s linear infinite; }
 .ticker-item {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 2.5px; text-transform: uppercase;
-  color: rgba(255,255,255,.82); padding: 0 32px;
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--muted); padding: 0 32px;
 }
-.ticker-sep { color: rgba(255,255,255,.3); }
+.ticker-sep { color: var(--talavera); }
 @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ── SECTION NAV ── */
+/* ── SEC NAV ── */
 .sec-nav {
-  background: var(--paper);
-  border-bottom: 1px solid var(--border);
-  display: flex; padding: 0 72px;
-  overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none;
+  background: var(--paper); border-bottom: 1px solid var(--border);
+  display: flex; padding: 0 72px; overflow-x: auto;
+  -ms-overflow-style: none; scrollbar-width: none;
 }
 .sec-nav::-webkit-scrollbar { display: none; }
 .sec-tab {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: var(--muted); padding: 15px 20px;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  white-space: nowrap; transition: all .2s; display: block;
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); padding: 14px 20px; text-decoration: none;
+  border-bottom: 2px solid transparent; white-space: nowrap; transition: all .2s;
 }
 .sec-tab:hover { color: var(--ocean); }
 .sec-tab.on { color: var(--ocean); border-bottom-color: var(--talavera); font-weight: 500; }
 
 /* ── STATS BAND ── */
 .stats-band {
-  background: white;
-  border-bottom: 1px solid var(--border);
-  padding: 28px 72px;
-  display: grid; grid-template-columns: repeat(4,1fr);
+  background: white; border-bottom: 1px solid var(--border);
+  padding: 28px 72px; display: grid; grid-template-columns: repeat(4,1fr);
 }
-.stat-item { padding: 0 32px; border-right: 1px solid var(--border); }
+.stat-item { padding: 0 24px; border-right: 1px solid var(--border); }
 .stat-item:first-child { padding-left: 0; }
 .stat-item:last-child { border-right: none; }
 .stat-num {
-  font-family: var(--ff-d); font-size: 32px;
-  color: var(--ocean); font-weight: 400;
-  line-height: 1; margin-bottom: 4px;
+  font-family: var(--ff-d); font-size: 34px; color: var(--ocean);
+  font-weight: 400; line-height: 1; margin-bottom: 5px;
 }
 .stat-num em { font-style: italic; font-weight: 300; color: var(--talavera); }
-.stat-label { font-family: var(--ff-u); font-size: 10px; letter-spacing: 1px; color: var(--muted); line-height: 1.5; }
+.stat-label { font-family: var(--ff-u); font-size: 10px; letter-spacing: .5px; color: var(--muted); line-height: 1.5; }
 .stat-src { font-family: var(--ff-u); font-size: 9px; color: var(--border); margin-top: 3px; }
 
 /* ── FEATURED ── */
 .featured {
-  display: grid; grid-template-columns: 1.15fr 1fr;
-  min-height: 480px; border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  border-bottom: 1px solid var(--border);
 }
 .feat-photo {
-  min-height: 420px; position: relative; overflow: hidden;
-  background: linear-gradient(160deg, #1B2A4A, #3D6B4F);
-  display: flex; align-items: center; justify-content: center;
+  min-height: 480px; position: relative; overflow: hidden; background: var(--paper-md);
+  display: flex; align-items: flex-end;
+  border-right: 1px solid var(--border);
 }
-.feat-photo-label {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(255,255,255,.1);
+.feat-photo-bg { position: absolute; inset: 0; background: linear-gradient(160deg, #1B2A4A, #3D6B4F); }
+.feat-photo-inner { position: relative; z-index: 1; padding: 32px; }
+.feat-photo-tag {
+  display: inline-block; font-family: var(--ff-u); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+  color: white; background: var(--talavera); padding: 5px 10px; border-radius: 1px; font-weight: 500; margin-bottom: 10px;
+}
+.feat-photo-cap {
+  font-family: var(--ff-b); font-size: 12px; color: rgba(255,255,255,.45); font-style: italic; line-height: 1.5;
 }
 .feat-content {
-  padding: 56px 52px; display: flex;
-  flex-direction: column; justify-content: center;
-  background: var(--paper); border-left: 1px solid var(--border);
+  padding: 56px 52px; display: flex; flex-direction: column; justify-content: center; background: white;
 }
-.art-tag {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 2.5px; text-transform: uppercase;
-  color: var(--talavera); margin-bottom: 18px; font-weight: 500;
+.art-cat {
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--talavera); margin-bottom: 16px; font-weight: 500;
 }
 .art-h2 {
-  font-family: var(--ff-d); font-size: clamp(22px,2.5vw,36px);
-  line-height: 1.08; color: var(--ocean);
-  font-weight: 400; margin-bottom: 18px;
+  font-family: var(--ff-d); font-size: clamp(24px,2.8vw,38px); line-height: 1.08;
+  color: var(--ocean); font-weight: 400; margin-bottom: 16px;
 }
 .art-h2 em { font-style: italic; font-weight: 300; }
-.art-rule { width: 32px; height: 1.5px; background: var(--talavera); margin-bottom: 18px; }
+.art-rule { width: 32px; height: 1.5px; background: var(--talavera); margin-bottom: 16px; }
 .art-excerpt {
-  font-family: var(--ff-b); font-size: 14px;
-  line-height: 1.85; color: var(--muted);
-  margin-bottom: 28px; font-style: italic; max-width: 360px;
+  font-family: var(--ff-b); font-size: 15px; line-height: 1.85; color: var(--muted);
+  margin-bottom: 24px; font-style: italic; max-width: 360px;
 }
-.art-meta { display: flex; gap: 10px; margin-bottom: 24px; }
-.badge {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  padding: 5px 11px; border-radius: 1px; font-weight: 500;
+.art-author { display: flex; align-items: center; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border); margin-bottom: 20px; }
+.art-avatar {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--paper);
+  border: 1.5px solid var(--selva); display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-d); font-size: 15px; font-style: italic; color: var(--selva); flex-shrink: 0;
 }
-.badge-dk { background: var(--ocean); color: white; }
-.badge-out { border: 1px solid var(--border); color: var(--muted); }
+.art-author-name { font-family: var(--ff-u); font-size: 11px; color: var(--ocean); font-weight: 500; margin-bottom: 2px; }
+.art-author-era { font-family: var(--ff-u); font-size: 10px; color: var(--muted); }
 .read-link {
-  font-family: var(--ff-u); font-size: 11px;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--talavera); text-decoration: none;
-  border-bottom: 1px solid var(--talavera);
+  font-family: var(--ff-u); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--talavera); text-decoration: none; border-bottom: 1px solid var(--talavera);
   padding-bottom: 2px; align-self: flex-start; transition: all .2s;
 }
 .read-link:hover { color: var(--ocean); border-color: var(--ocean); }
 
-/* ── 7 AREAS ── */
-.areas-section { padding: 72px; background: var(--paper); border-bottom: 1px solid var(--border); }
-.section-hdr { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; }
+/* ── MAGAZINE FEED ── */
+.mag-section { padding: 0 72px 0; background: var(--paper); border-bottom: 1px solid var(--border); }
+.mag-header { padding: 48px 0 36px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-end; }
 .section-eyebrow {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 3px; text-transform: uppercase;
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
   color: var(--talavera); margin-bottom: 8px; font-weight: 500;
 }
-.section-h2 {
-  font-family: var(--ff-d); font-size: 34px;
-  line-height: 1.05; color: var(--ocean); font-weight: 400;
-}
+.section-h2 { font-family: var(--ff-d); font-size: 34px; line-height: 1.05; color: var(--ocean); font-weight: 400; }
 .section-h2 em { font-style: italic; font-weight: 300; }
 .see-all {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: var(--muted); text-decoration: none;
-  border-bottom: 1px solid var(--border); padding-bottom: 2px;
-  transition: all .2s; white-space: nowrap;
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border);
+  padding-bottom: 2px; transition: all .2s; white-space: nowrap;
 }
 .see-all:hover { color: var(--talavera); border-color: var(--talavera); }
-.areas-grid {
-  display: grid; grid-template-columns: repeat(4,1fr);
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border); margin-bottom: 1px;
+
+.mag-filters { display: flex; gap: 8px; flex-wrap: wrap; padding: 24px 0; border-bottom: 1px solid var(--border); }
+.mag-pill {
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 1px;
+  padding: 8px 18px; border-radius: 100px; border: 1px solid var(--border);
+  color: var(--muted); cursor: pointer; transition: all .2s; background: white; text-decoration: none;
 }
-.areas-grid-2 {
-  display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border); border-top: none;
+.mag-pill.on { background: var(--ocean); color: white; border-color: var(--ocean); }
+.mag-pill:hover:not(.on) { border-color: var(--talavera); color: var(--talavera); }
+
+/* Story grande featured */
+.mag-feat { text-decoration: none; display: block; padding: 40px 0; border-bottom: 1px solid var(--border); }
+.mag-feat:hover .mag-feat-h3 { color: var(--talavera); }
+.mag-feat-cat { font-family: var(--ff-u); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--talavera); font-weight: 500; margin-bottom: 12px; }
+.mag-feat-photo {
+  height: 400px; border-radius: 2px; overflow: hidden;
+  background: linear-gradient(135deg, var(--ocean), var(--selva)); margin-bottom: 24px;
+  position: relative;
 }
-.area-card {
-  background: var(--paper); padding: 26px 24px 30px;
-  cursor: pointer; transition: background .2s;
-  position: relative; text-decoration: none; display: block;
+.mag-feat-photo-inner { position: absolute; inset: 0; }
+.mag-feat-h3 {
+  font-family: var(--ff-d); font-size: 38px; color: var(--ocean); font-weight: 400;
+  line-height: 1.05; max-width: 680px; margin-bottom: 12px; transition: color .2s;
 }
-.area-card::before {
-  content: ''; position: absolute;
-  top: 0; left: 0; right: 0; height: 2px;
-  background: var(--border); transition: background .2s;
+.mag-feat-h3 em { font-style: italic; font-weight: 300; }
+.mag-feat-excerpt { font-family: var(--ff-b); font-size: 15px; color: var(--muted); font-style: italic; line-height: 1.8; max-width: 600px; }
+.mag-feat-meta {
+  font-family: var(--ff-u); font-size: 10px; color: var(--muted);
+  margin-top: 12px; display: flex; align-items: center; gap: 12px;
 }
-.area-card:hover { background: white; }
-.area-card:hover::before { background: var(--talavera); }
-.area-tag {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2.5px; text-transform: uppercase;
-  color: var(--selva); margin-bottom: 10px; font-weight: 500;
-  display: flex; align-items: center; gap: 6px;
+.meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); }
+
+/* Feed de historias */
+.mag-feed { display: flex; flex-direction: column; }
+.mag-story {
+  display: grid; grid-template-columns: 220px 1fr; gap: 28px; padding: 28px 0;
+  border-bottom: 1px solid var(--border); text-decoration: none; transition: opacity .2s;
 }
-.area-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--talavera); }
-.area-title {
-  font-family: var(--ff-d); font-size: 18px;
-  line-height: 1.2; color: var(--ocean); font-weight: 400; margin-bottom: 8px;
+.mag-story:hover { opacity: .7; }
+.mag-story-photo {
+  height: 150px; border-radius: 2px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--paper-md), var(--border));
 }
-.area-title em { font-style: italic; font-weight: 300; }
-.area-desc {
-  font-family: var(--ff-b); font-size: 12px;
-  line-height: 1.65; color: var(--muted);
-  font-style: italic; margin-bottom: 10px;
+.mag-story-body { display: flex; flex-direction: column; justify-content: center; }
+.story-cat { font-family: var(--ff-u); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--talavera); font-weight: 500; margin-bottom: 8px; }
+.story-h3 { font-family: var(--ff-d); font-size: 22px; color: var(--ocean); font-weight: 400; line-height: 1.2; margin-bottom: 8px; }
+.story-h3 em { font-style: italic; font-weight: 300; }
+.story-excerpt { font-family: var(--ff-b); font-size: 13px; color: var(--muted); font-style: italic; line-height: 1.65; margin-bottom: 10px; max-width: 480px; }
+.story-author { display: flex; align-items: center; gap: 8px; }
+.story-avatar {
+  width: 24px; height: 24px; border-radius: 50%; background: var(--paper);
+  border: 1px solid var(--selva); display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-d); font-size: 11px; font-style: italic; color: var(--selva); flex-shrink: 0;
 }
-.area-sub {
-  font-family: var(--ff-u); font-size: 10px;
-  color: var(--muted); letter-spacing: .5px;
-  border-top: 1px solid var(--border); padding-top: 10px;
+.story-author-text { font-family: var(--ff-u); font-size: 10px; color: var(--muted); }
+
+/* ── DIRECTORIO PV — NYMag style ── */
+.directory-section { padding: 64px 72px; background: white; border-bottom: 1px solid var(--border); }
+.dir-table { width: 100%; border-top: 1px solid var(--border); margin-top: 40px; }
+.dir-row {
+  display: grid; grid-template-columns: 180px 1fr 120px;
+  align-items: center; padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none; cursor: pointer; transition: background .15s;
+  gap: 24px;
+}
+.dir-row:hover { background: rgba(193,68,14,.03); }
+.dir-cat-label {
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--talavera); font-weight: 500;
+}
+.dir-row-name { font-family: var(--ff-d); font-size: 20px; color: var(--ocean); font-weight: 400; line-height: 1.2; }
+.dir-row-name em { font-style: italic; font-weight: 300; }
+.dir-row-count { font-family: var(--ff-u); font-size: 10px; color: var(--muted); text-align: right; letter-spacing: .5px; }
+.dir-cta-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 24px; margin-top: 8px;
+}
+.dir-cta-text { font-family: var(--ff-b); font-size: 13px; color: var(--muted); font-style: italic; }
+.dir-cta-link {
+  font-family: var(--ff-u); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--talavera); text-decoration: none; border-bottom: 1px solid var(--talavera); padding-bottom: 2px;
 }
 
-/* ── DESTINO PV ── */
-.destino { background: var(--ocean); padding: 72px; }
-.destino .section-eyebrow { color: rgba(242,192,120,.7); }
-.destino .section-h2 { color: white; }
-.destino .see-all { color: rgba(255,255,255,.25); border-color: rgba(255,255,255,.08); }
-.destino .see-all:hover { color: rgba(255,255,255,.65); border-color: rgba(255,255,255,.3); }
-.dest-grid {
-  display: grid; grid-template-columns: 1.55fr 1fr 1fr;
-  gap: 1px; background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.05); margin-top: 44px;
+/* ── VOCES SÁFICAS ── */
+.voces-section { padding: 64px 72px; background: var(--paper); border-bottom: 1px solid var(--border); }
+.voces-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-top: 40px; border: 1px solid var(--border); }
+.voz-card {
+  padding: 28px 20px; border-right: 1px solid var(--border);
+  transition: background .2s; text-decoration: none;
 }
-.dest-main {
-  min-height: 440px; display: flex; flex-direction: column;
-  justify-content: flex-end; position: relative; overflow: hidden;
-  text-decoration: none;
+.voz-card:last-child { border-right: none; }
+.voz-card:hover { background: white; }
+.voz-avatar {
+  width: 52px; height: 52px; border-radius: 50%; background: var(--paper);
+  border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-d); font-size: 20px; font-style: italic; color: var(--ocean);
+  margin-bottom: 14px; transition: border-color .2s;
 }
-.dest-main-bg {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, #2A4A35 0%, #0D1A30 100%);
+.voz-card:hover .voz-avatar { border-color: var(--talavera); color: var(--talavera); }
+.voz-era { font-family: var(--ff-u); font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--talavera); margin-bottom: 4px; font-weight: 500; }
+.voz-name { font-family: var(--ff-d); font-size: 14px; color: var(--ocean); font-weight: 400; line-height: 1.2; margin-bottom: 4px; }
+.voz-role { font-family: var(--ff-u); font-size: 9px; color: var(--muted); line-height: 1.4; margin-bottom: 10px; }
+.voz-section-badge {
+  display: inline-block; font-family: var(--ff-u); font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase;
+  background: var(--paper-md); color: var(--muted); padding: 3px 8px; border-radius: 1px;
 }
-.dest-main-fade {
-  position: absolute; bottom: 0; left: 0; right: 0; height: 65%;
-  background: linear-gradient(to top, rgba(13,26,48,.97) 0%, transparent 100%);
+.voces-cta { margin-top: 32px; display: flex; align-items: center; justify-content: space-between; }
+.voces-cta-text { font-family: var(--ff-b); font-size: 14px; color: var(--muted); font-style: italic; max-width: 480px; }
+
+/* ── SPONSOR ── */
+.sponsor-section { background: var(--paper-md); padding: 0 72px; border-bottom: 1px solid var(--border); }
+.sponsor-inner {
+  display: grid; grid-template-columns: 200px 1fr auto; gap: 32px;
+  align-items: center; padding: 28px 0; position: relative;
 }
-.dest-main-body { position: relative; z-index: 2; padding: 36px; }
-.d-tag {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2.5px; text-transform: uppercase;
-  color: var(--talavera); margin-bottom: 8px; display: block; font-weight: 500;
+.sponsor-tag {
+  position: absolute; top: -1px; left: 0;
+  font-family: var(--ff-u); font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); background: var(--border); padding: 3px 8px;
 }
-.d-title {
-  font-family: var(--ff-d); font-size: 22px;
-  line-height: 1.15; color: rgba(255,255,255,.9);
-  font-weight: 400; margin-bottom: 10px;
+.sponsor-photo {
+  height: 90px; border-radius: 2px; background: var(--border); margin-top: 18px;
 }
-.d-title em { font-style: italic; font-weight: 300; }
-.d-rule { width: 24px; height: 1.5px; background: var(--talavera); margin-bottom: 10px; }
-.d-desc {
-  font-family: var(--ff-b); font-size: 12px;
-  color: rgba(255,255,255,.3); line-height: 1.6; font-style: italic;
+.sponsor-body { margin-top: 18px; }
+.sponsor-eyebrow { font-family: var(--ff-u); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--talavera); font-weight: 500; margin-bottom: 6px; }
+.sponsor-h3 { font-family: var(--ff-d); font-size: 20px; color: var(--ocean); font-weight: 400; margin-bottom: 6px; line-height: 1.2; }
+.sponsor-h3 em { font-style: italic; font-weight: 300; }
+.sponsor-desc { font-family: var(--ff-b); font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.5; }
+.sponsor-btn {
+  font-family: var(--ff-u); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  border: 1.5px solid var(--talavera); color: var(--talavera); padding: 10px 20px;
+  text-decoration: none; border-radius: 2px; white-space: nowrap; transition: all .2s; margin-top: 18px;
 }
-.dest-sm {
-  display: flex; flex-direction: column;
-  background: var(--ocean-dk); text-decoration: none;
-  transition: background .2s;
-}
-.dest-sm:hover { background: #0a1525; }
-.dest-sm-img {
-  flex: 1; min-height: 210px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(255,255,255,.08);
-}
-.dest-sm-body { padding: 20px 22px 24px; border-top: 1px solid rgba(255,255,255,.05); }
+.sponsor-btn:hover { background: var(--talavera); color: white; }
 
 /* ── ESTHER ── */
 .esther-section {
@@ -571,226 +467,159 @@ h3[data-es], h3[data-en], a[data-es], a[data-en] { display: block; }
   display: grid; grid-template-columns: 1fr 1fr;
 }
 .esther-photo {
-  min-height: 380px;
-  background: linear-gradient(145deg, #1B2A4A, #2A1810);
+  min-height: 360px; background: var(--paper-md);
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(255,255,255,.08);
+  border-right: 1px solid var(--border);
+  font-family: var(--ff-d); font-size: 60px; color: var(--border); font-style: italic;
 }
-.esther-content {
-  padding: 60px 56px; display: flex;
-  flex-direction: column; justify-content: center;
+.esther-content { padding: 56px 52px; display: flex; flex-direction: column; justify-content: center; }
+.esther-tag { font-family: var(--ff-u); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--selva); margin-bottom: 14px; font-weight: 500; }
+.esther-rule { width: 28px; height: 1.5px; background: var(--selva); margin-bottom: 18px; }
+.esther-quote { font-family: var(--ff-d); font-size: 22px; line-height: 1.3; color: var(--ocean); font-style: italic; font-weight: 300; margin-bottom: 14px; }
+.esther-attr { font-family: var(--ff-u); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.esther-desc { font-family: var(--ff-b); font-size: 14px; line-height: 1.8; color: var(--muted); font-style: italic; margin-bottom: 22px; }
+
+/* ── ANÚNCIATE ── */
+.advertise-section { padding: 64px 72px; background: var(--paper); border-bottom: 1px solid var(--border); }
+.adv-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+.adv-eyebrow { font-family: var(--ff-u); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--talavera); font-weight: 500; margin-bottom: 14px; }
+.adv-h2 { font-family: var(--ff-d); font-size: clamp(28px,3vw,40px); color: var(--ocean); font-weight: 400; line-height: 1.05; margin-bottom: 16px; }
+.adv-h2 em { font-style: italic; font-weight: 300; color: var(--muted); }
+.adv-desc { font-family: var(--ff-b); font-size: 14px; color: var(--muted); font-style: italic; line-height: 1.8; margin-bottom: 28px; }
+.adv-cats { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+.adv-cat-row { display: flex; align-items: center; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--border); }
+.adv-cat-name { font-family: var(--ff-u); font-size: 12px; color: var(--body); letter-spacing: .3px; }
+.adv-cat-arrow { color: var(--talavera); font-size: 14px; }
+.adv-right { padding-top: 4px; }
+.adv-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 28px; }
+.adv-stat { background: white; padding: 20px 18px; }
+.adv-stat-num { font-family: var(--ff-d); font-size: 28px; color: var(--ocean); font-weight: 400; line-height: 1; margin-bottom: 4px; }
+.adv-stat-num em { font-style: italic; font-weight: 300; color: var(--talavera); }
+.adv-stat-label { font-family: var(--ff-u); font-size: 10px; color: var(--muted); line-height: 1.4; }
+.adv-btn {
+  font-family: var(--ff-u); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  border: 1.5px solid var(--ocean); color: var(--ocean); padding: 14px 28px;
+  text-decoration: none; display: inline-block; transition: all .2s;
 }
-.esther-tag {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 3px; text-transform: uppercase;
-  color: var(--selva); margin-bottom: 14px; font-weight: 500;
-}
-.esther-rule { width: 32px; height: 1.5px; background: var(--selva); margin-bottom: 18px; }
-.esther-quote {
-  font-family: var(--ff-d); font-size: 24px;
-  line-height: 1.25; color: var(--ocean);
-  font-style: italic; font-weight: 300; margin-bottom: 16px;
-}
-.esther-attr {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 20px;
-}
-.esther-desc {
-  font-family: var(--ff-b); font-size: 14px;
-  line-height: 1.8; color: var(--muted);
-  font-style: italic; margin-bottom: 24px;
-}
+.adv-btn:hover { background: var(--ocean); color: white; }
 
 /* ── QUOTE ── */
-.quote-section {
-  background: var(--ocean); padding: 72px;
-  display: flex; align-items: center; gap: 48px;
-}
-.q-mark {
-  font-family: var(--ff-d); font-size: 100px;
-  color: rgba(255,255,255,.06); flex-shrink: 0; margin-top: -20px;
-}
-.q-text {
-  font-family: var(--ff-d); font-size: clamp(20px,2.2vw,32px);
-  line-height: 1.25; color: rgba(255,255,255,.85);
-  font-style: italic; font-weight: 300; margin-bottom: 16px;
-}
-.q-attr {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(255,255,255,.25);
-}
+.quote-section { padding: 56px 72px; border-bottom: 1px solid var(--border); background: white; display: flex; align-items: flex-start; gap: 32px; }
+.q-mark { font-family: var(--ff-d); font-size: 80px; color: var(--talavera); flex-shrink: 0; line-height: 1; margin-top: -12px; }
+.q-body {}
+.q-text { font-family: var(--ff-d); font-size: clamp(20px,2.2vw,30px); line-height: 1.3; color: var(--ocean); font-style: italic; font-weight: 300; margin-bottom: 14px; }
+.q-attr { font-family: var(--ff-u); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
 
 /* ── NEWSLETTER ── */
 .newsletter {
-  background: var(--selva); padding: 80px 72px;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 80px; align-items: center;
-  position: relative; overflow: hidden;
+  background: var(--paper-md); padding: 64px 72px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+  border-bottom: 1px solid var(--border);
 }
-.newsletter::before {
-  content: ''; position: absolute; top: -80px; right: -80px;
-  width: 300px; height: 300px; border-radius: 50%;
-  background: rgba(242,192,120,.07); pointer-events: none;
-}
-.nl-eyebrow {
-  font-family: var(--ff-u); font-size: 10px;
-  letter-spacing: 3px; text-transform: uppercase;
-  color: rgba(242,192,120,.6); margin-bottom: 14px; font-weight: 500;
-}
-.nl-title {
-  font-family: var(--ff-d); font-size: clamp(32px,3vw,46px);
-  color: white; font-weight: 400; line-height: 1; margin-bottom: 16px;
-}
-.nl-title em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.38); }
-.nl-desc {
-  font-family: var(--ff-b); font-size: 14px;
-  color: rgba(255,255,255,.35); line-height: 1.8; font-style: italic;
-}
+.nl-eyebrow { font-family: var(--ff-u); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--talavera); margin-bottom: 12px; font-weight: 500; }
+.nl-h2 { font-family: var(--ff-d); font-size: clamp(30px,3vw,44px); color: var(--ocean); font-weight: 400; line-height: 1; margin-bottom: 14px; }
+.nl-h2 em { font-style: italic; font-weight: 300; color: var(--muted); }
+.nl-desc { font-family: var(--ff-b); font-size: 14px; color: var(--muted); line-height: 1.8; font-style: italic; }
 .nl-form { display: flex; flex-direction: column; gap: 10px; }
 .nl-form input {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.12);
-  color: white; padding: 13px 16px;
-  font-size: 14px; font-family: var(--ff-u);
-  border-radius: 2px; outline: none;
+  background: white; border: 1px solid var(--border); color: var(--body);
+  padding: 13px 16px; font-size: 14px; font-family: var(--ff-u); border-radius: 2px; outline: none;
+  transition: border-color .2s;
 }
-.nl-form input::placeholder { color: rgba(255,255,255,.22); font-style: italic; }
+.nl-form input:focus { border-color: var(--talavera); }
+.nl-form input::placeholder { color: var(--muted); font-style: italic; }
 .nl-form button {
-  background: var(--talavera); color: white;
-  padding: 13px 20px; font-family: var(--ff-u);
-  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-  border: none; cursor: pointer; border-radius: 2px; font-weight: 500;
-  transition: background .2s;
+  background: var(--talavera); color: white; padding: 13px 20px; font-family: var(--ff-u);
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase; border: none;
+  cursor: pointer; border-radius: 2px; font-weight: 500; transition: background .2s;
 }
 .nl-form button:hover { background: #a83800; }
-.nl-note { font-family: var(--ff-u); font-size: 10px; color: rgba(255,255,255,.18); }
+.nl-note { font-family: var(--ff-u); font-size: 10px; color: var(--muted); }
 
 /* ── FOOTER ── */
-footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
+footer { background: var(--paper); border-top: 2px solid var(--ocean); padding: 52px 72px 32px; }
 .foot-top {
-  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
-  gap: 40px; padding-bottom: 44px;
-  border-bottom: 1px solid rgba(255,255,255,.05); margin-bottom: 28px;
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 24px;
 }
-.foot-brand { font-family: var(--ff-d); font-size: 22px; color: white; margin-bottom: 10px; }
-.foot-tagline {
-  font-family: var(--ff-b); font-size: 12px;
-  line-height: 1.7; color: rgba(255,255,255,.2);
-  font-style: italic; margin-bottom: 18px;
-}
+.foot-brand { font-family: var(--ff-d); font-size: 22px; color: var(--ocean); margin-bottom: 10px; }
+.foot-tagline { font-family: var(--ff-b); font-size: 12px; line-height: 1.7; color: var(--muted); font-style: italic; margin-bottom: 18px; }
 .foot-soc { display: flex; gap: 8px; }
 .soc {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  color: rgba(255,255,255,.28);
-  border: 1px solid rgba(255,255,255,.07);
-  padding: 6px 10px; border-radius: 2px; text-decoration: none; transition: all .2s;
+  font-family: var(--ff-u); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--border); padding: 5px 10px; text-decoration: none; transition: all .2s;
 }
-.soc:hover { color: white; border-color: rgba(255,255,255,.2); }
-.foot-col h4 {
-  font-family: var(--ff-u); font-size: 9px;
-  letter-spacing: 2.5px; text-transform: uppercase;
-  color: rgba(242,192,120,.45); margin-bottom: 14px;
-}
+.soc:hover { color: var(--ocean); border-color: var(--ocean); }
+.foot-col h4 { font-family: var(--ff-u); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--talavera); margin-bottom: 14px; }
 .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.foot-col a {
-  font-family: var(--ff-u); font-size: 12px;
-  color: rgba(255,255,255,.22); text-decoration: none; transition: color .2s;
-}
-.foot-col a:hover { color: rgba(255,255,255,.65); }
+.foot-col a { font-family: var(--ff-u); font-size: 12px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.foot-col a:hover { color: var(--ocean); }
 .foot-bottom { display: flex; align-items: center; justify-content: space-between; }
-.foot-copy { font-family: var(--ff-u); font-size: 10px; color: rgba(255,255,255,.14); }
-.foot-domain { font-family: var(--ff-u); font-size: 10px; color: rgba(255,255,255,.1); }
+.foot-copy { font-family: var(--ff-u); font-size: 10px; color: var(--muted); }
+.foot-domain { font-family: var(--ff-u); font-size: 10px; color: var(--border); }
 
-/* ═══════════════════════════════
-   RESPONSIVE — mobile first
-   ═══════════════════════════════ */
+/* ═══ RESPONSIVE ═══ */
 @media (max-width: 900px) {
   .topbar { padding: 7px 20px; }
   .topbar-left { display: none; }
   .main-nav { padding: 0 20px; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
-
-  /* Hero stack */
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-left { padding: 52px 24px 40px; }
-  .hero-h1 { font-size: clamp(38px, 10vw, 60px); }
-  .hero-right { min-height: 320px; }
-  .hero-cover-card { padding: 24px; height: auto; min-height: 300px; }
-  .cover-title { font-size: 22px; }
-
-  /* Sec nav */
+  .hero-left { padding: 52px 24px 40px; border-right: none; border-bottom: 1px solid var(--border); }
+  .hero-h1 { font-size: clamp(40px, 10vw, 64px); }
+  .hero-right { padding: 36px 24px 48px; }
   .sec-nav { padding: 0 16px; }
-
-  /* Stats */
-  .stats-band { grid-template-columns: 1fr 1fr; padding: 24px 20px; gap: 0; }
-  .stat-item { padding: 14px 16px !important; border-right: none !important; border-bottom: 1px solid var(--border); }
+  .stats-band { grid-template-columns: 1fr 1fr; padding: 24px 20px; }
+  .stat-item { padding: 14px !important; border-right: none !important; border-bottom: 1px solid var(--border); }
   .stat-item:nth-child(odd) { border-right: 1px solid var(--border) !important; }
   .stat-item:last-child, .stat-item:nth-last-child(-n+2) { border-bottom: none; }
-
-  /* Featured */
   .featured { grid-template-columns: 1fr; }
-  .feat-photo { min-height: 240px; }
-  .feat-content { padding: 32px 24px; border-left: none; border-top: 1px solid var(--border); }
-
-  /* Areas */
-  .areas-section { padding: 48px 20px; }
-  .areas-grid { grid-template-columns: 1fr 1fr; }
-  .areas-grid-2 { grid-template-columns: 1fr 1fr; }
-
-  /* Destino */
-  .destino { padding: 48px 20px; }
-  .dest-grid { grid-template-columns: 1fr; }
-  .dest-main { min-height: 300px; }
-
-  /* Esther */
+  .feat-photo { min-height: 240px; border-right: none; border-bottom: 1px solid var(--border); }
+  .feat-content { padding: 32px 24px; }
+  .mag-section { padding: 0 20px; }
+  .mag-feat-h3 { font-size: 26px; }
+  .mag-feat-photo { height: 240px; }
+  .mag-story { grid-template-columns: 1fr; }
+  .mag-story-photo { height: 180px; }
+  .directory-section { padding: 48px 20px; }
+  .dir-row { grid-template-columns: 120px 1fr; }
+  .dir-row-count { display: none; }
+  .voces-section { padding: 48px 20px; }
+  .voces-grid { grid-template-columns: repeat(3, 1fr); }
+  .sponsor-section { padding: 0 20px; }
+  .sponsor-inner { grid-template-columns: 1fr; }
   .esther-section { grid-template-columns: 1fr; }
-  .esther-photo { min-height: 220px; }
+  .esther-photo { min-height: 180px; border-right: none; border-bottom: 1px solid var(--border); }
   .esther-content { padding: 32px 24px; }
-
-  /* Quote */
-  .quote-section { padding: 48px 24px; gap: 16px; }
-  .q-mark { font-size: 64px; }
-
-  /* Newsletter */
+  .advertise-section { padding: 48px 20px; }
+  .adv-inner { grid-template-columns: 1fr; gap: 40px; }
+  .quote-section { padding: 48px 24px; }
   .newsletter { grid-template-columns: 1fr; gap: 32px; padding: 48px 24px; }
-
-  /* Footer */
   footer { padding: 40px 20px 24px; }
   .foot-top { grid-template-columns: 1fr 1fr; gap: 28px; }
   .foot-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
-
 @media (max-width: 480px) {
-  .areas-grid { grid-template-columns: 1fr; }
-  .areas-grid-2 { grid-template-columns: 1fr; }
+  .voces-grid { grid-template-columns: 1fr 1fr; }
   .foot-top { grid-template-columns: 1fr; }
   .stats-band { grid-template-columns: 1fr; }
   .stat-item:nth-child(odd) { border-right: none !important; }
-  .hero-actions { flex-direction: column; align-items: flex-start; gap: 14px; }
-  .quote-section { flex-direction: column; gap: 8px; }
-  .q-mark { display: none; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .adv-stats { grid-template-columns: 1fr; }
+  .quote-section { flex-direction: column; gap: 0; }
+  .q-mark { font-size: 48px; }
 }
 </style>
 </head>
 <body class="lang-es">
 
-<!-- ── TOPBAR ── -->
+<!-- TOPBAR -->
 <div class="topbar">
-  <div class="topbar-left">
-    <span data-es>Puerto Vallarta, México · Revista Digital Lésbica</span>
-    <span data-en>Puerto Vallarta, Mexico · Lesbian Digital Magazine</span>
-  </div>
+  <div class="topbar-left"><span data-es>Puerto Vallarta, México · Revista Digital Lésbica</span><span data-en>Puerto Vallarta, Mexico · Lesbian Digital Magazine</span></div>
   <div class="topbar-right">
-    <a href="#sobre" class="topbar-link" data-es>Sobre nosotras</a>
-    <a href="#sobre" class="topbar-link" data-en>About us</a>
-    <a href="#newsletter" class="topbar-link" data-es>Newsletter</a>
-    <a href="#newsletter" class="topbar-link" data-en>Newsletter</a>
+    <a href="#sobre" class="topbar-link" data-es>Sobre nosotras</a><a href="#sobre" class="topbar-link" data-en>About us</a>
+    <a href="#anunciate" class="topbar-link" data-es>Anúnciate</a><a href="#anunciate" class="topbar-link" data-en>Advertise</a>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
@@ -798,62 +627,36 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
   </div>
 </div>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav class="main-nav">
   <a href="index.html" class="nav-logo">She Lives PV <span class="nav-dot"></span></a>
   <ul class="nav-links">
     <li><a href="destino-pv/index.html" data-es>Destino PV</a><a href="destino-pv/index.html" data-en>Destination PV</a></li>
-    <li><a href="#amor" data-es>Amor & Deseo</a><a href="#amor" data-en>Love & Desire</a></li>
+    <li><a href="#amor">Amor & Deseo</a></li>
     <li><a href="#cultura" data-es>Cultura</a><a href="#cultura" data-en>Culture</a></li>
-    <li><a href="#identidad" data-es>Identidad</a><a href="#identidad" data-en>Identity</a></li>
-    <li><a href="#comunidad" data-es>Comunidad</a><a href="#comunidad" data-en>Community</a></li>
+    <li><a href="#voces" data-es>Las Voces</a><a href="#voces" data-en>The Voices</a></li>
+    <li><a href="#anunciate" data-es>Anúnciate</a><a href="#anunciate" data-en>Advertise</a></li>
     <li><a href="#newsletter" class="nav-cta" data-es>Suscríbete</a><a href="#newsletter" class="nav-cta" data-en>Subscribe</a></li>
   </ul>
-  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="destino-pv/index.html" data-es>Destino PV</a>
-  <a href="destino-pv/index.html" data-en>Destination PV</a>
-  <a href="#amor" onclick="closeMenu()" data-es>Amor & Deseo</a>
-  <a href="#amor" onclick="closeMenu()" data-en>Love & Desire</a>
+  <a href="destino-pv/index.html" onclick="closeMenu()" data-es>Destino PV</a>
+  <a href="destino-pv/index.html" onclick="closeMenu()" data-en>Destination PV</a>
+  <a href="#amor" onclick="closeMenu()">Amor & Deseo</a>
   <a href="#cultura" onclick="closeMenu()" data-es>Cultura</a>
   <a href="#cultura" onclick="closeMenu()" data-en>Culture</a>
-  <a href="#identidad" onclick="closeMenu()" data-es>Identidad</a>
-  <a href="#identidad" onclick="closeMenu()" data-en>Identity</a>
+  <a href="#voces" onclick="closeMenu()" data-es>Las Voces</a>
+  <a href="#voces" onclick="closeMenu()" data-en>The Voices</a>
   <a href="#newsletter" onclick="closeMenu()" class="m-cta" data-es>Suscríbete →</a>
   <a href="#newsletter" onclick="closeMenu()" class="m-cta" data-en>Subscribe →</a>
 </div>
 
-<!-- ── HERO con slideshow ── -->
+<!-- ═══ HERO ═══ -->
 <section class="hero">
-
-  <!-- Slides de fondo -->
-  <div class="hero-slides">
-    <div class="hero-slide slide-1 active" id="slide-0"></div>
-    <div class="hero-slide slide-2" id="slide-1"></div>
-    <div class="hero-slide slide-3" id="slide-2"></div>
-  </div>
-
-  <!-- Confetti dots Pride -->
-  <div class="hero-confetti" aria-hidden="true" id="confetti"></div>
-
-  <!-- Slide dots -->
-  <div class="slide-dots">
-    <div class="dot active" onclick="goToSlide(0)"></div>
-    <div class="dot" onclick="goToSlide(1)"></div>
-    <div class="dot" onclick="goToSlide(2)"></div>
-  </div>
-
-  <!-- Contenido izquierdo -->
   <div class="hero-left">
-    <p class="hero-eyebrow">
-      <span data-es>Puerto Vallarta · Revista Lésbica · Est. 2025</span>
-      <span data-en>Puerto Vallarta · Lesbian Magazine · Est. 2025</span>
-    </p>
+    <div class="hero-vol"><span data-es>Vol. 01 · Puerto Vallarta · Est. 2025</span><span data-en>Vol. 01 · Puerto Vallarta · Est. 2025</span></div>
     <h1 class="hero-h1">
       <span data-es>Ella vive.<br><em>Ella ama.</em><br>Ella viaja.</span>
       <span data-en>She lives.<br><em>She loves.</em><br>She travels.</span>
@@ -864,40 +667,32 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
       <span data-en>The first lesbian digital magazine from Puerto Vallarta — lifestyle, culture, love and the best queer scene on Mexico's Pacific coast.</span>
     </p>
     <div class="hero-actions">
-      <a href="destino-pv/index.html" class="btn-solid">
-        <span data-es>Explorar Destino PV</span>
-        <span data-en>Explore Destination PV</span>
-      </a>
-      <a href="#newsletter" class="btn-ghost">
-        <span data-es>Recibe la revista →</span>
-        <span data-en>Get the magazine →</span>
-      </a>
+      <a href="destino-pv/index.html" class="btn-primary"><span data-es>Explorar Destino PV</span><span data-en>Explore Destination PV</span></a>
+      <a href="#newsletter" class="btn-outline"><span data-es>Recibe la revista →</span><span data-en>Get the magazine →</span></a>
     </div>
   </div>
 
-  <!-- Cover card derecha -->
   <div class="hero-right">
-    <div class="hero-cover-card">
-      <p class="hero-vol">Vol. 01 · 2025</p>
+    <div class="hero-pride-tag">
+      <span class="hero-pride-text">Vallarta Pride 2026 · <span data-es>17–24 Mayo</span><span data-en>May 17–24</span></span>
+    </div>
+    <p class="cover-section"><span data-es>✦ Portada — Amor & Deseo</span><span data-en>✦ Cover — Love & Desire</span></p>
+    <h2 class="cover-title">
+      <span data-es>Te amo Elizabeth,<br>pero no se vale<br><em>lo que me has hecho.</em></span>
+      <span data-en>I love you Elizabeth,<br>but what you did<br><em>wasn't right.</em></span>
+    </h2>
+    <div class="cover-rule"></div>
+    <p class="cover-desc">
+      <span data-es>Cuando el dolor de una infidelidad se vuelve viral — y lo que ningún TikTok te va a decir sobre sanar.</span>
+      <span data-en>When the pain of betrayal goes viral — and what no TikTok will ever tell you about healing.</span>
+    </p>
+    <div class="cover-author">
+      <div class="cover-avatar">G</div>
       <div>
-        <div class="cover-pride-badge">
-          <span style="font-size:14px;">🏳️‍🌈</span>
-          <span class="cover-pride-text" data-es>Vallarta Pride 2026 · Mayo 17–24</span>
-          <span class="cover-pride-text" data-en>Vallarta Pride 2026 · May 17–24</span>
-        </div>
-        <p class="cover-meta">
-          <span data-es>✦ Portada — Amor & Deseo</span>
-          <span data-en>✦ Cover — Love & Desire</span>
-        </p>
-        <h2 class="cover-title">
-          <span data-es>Te amo Elizabeth,<br>pero no se vale<br><em>lo que me has hecho.</em></span>
-          <span data-en>I love you Elizabeth,<br>but what you did<br><em>wasn't right.</em></span>
-        </h2>
-        <div class="cover-rule"></div>
-        <p class="cover-desc">
-          <span data-es>Cuando el dolor de una infidelidad se vuelve viral — y lo que ningún TikTok te va a decir sobre sanar.</span>
-          <span data-en>When the pain of betrayal goes viral — and what no TikTok will ever tell you about healing.</span>
-        </p>
+        <div class="cover-byline-name" data-es>Escrito por Gertrude Stein</div>
+        <div class="cover-byline-name" data-en>Written by Gertrude Stein</div>
+        <div class="cover-byline-role" data-es>Voz de Amor & Deseo · París, 1903</div>
+        <div class="cover-byline-role" data-en>Voice of Love & Desire · Paris, 1903</div>
       </div>
     </div>
   </div>
@@ -908,25 +703,25 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
   <div class="ticker-track">
     <span class="ticker-item" data-es>Destino PV</span><span class="ticker-item" data-en>Destination PV</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">Amor & Deseo</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item" data-es>Vallarta Pride 2026</span><span class="ticker-item" data-en>Vallarta Pride 2026</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item">Vallarta Pride 2026</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Viajera Sola</span><span class="ticker-item" data-en>Solo Traveler</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item">She Lives PV</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item" data-es>Las Voces</span><span class="ticker-item" data-en>The Voices</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">Puerto Vallarta</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Cultura Lésbica</span><span class="ticker-item" data-en>Lesbian Culture</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item">She Lives PV</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item" data-es>Zona Romántica</span><span class="ticker-item" data-en>Romantic Zone</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Destino PV</span><span class="ticker-item" data-en>Destination PV</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">Amor & Deseo</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item" data-es>Vallarta Pride 2026</span><span class="ticker-item" data-en>Vallarta Pride 2026</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item">Vallarta Pride 2026</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Viajera Sola</span><span class="ticker-item" data-en>Solo Traveler</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item">She Lives PV</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item" data-es>Las Voces</span><span class="ticker-item" data-en>The Voices</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">Puerto Vallarta</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Cultura Lésbica</span><span class="ticker-item" data-en>Lesbian Culture</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item">She Lives PV</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item" data-es>Zona Romántica</span><span class="ticker-item" data-en>Romantic Zone</span><span class="ticker-sep"> · </span>
   </div>
 </div>
 
-<!-- SECTION NAV -->
-<nav class="sec-nav" aria-label="Secciones">
+<!-- SEC NAV -->
+<nav class="sec-nav">
   <a href="index.html" class="sec-tab on" data-es>Todas</a>
   <a href="index.html" class="sec-tab on" data-en>All</a>
   <a href="destino-pv/index.html" class="sec-tab" data-es>Destino PV</a>
@@ -936,46 +731,26 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
   <a href="#cultura" class="sec-tab" data-en>Culture</a>
   <a href="#identidad" class="sec-tab" data-es>Identidad</a>
   <a href="#identidad" class="sec-tab" data-en>Identity</a>
-  <a href="#comunidad" class="sec-tab" data-es>Viajera Sola</a>
-  <a href="#comunidad" class="sec-tab" data-en>Solo Traveler</a>
+  <a href="#voces" class="sec-tab" data-es>Las Voces</a>
+  <a href="#voces" class="sec-tab" data-en>The Voices</a>
 </nav>
 
-<!-- STATS BAND -->
+<!-- STATS -->
 <div class="stats-band">
-  <div class="stat-item">
-    <div class="stat-num"><em>2M</em></div>
-    <div class="stat-label" data-es>turistas LGBT visitaron PV en 2023</div>
-    <div class="stat-label" data-en>LGBT tourists visited PV in 2023</div>
-    <div class="stat-src">PV Tourism Trust</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">51<em>%</em></div>
-    <div class="stat-label" data-es>viajan solas — el segmento más grande</div>
-    <div class="stat-label" data-en>travel solo — the fastest growing segment</div>
-    <div class="stat-src">MMGY Global 2022</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num"><em>$274</em></div>
-    <div class="stat-label" data-es>gasto diario — 40% más que el turista típico</div>
-    <div class="stat-label" data-en>avg. daily spend — 40% more than average</div>
-    <div class="stat-src">Tel Aviv Tourism Study</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num"><em>#2</em></div>
-    <div class="stat-label" data-es>ciudad más segura de México</div>
-    <div class="stat-label" data-en>safest city in Mexico</div>
-    <div class="stat-src">INEGI 2023</div>
-  </div>
+  <div class="stat-item"><div class="stat-num"><em>2M</em></div><div class="stat-label" data-es>turistas LGBT visitaron PV en 2023</div><div class="stat-label" data-en>LGBT tourists visited PV in 2023</div><div class="stat-src">PV Tourism Trust</div></div>
+  <div class="stat-item"><div class="stat-num">51<em>%</em></div><div class="stat-label" data-es>viajan solas — el segmento más grande</div><div class="stat-label" data-en>travel solo — the fastest growing segment</div><div class="stat-src">MMGY Global 2022</div></div>
+  <div class="stat-item"><div class="stat-num"><em>$274</em></div><div class="stat-label" data-es>gasto diario — 40% más que el turista típico</div><div class="stat-label" data-en>daily spend — 40% more than average tourist</div><div class="stat-src">Tel Aviv Tourism Study</div></div>
+  <div class="stat-item"><div class="stat-num"><em>#2</em></div><div class="stat-label" data-es>ciudad más segura de México</div><div class="stat-label" data-en>safest city in Mexico</div><div class="stat-src">INEGI 2023</div></div>
 </div>
 
-<!-- FEATURED -->
+<!-- FEATURED — artículo de portada -->
 <section class="featured" id="amor">
   <div class="feat-photo">
-    <span class="feat-photo-label" data-es>Foto editorial · She Lives PV</span>
-    <span class="feat-photo-label" data-en>Editorial photo · She Lives PV</span>
+    <div class="feat-photo-bg"></div>
+    <div class="feat-photo-inner"></div>
   </div>
   <div class="feat-content">
-    <p class="art-tag"><span data-es>✦ Destacado · Amor & Deseo</span><span data-en>✦ Featured · Love & Desire</span></p>
+    <p class="art-cat"><span data-es>✦ Destacado · Amor & Deseo</span><span data-en>✦ Featured · Love & Desire</span></p>
     <h2 class="art-h2">
       <span data-es>Te amo Elizabeth,<br>pero no se vale<br><em>lo que me has hecho.</em></span>
       <span data-en>I love you Elizabeth,<br>but what you did<br><em>wasn't right.</em></span>
@@ -985,172 +760,276 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
       <span data-es>Un video en TikTok se vuelve viral. Una mujer llora en la calle. Millones la ven — y nadie habla de lo que viene después. De cómo se sana cuando tu dolor se convierte en meme.</span>
       <span data-en>A TikTok video goes viral. A woman cries in the street. Millions watch — and nobody talks about what comes after. How you heal when your pain becomes a meme.</span>
     </p>
-    <div class="art-meta">
-      <span class="badge badge-dk" data-es>Relaciones</span>
-      <span class="badge badge-dk" data-en>Relationships</span>
-      <span class="badge badge-out" data-es>8 min de lectura</span>
-      <span class="badge badge-out" data-en>8 min read</span>
+    <div class="art-author">
+      <div class="art-avatar">G</div>
+      <div>
+        <div class="art-author-name" data-es>Gertrude Stein</div>
+        <div class="art-author-name" data-en>Gertrude Stein</div>
+        <div class="art-author-era" data-es>Voz de Amor & Deseo · 1874–1946</div>
+        <div class="art-author-era" data-en>Voice of Love & Desire · 1874–1946</div>
+      </div>
     </div>
-    <a href="#" class="read-link">
-      <span data-es>Leer artículo completo →</span>
-      <span data-en>Read full article →</span>
+    <a href="#" class="read-link"><span data-es>Leer artículo completo →</span><span data-en>Read full article →</span></a>
+  </div>
+</section>
+
+<!-- MAGAZINE FEED -->
+<section class="mag-section" id="cultura">
+  <div class="mag-header">
+    <div>
+      <p class="section-eyebrow" data-es>La revista</p>
+      <p class="section-eyebrow" data-en>The magazine</p>
+      <h2 class="section-h2"><span data-es>Historias que <em>te atrapan.</em></span><span data-en>Stories that <em>pull you in.</em></span></h2>
+    </div>
+    <a href="#" class="see-all" data-es>Ver todas las historias →</a>
+    <a href="#" class="see-all" data-en>View all stories →</a>
+  </div>
+
+  <div class="mag-filters">
+    <a href="#" class="mag-pill on" data-es>Todas</a>
+    <a href="#" class="mag-pill on" data-en>All</a>
+    <a href="destino-pv/index.html" class="mag-pill" data-es>Destino PV</a>
+    <a href="destino-pv/index.html" class="mag-pill" data-en>Destination PV</a>
+    <a href="#" class="mag-pill">Amor & Deseo</a>
+    <a href="#" class="mag-pill" data-es>Cultura</a>
+    <a href="#" class="mag-pill" data-en>Culture</a>
+    <a href="#" class="mag-pill" data-es>Identidad</a>
+    <a href="#" class="mag-pill" data-en>Identity</a>
+    <a href="#" class="mag-pill" data-es>Viajera Sola</a>
+    <a href="#" class="mag-pill" data-en>Solo Traveler</a>
+  </div>
+
+  <!-- Featured grande -->
+  <a href="destino-pv/index.html" class="mag-feat">
+    <p class="mag-feat-cat" data-es>Destino PV</p>
+    <p class="mag-feat-cat" data-en>Destination PV</p>
+    <div class="mag-feat-photo"></div>
+    <h3 class="mag-feat-h3">
+      <span data-es>La guía que <em>no existe en español:</em> Zona Romántica para mujeres</span>
+      <span data-en>The guide that <em>doesn't exist in English:</em> Zona Romántica for women</span>
+    </h3>
+    <p class="mag-feat-excerpt" data-es>Bares, playas, hoteles y la escena lésbica local de Puerto Vallarta — contada desde adentro, sin filtros de turista.</p>
+    <p class="mag-feat-excerpt" data-en>Bars, beaches, hotels and PV's local lesbian scene — told from the inside, no tourist filter.</p>
+    <div class="mag-feat-meta">
+      <span data-es>Destino PV</span><span data-en>Destination PV</span>
+      <span class="meta-dot"></span>
+      <span data-es>9 min de lectura</span><span data-en>9 min read</span>
+    </div>
+  </a>
+
+  <div class="mag-feed">
+    <a href="#" class="mag-story">
+      <div class="mag-story-photo"></div>
+      <div class="mag-story-body">
+        <div class="story-cat">Amor & Deseo</div>
+        <h3 class="story-h3"><span data-es>Relaciones lésbicas <em>en profundidad:</em> lo que Esther Perel no te dice</span><span data-en>Lesbian relationships <em>in depth:</em> what Esther Perel won't tell you</span></h3>
+        <p class="story-excerpt" data-es>Infidelidad, deseo, monogamia y convivencia — con perspectiva latinoamericana.</p>
+        <p class="story-excerpt" data-en>Infidelity, desire, monogamy and cohabitation — with a Latin American perspective.</p>
+        <div class="story-author"><div class="story-avatar">G</div><div class="story-author-text" data-es>Gertrude Stein · 6 min</div><div class="story-author-text" data-en>Gertrude Stein · 6 min</div></div>
+      </div>
+    </a>
+    <a href="#" class="mag-story">
+      <div class="mag-story-photo"></div>
+      <div class="mag-story-body">
+        <div class="story-cat" data-es>Viajera Sola</div><div class="story-cat" data-en>Solo Traveler</div>
+        <h3 class="story-h3"><span data-es>El 51% que llega <em>sola a PV</em> — y cómo no sentirte sola</span><span data-en>The 51% who arrive <em>solo to PV</em> — and how not to feel alone</span></h3>
+        <p class="story-excerpt" data-es>Guías reales para conectar con la comunidad local, no solo visitar.</p>
+        <p class="story-excerpt" data-en>Real guides for connecting with the local community, not just visiting.</p>
+        <div class="story-author"><div class="story-avatar">A</div><div class="story-author-text" data-es>Alice B. Toklas · 5 min</div><div class="story-author-text" data-en>Alice B. Toklas · 5 min</div></div>
+      </div>
+    </a>
+    <a href="#" class="mag-story">
+      <div class="mag-story-photo"></div>
+      <div class="mag-story-body">
+        <div class="story-cat" data-es>Cultura Contemporánea</div><div class="story-cat" data-en>Contemporary Culture</div>
+        <h3 class="story-h3"><span data-es>El año de <em>la lesbiana:</em> Young Miko, Chappell Roan y el momento</span><span data-en>The year of <em>the lesbian:</em> Young Miko, Chappell Roan and the moment</span></h3>
+        <p class="story-excerpt" data-es>La voz analítica en español que faltaba sobre este momento cultural.</p>
+        <p class="story-excerpt" data-en>The Spanish-language analytical voice that was missing on this cultural moment.</p>
+        <div class="story-author"><div class="story-avatar">R</div><div class="story-author-text" data-es>Adrienne Rich · 7 min</div><div class="story-author-text" data-en>Adrienne Rich · 7 min</div></div>
+      </div>
+    </a>
+    <a href="#" class="mag-story" id="identidad">
+      <div class="mag-story-photo"></div>
+      <div class="mag-story-body">
+        <div class="story-cat" data-es>Identidad & Espiritualidad</div><div class="story-cat" data-en>Identity & Spirituality</div>
+        <h3 class="story-h3"><span data-es>Lesbiana y creyente: <em>las preguntas sin respuesta</em></span><span data-en>Lesbian and faithful: <em>the questions nobody answers</em></span></h3>
+        <p class="story-excerpt" data-es>Religión, familia y lesbianismo en Latinoamérica — un espacio que nadie ocupa.</p>
+        <p class="story-excerpt" data-en>Religion, family and lesbianism in Latin America — a space nobody occupies.</p>
+        <div class="story-author"><div class="story-avatar">S</div><div class="story-author-text" data-es>Sor Juana Inés · 8 min</div><div class="story-author-text" data-en>Sor Juana Inés · 8 min</div></div>
+      </div>
+    </a>
+    <a href="destino-pv/bars-nightlife.html" class="mag-story">
+      <div class="mag-story-photo"></div>
+      <div class="mag-story-body">
+        <div class="story-cat" data-es>Comunidad PV</div><div class="story-cat" data-en>PV Community</div>
+        <h3 class="story-h3"><span data-es>Las voces que <em>viven aquí:</em> Laura y Elena de Elixir</span><span data-en>The voices <em>who live here:</em> Laura and Elena of Elixir</span></h3>
+        <p class="story-excerpt" data-es>La historia del único bar de propiedad lésbica en Puerto Vallarta.</p>
+        <p class="story-excerpt" data-en>The story of the only lesbian-owned bar in Puerto Vallarta.</p>
+        <div class="story-author"><div class="story-avatar">G</div><div class="story-author-text" data-es>Gloria Anzaldúa · 6 min</div><div class="story-author-text" data-en>Gloria Anzaldúa · 6 min</div></div>
+      </div>
     </a>
   </div>
 </section>
 
-<!-- 7 ÁREAS EDITORIALES -->
-<section class="areas-section" id="cultura">
-  <div class="section-hdr">
+<!-- DIRECTORIO PV — NYMag style -->
+<section class="directory-section" id="directorio">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;">
     <div>
-      <p class="section-eyebrow" data-es>Las 7 áreas editoriales</p>
-      <p class="section-eyebrow" data-en>7 editorial areas</p>
-      <h2 class="section-h2">
-        <span data-es>Todo lo que<br><em>She Lives PV cubre.</em></span>
-        <span data-en>Everything<br><em>She Lives PV covers.</em></span>
-      </h2>
+      <p class="section-eyebrow" data-es>Directorio PV</p>
+      <p class="section-eyebrow" data-en>PV Directory</p>
+      <h2 class="section-h2"><span data-es>Negocios que <em>nos reciben.</em></span><span data-en>Businesses that <em>welcome us.</em></span></h2>
     </div>
-    <a href="destino-pv/index.html" class="see-all">
-      <span data-es>Ver todos →</span>
-      <span data-en>See all →</span>
+    <a href="destino-pv/index.html" class="see-all" data-es>Directorio completo →</a>
+    <a href="destino-pv/index.html" class="see-all" data-en>Full directory →</a>
+  </div>
+  <div class="dir-table">
+    <a href="destino-pv/bars-nightlife.html" class="dir-row">
+      <span class="dir-cat-label" data-es>Bares & Noche</span>
+      <span class="dir-cat-label" data-en>Bars & Nightlife</span>
+      <span class="dir-row-name" data-es>Bares, cantinas <em>y vida nocturna</em></span>
+      <span class="dir-row-name" data-en>Bars, cantinas <em>and nightlife</em></span>
+      <span class="dir-row-count" data-es>12 en guía</span>
+      <span class="dir-row-count" data-en>12 in guide</span>
+    </a>
+    <a href="#" class="dir-row">
+      <span class="dir-cat-label" data-es>Gastronomía</span>
+      <span class="dir-cat-label" data-en>Dining</span>
+      <span class="dir-row-name" data-es>Restaurantes <em>y cafeterías</em></span>
+      <span class="dir-row-name" data-en>Restaurants <em>and cafés</em></span>
+      <span class="dir-row-count" data-es>Próximamente</span>
+      <span class="dir-row-count" data-en>Coming soon</span>
+    </a>
+    <a href="destino-pv/hotels.html" class="dir-row">
+      <span class="dir-cat-label" data-es>Hospedaje</span>
+      <span class="dir-cat-label" data-en>Hotels</span>
+      <span class="dir-row-name" data-es>Hoteles <em>genuinamente gay-friendly</em></span>
+      <span class="dir-row-name" data-en>Hotels <em>genuinely gay-friendly</em></span>
+      <span class="dir-row-count" data-es>Próximamente</span>
+      <span class="dir-row-count" data-en>Coming soon</span>
+    </a>
+    <a href="#" class="dir-row">
+      <span class="dir-cat-label" data-es>Bienestar</span>
+      <span class="dir-cat-label" data-en>Wellness</span>
+      <span class="dir-row-name" data-es>Spas, retiros <em>y turismo médico</em></span>
+      <span class="dir-row-name" data-en>Spas, retreats <em>and medical tourism</em></span>
+      <span class="dir-row-count" data-es>Próximamente</span>
+      <span class="dir-row-count" data-en>Coming soon</span>
+    </a>
+    <a href="#" class="dir-row">
+      <span class="dir-cat-label" data-es>Experiencias</span>
+      <span class="dir-cat-label" data-en>Experiences</span>
+      <span class="dir-row-name" data-es>Tours, aventuras <em>y cultura local</em></span>
+      <span class="dir-row-name" data-en>Tours, adventures <em>and local culture</em></span>
+      <span class="dir-row-count" data-es>Próximamente</span>
+      <span class="dir-row-count" data-en>Coming soon</span>
+    </a>
+    <a href="#" class="dir-row">
+      <span class="dir-cat-label" data-es>Comunidad</span>
+      <span class="dir-cat-label" data-en>Community</span>
+      <span class="dir-row-name" data-es>Organizaciones <em>y servicios LGBTQ+</em></span>
+      <span class="dir-row-name" data-en>Organizations <em>and LGBTQ+ services</em></span>
+      <span class="dir-row-count" data-es>Próximamente</span>
+      <span class="dir-row-count" data-en>Coming soon</span>
     </a>
   </div>
-
-  <div class="areas-grid">
-    <a href="destino-pv/index.html" class="area-card">
-      <div class="area-tag"><div class="area-dot"></div><span data-es>Destino PV</span><span data-en>Destination PV</span></div>
-      <h3 class="area-title" data-es>La guía lésbica <em>de PV</em></h3>
-      <h3 class="area-title" data-en>The lesbian guide <em>to PV</em></h3>
-      <p class="area-desc" data-es>Zona Romántica, playas, bares y la escena local — desde adentro.</p>
-      <p class="area-desc" data-en>Zona Romántica, beaches, bars and the local scene — from the inside.</p>
-      <div class="area-sub" data-es>Elixir Mixology · Los Muertos · Vallarta Pride</div>
-      <div class="area-sub" data-en>Elixir Mixology · Los Muertos · Vallarta Pride</div>
-    </a>
-    <a href="#amor" class="area-card">
-      <div class="area-tag"><div class="area-dot"></div>Amor & Deseo</div>
-      <h3 class="area-title" data-es>Relaciones lésbicas <em>en profundidad</em></h3>
-      <h3 class="area-title" data-en>Lesbian relationships <em>in depth</em></h3>
-      <p class="area-desc" data-es>Infidelidad, deseo, monogamia — con perspectiva latinoamericana.</p>
-      <p class="area-desc" data-en>Infidelity, desire, monogamy — with a Latin American perspective.</p>
-      <div class="area-sub" data-es>Elizabeth · Fusión lésbica · Esther Perel</div>
-      <div class="area-sub" data-en>Elizabeth · Lesbian fusion · Esther Perel</div>
-    </a>
-    <a href="#comunidad" class="area-card">
-      <div class="area-tag"><div class="area-dot"></div><span data-es>Viajera Sola</span><span data-en>Solo Traveler</span></div>
-      <h3 class="area-title" data-es>El <em>51%</em> que llega sola</h3>
-      <h3 class="area-title" data-en>The <em>51%</em> who arrive solo</h3>
-      <p class="area-desc" data-es>Guías reales para conectar, no solo visitar Puerto Vallarta.</p>
-      <p class="area-desc" data-en>Real guides for connecting, not just visiting Puerto Vallarta.</p>
-      <div class="area-sub" data-es>Llegar sola · Apps en PV · Seguridad real</div>
-      <div class="area-sub" data-en>Arriving solo · Apps in PV · Real safety</div>
-    </a>
-    <a href="#cultura" class="area-card">
-      <div class="area-tag"><div class="area-dot"></div><span data-es>Cultura Contemporánea</span><span data-en>Contemporary Culture</span></div>
-      <h3 class="area-title" data-es>El año de <em>la lesbiana</em></h3>
-      <h3 class="area-title" data-en>The year of <em>the lesbian</em></h3>
-      <p class="area-desc" data-es>Chappell Roan, Young Miko, TikTok — la voz analítica en español.</p>
-      <p class="area-desc" data-en>Chappell Roan, Young Miko, TikTok — the analytical voice in Spanish.</p>
-      <div class="area-sub" data-es>Young Miko · TikTok Watch · Literatura sáfica</div>
-      <div class="area-sub" data-en>Young Miko · TikTok Watch · Sapphic literature</div>
-    </a>
-  </div>
-
-  <div class="areas-grid-2">
-    <a href="#identidad" class="area-card">
-      <div class="area-tag"><div class="area-dot"></div><span data-es>Identidad & Espiritualidad</span><span data-en>Identity & Spirituality</span></div>
-      <h3 class="area-title" data-es>Las preguntas <em>sin respuesta</em></h3>
-      <h3 class="area-title" data-en>The questions <em>nobody answers</em></h3>
-      <p class="area-desc" data-es>Religión, familia y lesbianismo en Latinoamérica.</p>
-      <p class="area-desc" data-en>Religion, family and lesbianism in Latin America.</p>
-      <div class="area-sub" data-es>Lesbiana y creyente · Salir del clóset en México</div>
-      <div class="area-sub" data-en>Lesbian and faithful · Coming out in Mexico</div>
-    </a>
-    <a href="#comunidad" class="area-card">
-      <div class="area-tag"><div class="area-dot"></div><span data-es>Comunidad PV</span><span data-en>PV Community</span></div>
-      <h3 class="area-title" data-es>Las voces que <em>viven aquí</em></h3>
-      <h3 class="area-title" data-en>The voices <em>who live here</em></h3>
-      <p class="area-desc" data-es>Periodismo de comunidad desde Puerto Vallarta.</p>
-      <p class="area-desc" data-en>Community journalism from Puerto Vallarta.</p>
-      <div class="area-sub" data-es>Elixir Bar · Las Mambas · Historias reales</div>
-      <div class="area-sub" data-en>Elixir Bar · Las Mambas · Real stories</div>
-    </a>
-    <a href="#" class="area-card">
-      <div class="area-tag"><div class="area-dot"></div><span data-es>Bienestar & Cuerpo</span><span data-en>Wellness & Body</span></div>
-      <h3 class="area-title" data-es>La nueva <em>prioridad lésbica</em></h3>
-      <h3 class="area-title" data-en>The new <em>lesbian priority</em></h3>
-      <p class="area-desc" data-es>Salud mental, spas y el cuerpo lésbico sin el filtro masculino.</p>
-      <p class="area-desc" data-en>Mental health, spas and the lesbian body without the male gaze.</p>
-      <div class="area-sub" data-es>Spas en PV · Terapia de pareja · Imagen corporal</div>
-      <div class="area-sub" data-en>Spas in PV · Couples therapy · Body image</div>
-    </a>
+  <div class="dir-cta-row">
+    <p class="dir-cta-text" data-es>¿Tienes un negocio LGBTQ+ en Puerto Vallarta?</p>
+    <p class="dir-cta-text" data-en>Do you have an LGBTQ+ business in Puerto Vallarta?</p>
+    <a href="#anunciate" class="dir-cta-link" data-es>Súmate al directorio →</a>
+    <a href="#anunciate" class="dir-cta-link" data-en>Join the directory →</a>
   </div>
 </section>
 
-<!-- DESTINO PV -->
-<section class="destino" id="comunidad">
-  <div class="section-hdr">
-    <div>
-      <p class="section-eyebrow" data-es>Destino PV</p>
-      <p class="section-eyebrow" data-en>Destination PV</p>
-      <h2 class="section-h2">
-        <span data-es>Puerto Vallarta<br><em>te espera.</em></span>
-        <span data-en>Puerto Vallarta<br><em>is waiting for you.</em></span>
-      </h2>
+<!-- SPONSOR BANNER -->
+<section class="sponsor-section">
+  <div class="sponsor-inner">
+    <span class="sponsor-tag" data-es>Espacio patrocinado</span>
+    <span class="sponsor-tag" data-en>Sponsored placement</span>
+    <div class="sponsor-photo"></div>
+    <div class="sponsor-body">
+      <p class="sponsor-eyebrow" data-es>Este spot puede ser tuyo</p>
+      <p class="sponsor-eyebrow" data-en>This spot could be yours</p>
+      <h3 class="sponsor-h3" data-es>Tu negocio frente a <em>miles de viajeras lésbicas.</em></h3>
+      <h3 class="sponsor-h3" data-en>Your business in front of <em>thousands of lesbian travelers.</em></h3>
+      <p class="sponsor-desc" data-es>Restaurantes, hoteles, spas, bares, turismo médico — el spot premium de la home.</p>
+      <p class="sponsor-desc" data-en>Restaurants, hotels, spas, bars, medical tourism — the premium homepage spot.</p>
     </div>
-    <a href="destino-pv/index.html" class="see-all">
-      <span data-es>Toda la guía →</span>
-      <span data-en>Full guide →</span>
+    <a href="#anunciate" class="sponsor-btn"><span data-es>Anúnciate →</span><span data-en>Advertise →</span></a>
+  </div>
+</section>
+
+<!-- LAS VOCES SÁFICAS -->
+<section class="voces-section" id="voces">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;">
+    <div>
+      <p class="section-eyebrow" data-es>Las Voces — Redactoras de She Lives PV</p>
+      <p class="section-eyebrow" data-en>The Voices — She Lives PV's writers</p>
+      <h2 class="section-h2"><span data-es>Ellas escriben <em>en estas páginas.</em></span><span data-en>They write <em>in these pages.</em></span></h2>
+    </div>
+    <a href="#" class="see-all" data-es>Conoce a todas las voces →</a>
+    <a href="#" class="see-all" data-en>Meet all the voices →</a>
+  </div>
+  <div class="voces-grid">
+    <a href="#" class="voz-card">
+      <div class="voz-avatar">A</div>
+      <div class="voz-era">1877–1967</div>
+      <div class="voz-name">Alice B. Toklas</div>
+      <div class="voz-role">Cocinera, escritora, París</div>
+      <span class="voz-section-badge" data-es>Gastronomía</span>
+      <span class="voz-section-badge" data-en>Food & Travel</span>
+    </a>
+    <a href="#" class="voz-card">
+      <div class="voz-avatar">S</div>
+      <div class="voz-era">1648–1695</div>
+      <div class="voz-name">Sor Juana Inés</div>
+      <div class="voz-role">Poeta, filósofa, Nueva España</div>
+      <span class="voz-section-badge" data-es>Identidad</span>
+      <span class="voz-section-badge" data-en>Identity</span>
+    </a>
+    <a href="#" class="voz-card">
+      <div class="voz-avatar">R</div>
+      <div class="voz-era">1929–2012</div>
+      <div class="voz-name">Adrienne Rich</div>
+      <div class="voz-role">Poeta, ensayista, Baltimore</div>
+      <span class="voz-section-badge" data-es>Cultura</span>
+      <span class="voz-section-badge" data-en>Culture</span>
+    </a>
+    <a href="#" class="voz-card">
+      <div class="voz-avatar">G</div>
+      <div class="voz-era">1874–1946</div>
+      <div class="voz-name">Gertrude Stein</div>
+      <div class="voz-role">Escritora modernista, París</div>
+      <span class="voz-section-badge" data-es>Amor & Deseo</span>
+      <span class="voz-section-badge" data-en>Love & Desire</span>
+    </a>
+    <a href="#" class="voz-card">
+      <div class="voz-avatar">G</div>
+      <div class="voz-era">1942–2004</div>
+      <div class="voz-name">Gloria Anzaldúa</div>
+      <div class="voz-role">Escritora chicana, Texas</div>
+      <span class="voz-section-badge" data-es>Comunidad</span>
+      <span class="voz-section-badge" data-en>Community</span>
+    </a>
+    <a href="#" class="voz-card">
+      <div class="voz-avatar">R</div>
+      <div class="voz-era">1880–1943</div>
+      <div class="voz-name">Radclyffe Hall</div>
+      <div class="voz-role">Novelista, Hampshire</div>
+      <span class="voz-section-badge" data-es>Amor & Deseo</span>
+      <span class="voz-section-badge" data-en>Love & Desire</span>
     </a>
   </div>
-  <div class="dest-grid">
-    <a href="destino-pv/index.html" class="dest-main">
-      <div class="dest-main-bg"></div>
-      <div class="dest-main-fade"></div>
-      <div class="dest-main-body">
-        <span class="d-tag" data-es>Guía completa</span>
-        <span class="d-tag" data-en>Full guide</span>
-        <h3 class="d-title">
-          <span data-es>La escena lésbica de PV:<br><em>todo lo que necesitas saber</em><br>antes de llegar.</span>
-          <span data-en>PV's lesbian scene:<br><em>everything you need to know</em><br>before you arrive.</span>
-        </h3>
-        <div class="d-rule"></div>
-        <p class="d-desc" data-es>Bares, playas, hoteles y la comunidad que te va a recibir como en casa.</p>
-        <p class="d-desc" data-en>Bars, beaches, hotels and a community that will welcome you like home.</p>
-      </div>
-    </a>
-    <a href="destino-pv/bars-nightlife.html" class="dest-sm">
-      <div class="dest-sm-img" style="background:linear-gradient(180deg,#1B2A4A,#3D1A0A);">
-        <span data-es>Foto bares PV</span><span data-en>PV bars photo</span>
-      </div>
-      <div class="dest-sm-body">
-        <span class="d-tag" data-es>Bares & Noche</span>
-        <span class="d-tag" data-en>Bars & Nightlife</span>
-        <h4 class="d-title" style="font-size:16px;" data-es>Elixir, Las Mambas y el circuito <em>nocturno lésbico.</em></h4>
-        <h4 class="d-title" style="font-size:16px;" data-en>Elixir, Las Mambas and the <em>lesbian night circuit.</em></h4>
-        <p class="d-desc" data-es>Guía honesta sin patrocinios.</p>
-        <p class="d-desc" data-en>Honest guide, no sponsorships.</p>
-      </div>
-    </a>
-    <a href="destino-pv/vallarta-pride.html" class="dest-sm">
-      <div class="dest-sm-img" style="background:linear-gradient(180deg,#C1440E 0%,#1B2A4A 100%);">
-        <span style="font-size:28px;">🏳️‍🌈</span>
-      </div>
-      <div class="dest-sm-body">
-        <span class="d-tag">Vallarta Pride 2026</span>
-        <h4 class="d-title" style="font-size:16px;" data-es>Mayo 17–24 · <em>"A Very Mexican Pride"</em></h4>
-        <h4 class="d-title" style="font-size:16px;" data-en>May 17–24 · <em>"A Very Mexican Pride"</em></h4>
-        <p class="d-desc" data-es>El Pride más importante del Pacífico mexicano.</p>
-        <p class="d-desc" data-en>The most important Pride on Mexico's Pacific coast.</p>
-      </div>
-    </a>
+  <div class="voces-cta">
+    <p class="voces-cta-text" data-es>Convocamos a las mujeres que amaron, crearon y resistieron — para que vivan en estas páginas con su propia voz y su visión del mundo que She Lives PV habita hoy.</p>
+    <p class="voces-cta-text" data-en>We summon the women who loved, created and resisted — so they may live in these pages with their own voice and vision of the world She Lives PV inhabits today.</p>
+    <a href="#" class="dir-cta-link" style="white-space:nowrap;" data-es>Conocer el proyecto →</a>
+    <a href="#" class="dir-cta-link" style="white-space:nowrap;" data-en>Learn about the project →</a>
   </div>
 </section>
 
 <!-- ESTHER PEREL -->
 <section class="esther-section">
-  <div class="esther-photo">
-    <span data-es>Foto editorial · referencia</span>
-    <span data-en>Editorial photo · reference</span>
-  </div>
+  <div class="esther-photo">"</div>
   <div class="esther-content">
     <p class="esther-tag" data-es>Referencia editorial — Amor & Deseo</p>
     <p class="esther-tag" data-en>Editorial reference — Love & Desire</p>
@@ -1160,17 +1039,45 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
     <p class="esther-attr">Esther Perel — <em>Mating in Captivity</em></p>
     <p class="esther-desc" data-es>Esther Perel es la terapeuta de parejas más influyente de nuestro tiempo. Su mirada sobre el deseo y la intimidad trasciende cualquier orientación. En She Lives PV la leemos — y la cuestionamos desde nuestra realidad lésbica latinoamericana.</p>
     <p class="esther-desc" data-en>Esther Perel is the most influential couples therapist of our time. Her insights on desire and intimacy transcend any orientation. At She Lives PV we read her — and question her from our Latin American lesbian reality.</p>
-    <a href="#amor" class="read-link" style="border-color:var(--selva);color:var(--selva);">
-      <span data-es>Leer sobre relaciones lésbicas →</span>
-      <span data-en>Read on lesbian relationships →</span>
-    </a>
+    <a href="#" class="read-link" style="border-color:var(--selva);color:var(--selva);" data-es>Leer sobre relaciones lésbicas →</a>
+    <a href="#" class="read-link" style="border-color:var(--selva);color:var(--selva);" data-en>Read on lesbian relationships →</a>
+  </div>
+</section>
+
+<!-- ANÚNCIATE -->
+<section class="advertise-section" id="anunciate">
+  <div class="adv-inner">
+    <div>
+      <p class="adv-eyebrow" data-es>Para negocios LGBTQ+ de Puerto Vallarta</p>
+      <p class="adv-eyebrow" data-en>For Puerto Vallarta's LGBTQ+ businesses</p>
+      <h2 class="adv-h2"><span data-es>Llega a la comunidad<br>que <em>realmente te busca.</em></span><span data-en>Reach the community<br>that's <em>actually looking for you.</em></span></h2>
+      <p class="adv-desc" data-es>She Lives PV es el primer medio digital lésbico de Puerto Vallarta. Miles de viajeras y residentes leen nuestras guías cada mes — y llegan justo antes de decidir dónde comer, dormir o celebrar.</p>
+      <p class="adv-desc" data-en>She Lives PV is Puerto Vallarta's first lesbian digital outlet. Thousands of travelers and residents read our guides monthly — arriving right before deciding where to eat, stay, or celebrate.</p>
+      <div class="adv-cats">
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Bares & vida nocturna</span><span class="adv-cat-name" data-en>Bars & nightlife</span><span class="adv-cat-arrow">→</span></div>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Restaurantes & cafeterías</span><span class="adv-cat-name" data-en>Restaurants & cafés</span><span class="adv-cat-arrow">→</span></div>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Hoteles & hospedaje</span><span class="adv-cat-name" data-en>Hotels & lodging</span><span class="adv-cat-arrow">→</span></div>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Turismo médico & wellness</span><span class="adv-cat-name" data-en>Medical & wellness tourism</span><span class="adv-cat-arrow">→</span></div>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Experiencias & tours</span><span class="adv-cat-name" data-en>Experiences & tours</span><span class="adv-cat-arrow">→</span></div>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Spas & bienestar</span><span class="adv-cat-name" data-en>Spas & beauty</span><span class="adv-cat-arrow">→</span></div>
+      </div>
+    </div>
+    <div class="adv-right">
+      <div class="adv-stats">
+        <div class="adv-stat"><div class="adv-stat-num">51<em>%</em></div><div class="adv-stat-label" data-es>viajan solas, listas para descubrir</div><div class="adv-stat-label" data-en>travel solo, ready to discover</div></div>
+        <div class="adv-stat"><div class="adv-stat-num"><em>$274</em></div><div class="adv-stat-label" data-es>gasto diario promedio</div><div class="adv-stat-label" data-en>average daily spend</div></div>
+        <div class="adv-stat"><div class="adv-stat-num"><em>2M</em></div><div class="adv-stat-label" data-es>turistas LGBTQ+ en PV al año</div><div class="adv-stat-label" data-en>LGBTQ+ tourists in PV per year</div></div>
+        <div class="adv-stat"><div class="adv-stat-num">EN<em>/ES</em></div><div class="adv-stat-label" data-es>audiencia bilingüe completa</div><div class="adv-stat-label" data-en>fully bilingual audience</div></div>
+      </div>
+      <a href="mailto:hola@shelivespv.com?subject=Quiero%20anunciarme%20en%20She%20Lives%20PV" class="adv-btn"><span data-es>Anúnciate con nosotras →</span><span data-en>Advertise with us →</span></a>
+    </div>
   </div>
 </section>
 
 <!-- QUOTE -->
-<section class="quote-section" id="identidad">
+<section class="quote-section">
   <div class="q-mark">"</div>
-  <div>
+  <div class="q-body">
     <blockquote class="q-text" data-es>"Una lesbiana que no reinventa la palabra es una lesbiana en proceso de desaparecer."</blockquote>
     <blockquote class="q-text" data-en>"A lesbian who does not reinvent the word is a lesbian in the process of disappearing."</blockquote>
     <p class="q-attr">Adrienne Rich</p>
@@ -1182,12 +1089,9 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
   <div>
     <p class="nl-eyebrow" data-es>Newsletter · Cada dos semanas</p>
     <p class="nl-eyebrow" data-en>Newsletter · Every two weeks</p>
-    <h2 class="nl-title">
-      <span data-es>La revista<br>en tu<br><em>correo.</em></span>
-      <span data-en>The magazine<br>in your<br><em>inbox.</em></span>
-    </h2>
-    <p class="nl-desc" data-es>Guías de Vallarta, artículos, referencias culturales y lo que ningún otro medio lésbico en español te está contando.</p>
-    <p class="nl-desc" data-en>Vallarta guides, articles, cultural picks and what no other Spanish-language lesbian publication is covering.</p>
+    <h2 class="nl-h2"><span data-es>La revista<br>en tu <em>correo.</em></span><span data-en>The magazine<br>in your <em>inbox.</em></span></h2>
+    <p class="nl-desc" data-es>Guías de Vallarta, artículos editoriales, novedades de las voces sáficas y lo que ningún otro medio lésbico en español te está contando.</p>
+    <p class="nl-desc" data-en>Vallarta guides, editorial articles, updates from the sapphic voices and what no other Spanish-language lesbian publication is covering.</p>
   </div>
   <form class="nl-form" onsubmit="return false;">
     <input type="text" data-placeholder-es="Tu nombre" data-placeholder-en="Your name" placeholder="Tu nombre">
@@ -1202,8 +1106,8 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
   <div class="foot-top">
     <div>
       <div class="foot-brand">She Lives PV</div>
-      <p class="foot-tagline" data-es>La primera revista digital lésbica de Puerto Vallarta. Lifestyle, cultura, amor y viaje — para la mujer que vive sin pedir permiso.</p>
-      <p class="foot-tagline" data-en>The first lesbian digital magazine from Puerto Vallarta. Lifestyle, culture, love and travel — for the woman who lives without asking permission.</p>
+      <p class="foot-tagline" data-es>La primera revista digital lésbica de Puerto Vallarta — para la mujer que vive sin pedir permiso.</p>
+      <p class="foot-tagline" data-en>The first lesbian digital magazine from Puerto Vallarta — for the woman who lives without asking permission.</p>
       <div class="foot-soc">
         <a href="#" class="soc">Instagram</a>
         <a href="#" class="soc">TikTok</a>
@@ -1216,8 +1120,7 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
         <li><a href="destino-pv/index.html" data-es>Destino PV</a><a href="destino-pv/index.html" data-en>Destination PV</a></li>
         <li><a href="#amor">Amor & Deseo</a></li>
         <li><a href="#cultura" data-es>Cultura</a><a href="#cultura" data-en>Culture</a></li>
-        <li><a href="#identidad" data-es>Identidad</a><a href="#identidad" data-en>Identity</a></li>
-        <li><a href="#comunidad" data-es>Viajera Sola</a><a href="#comunidad" data-en>Solo Traveler</a></li>
+        <li><a href="#voces" data-es>Las Voces</a><a href="#voces" data-en>The Voices</a></li>
       </ul>
     </div>
     <div class="foot-col">
@@ -1227,15 +1130,14 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
         <li><a href="destino-pv/beaches.html" data-es>Playas</a><a href="destino-pv/beaches.html" data-en>Beaches</a></li>
         <li><a href="destino-pv/hotels.html" data-es>Hoteles</a><a href="destino-pv/hotels.html" data-en>Hotels</a></li>
         <li><a href="destino-pv/vallarta-pride.html">Vallarta Pride</a></li>
-        <li><a href="destino-pv/solo-traveler.html" data-es>Viajera Sola</a><a href="destino-pv/solo-traveler.html" data-en>Solo Traveler</a></li>
       </ul>
     </div>
     <div class="foot-col">
       <h4 data-es>La revista</h4><h4 data-en>Magazine</h4>
       <ul>
         <li><a href="#sobre" data-es>Sobre She Lives PV</a><a href="#sobre" data-en>About She Lives PV</a></li>
-        <li><a href="#newsletter" data-es>Newsletter</a><a href="#newsletter" data-en>Newsletter</a></li>
-        <li><a href="#" data-es>Colabora</a><a href="#" data-en>Collaborate</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="#anunciate" data-es>Anúnciate</a><a href="#anunciate" data-en>Advertise</a></li>
       </ul>
     </div>
     <div class="foot-col">
@@ -1255,70 +1157,21 @@ footer { background: var(--ocean-dk); padding: 56px 72px 36px; }
 </footer>
 
 <script>
-/* ── LANG ── */
 function setLang(lang) {
   document.body.className = 'lang-' + lang;
   document.documentElement.lang = lang;
   document.getElementById('btn-es').classList.toggle('active', lang === 'es');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
-    el.placeholder = el.getAttribute('data-placeholder-' + lang);
-  });
-  document.title = lang === 'es'
-    ? 'She Lives PV — Revista Lésbica · Puerto Vallarta'
-    : 'She Lives PV — Lesbian Magazine · Puerto Vallarta';
+  document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => { el.placeholder = el.getAttribute('data-placeholder-' + lang); });
+  document.title = lang === 'es' ? 'She Lives PV — Revista Lésbica · Puerto Vallarta' : 'She Lives PV — Lesbian Magazine · Puerto Vallarta';
   localStorage.setItem('slpv-lang', lang);
 }
-
-/* ── MOBILE MENU ── */
-function toggleMenu() {
-  document.getElementById('mobile-menu').classList.toggle('open');
-}
-function closeMenu() {
-  document.getElementById('mobile-menu').classList.remove('open');
-}
-
-/* ── HERO SLIDESHOW ── */
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.dot');
-
-function goToSlide(n) {
-  slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
-  currentSlide = n;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
-}
-
-// Auto-advance every 5s
-setInterval(() => {
-  goToSlide((currentSlide + 1) % slides.length);
-}, 5000);
-
-/* ── CONFETTI PRIDE ── */
-const colors = ['#C1440E','#F2C078','#3D6B4F','rgba(255,255,255,.3)','#1B2A4A'];
-const confetti = document.getElementById('confetti');
-for (let i = 0; i < 18; i++) {
-  const s = document.createElement('span');
-  const size = Math.random() * 6 + 3;
-  s.style.cssText = `
-    width:${size}px; height:${size}px;
-    left:${Math.random()*100}%;
-    bottom:${Math.random()*40}%;
-    background:${colors[Math.floor(Math.random()*colors.length)]};
-    animation-delay:${Math.random()*8}s;
-    animation-duration:${6+Math.random()*6}s;
-  `;
-  confetti.appendChild(s);
-}
-
-/* ── INIT ── */
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
 window.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('slpv-lang');
   const browser = navigator.language?.slice(0,2);
-  const lang = saved || (browser === 'en' ? 'en' : 'es');
-  if (lang === 'en') setLang('en');
+  if ((saved || browser) === 'en') setLang('en');
 });
 </script>
 </body>
