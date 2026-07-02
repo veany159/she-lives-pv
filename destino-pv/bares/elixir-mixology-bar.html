@@ -11,26 +11,40 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Article","headline":"Elixir Mixology Bar: el único lugar en PV donde realmente somos nosotras","author":{"@type":"Person","name":"Alice B. Toklas"},"publisher":{"@type":"Organization","name":"She Lives PV","url":"https://vallartaqueer.com"},"url":"https://vallartaqueer.com/destino-pv/bares/elixir-mixology-bar","inLanguage":["es","en"]},
-{"@type":"Bar","name":"Elixir Mixology Bar","description":"Único bar de propiedad lésbica en Puerto Vallarta. Cócteles artesanales. Espacio seguro para mujeres queer.","address":{"@type":"PostalAddress","streetAddress":"Basilio Badillo 419","addressLocality":"Puerto Vallarta","addressRegion":"Jalisco","addressCountry":"MX"},"telephone":"","openingHours":["Tu-Su 18:00-00:00"],"priceRange":"$$","sameAs":["https://www.instagram.com/elixirmixologybar"]},
+{"@type":"Bar","name":"Elixir Mixology Bar","description":"Único bar de propiedad lésbica en Puerto Vallarta.","address":{"@type":"PostalAddress","streetAddress":"Basilio Badillo 419","addressLocality":"Puerto Vallarta","addressRegion":"Jalisco","addressCountry":"MX"},"openingHours":["Tu-Su 18:00-00:00"],"priceRange":"$$","sameAs":["https://www.instagram.com/elixirmixologybar"]},
 {"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"¿Dónde está Elixir Mixology Bar en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Elixir Mixology Bar está en Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes a domingo 6pm-12am."}},
-{"@type":"Question","name":"¿Quiénes son las dueñas de Elixir Mixology Bar?","acceptedAnswer":{"@type":"Answer","text":"Elixir Mixology Bar fue fundado en 2021 por Laura Jaimes y Elena Zolezzi. Elena tiene una década de experiencia en mixología con Carnival Cruise Lines."}}
+{"@type":"Question","name":"¿Dónde está Elixir Mixology Bar?","acceptedAnswer":{"@type":"Answer","text":"Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes a domingo 6pm-12am. Solo efectivo."}},
+{"@type":"Question","name":"¿Quiénes son las dueñas de Elixir?","acceptedAnswer":{"@type":"Answer","text":"Fundado en 2021 por Laura Jaimes y Elena Zolezzi. Elena tiene una década de experiencia en mixología con Carnival Cruise Lines."}}
 ]}
 ]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ocean:#1B2A4A;--talavera:#C1440E;--selva:#3D6B4F;--paper:#F8F7F4;--paper-md:#F2F0EA;--border:#E4E1DA;--muted:#8A8378;--body:#2A2420;--ff-d:'Fraunces',Georgia,serif;--ff-b:'Libre Baskerville',Georgia,serif;--ff-u:'Space Grotesk',system-ui,sans-serif}
+:root{
+  --ocean:#1B2A4A;--talavera:#C1440E;--selva:#3D6B4F;
+  --paper:#F8F7F4;--paper-md:#F2F0EA;--border:#E4E1DA;
+  --muted:#8A8378;--body:#2A2420;
+  --ff-d:'Fraunces',Georgia,serif;
+  --ff-b:'Libre Baskerville',Georgia,serif;
+  --ff-u:'Space Grotesk',system-ui,sans-serif;
+  /* Ancho de lectura — nunca cambia */
+  --read-w:680px;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* LANG */
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
 span[data-es],span[data-en]{display:inline}
-div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en]{display:block}
+div[data-es],div[data-en],p[data-es],p[data-en],
+h1[data-es],h1[data-en],h2[data-es],h2[data-en],
+h3[data-es],h3[data-en],a[data-es],a[data-en],
+li[data-es],li[data-en]{display:block}
 
-/* NAV */
+/* ── NAV ── */
 .main-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--ocean)}
 .nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:58px}
 .nav-logo{font-family:var(--ff-d);font-size:21px;color:var(--ocean);text-decoration:none;display:flex;align-items:center;gap:10px}
@@ -50,94 +64,266 @@ div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-family:var(--ff-u);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:13px 0;border-bottom:1px solid var(--border);transition:color .2s}
 .mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--ocean)}
 
 /* BREADCRUMB */
 .breadcrumb{padding:12px 64px;background:white;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
-.breadcrumb a{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.breadcrumb a{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .breadcrumb a:hover{color:var(--talavera)}
 .bc-sep{font-size:10px;color:var(--border)}
 .bc-cur{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--talavera);font-weight:500}
 
-/* ══ ARTICLE LAYOUT ══
-   El artículo tiene:
-   1. Hero editorial (imagen grande + título + byline)
-   2. Cuerpo del artículo (texto limpio, max 680px)
-   3. Datos del venue (sidebar-style block)
-   4. Safo recomienda
-   5. Artículos relacionados
-*/
+/* ════════════════════════════════
+   ARTICLE HEADER — centrado, imagen controlada
+   ════════════════════════════════ */
 
-/* HERO DEL ARTÍCULO */
-.article-hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;border-bottom:1px solid var(--border)}
-.ah-photo{position:relative;overflow:hidden;background:var(--paper-md)}
-.ah-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.ah-badges{position:absolute;top:20px;left:20px;display:flex;flex-direction:column;gap:5px}
-.ah-badge{font-family:var(--ff-u);font-size:8px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;font-weight:500;align-self:flex-start}
+/* Zona de encabezado: fondo blanco, centrado */
+.article-header{
+  background:white;
+  border-bottom:1px solid var(--border);
+  padding:56px 24px 0;
+}
+.ah-inner{
+  max-width:var(--read-w);
+  margin:0 auto;
+}
+
+/* Metadatos arriba del título */
+.ah-meta{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:20px;flex-wrap:wrap;
+}
+.ah-cat{
+  font-family:var(--ff-u);font-size:9px;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--talavera);font-weight:500;
+}
+.ah-sep{color:var(--border);font-size:10px}
+.ah-badges{display:flex;gap:6px;flex-wrap:wrap}
+.ah-badge{
+  font-family:var(--ff-u);font-size:8px;letter-spacing:1.5px;
+  text-transform:uppercase;padding:3px 9px;font-weight:500;
+}
 .ah-badge.b-red{background:var(--talavera);color:white}
 .ah-badge.b-ocean{background:var(--ocean);color:white}
 .ah-badge.b-selva{background:var(--selva);color:white}
-.ah-content{padding:52px 52px;display:flex;flex-direction:column;justify-content:center;background:white;border-left:1px solid var(--border)}
-.ah-eyebrow{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.ah-eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--talavera)}
-.ah-h1{font-family:var(--ff-d);font-size:clamp(32px,3.5vw,48px);line-height:1.05;color:var(--ocean);font-weight:400;margin-bottom:16px}
+
+/* Título — grande, Fraunces, respira */
+.ah-h1{
+  font-family:var(--ff-d);
+  font-size:clamp(34px,4vw,52px);
+  line-height:1.05;color:var(--ocean);
+  font-weight:400;margin-bottom:20px;
+}
 .ah-h1 em{font-style:italic;font-weight:300}
-.ah-rule{width:32px;height:2px;background:var(--talavera);margin-bottom:16px}
-.ah-intro{font-family:var(--ff-b);font-size:16px;line-height:1.85;color:var(--muted);font-style:italic;max-width:380px;margin-bottom:24px}
-.ah-byline{display:flex;align-items:center;gap:12px;padding-top:20px;border-top:1px solid var(--border)}
-.ah-avatar{width:40px;height:40px;border-radius:50%;background:var(--paper);border:1.5px solid var(--selva);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-size:17px;font-style:italic;color:var(--selva);flex-shrink:0}
-.ah-author-name{font-family:var(--ff-u);font-size:12px;color:var(--ocean);font-weight:500;margin-bottom:2px}
+
+/* Línea roja */
+.ah-rule{width:36px;height:2px;background:var(--talavera);margin-bottom:20px}
+
+/* Intro / entradilla */
+.ah-intro{
+  font-family:var(--ff-b);font-size:18px;line-height:1.8;
+  color:var(--muted);font-style:italic;margin-bottom:28px;
+}
+
+/* Byline */
+.ah-byline{
+  display:flex;align-items:center;gap:12px;
+  padding:16px 0;border-top:1px solid var(--border);
+  margin-bottom:0;
+}
+.ah-avatar{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--paper);border:1.5px solid var(--selva);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-d);font-size:16px;font-style:italic;
+  color:var(--selva);flex-shrink:0;
+}
+.ah-author-name{font-family:var(--ff-u);font-size:12px;color:var(--ocean);font-weight:500;margin-bottom:1px}
 .ah-author-role{font-family:var(--ff-u);font-size:10px;color:var(--muted)}
 
-/* CUERPO EDITORIAL */
-.article-body{padding:64px 64px;background:white;border-bottom:1px solid var(--border)}
-.article-inner{max-width:680px}
+/* ── IMAGEN HERO — altura fija, no manda ──
+   La imagen tiene una altura máxima controlada.
+   Se muestra completa dentro de ese contenedor.
+   El contenedor tiene fondo blanco para que no se vea raro si la imagen no llena. */
+.article-hero-img{
+  background:white;
+  border-bottom:1px solid var(--border);
+}
+.hero-img-inner{
+  max-width:var(--read-w);
+  margin:0 auto;
+  padding:28px 0 0;  /* espacio entre byline y foto */
+}
+.hero-img-frame{
+  /* Altura fija — siempre la misma sin importar el tamaño de la foto */
+  height:420px;
+  overflow:hidden;
+  position:relative;
+  background:var(--paper-md);
+}
+.hero-img-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;   /* recorta inteligentemente */
+  object-position:center;
+  display:block;
+}
+/* Badges sobre la imagen */
+.hero-img-badges{
+  position:absolute;top:16px;left:16px;
+  display:flex;flex-direction:column;gap:5px;
+}
 
-/* DATOS DEL VENUE — aparte del texto */
-.venue-data{background:var(--paper);border:1px solid var(--border);padding:28px;margin:36px 0}
-.vd-title{font-family:var(--ff-u);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+/* ════════════════════════════════
+   CUERPO DEL ARTÍCULO
+   Columna estrecha centrada — 680px máximo
+   ════════════════════════════════ */
+.article-body{
+  background:white;
+  border-bottom:1px solid var(--border);
+  padding:52px 24px 64px;
+}
+.article-inner{
+  max-width:var(--read-w);
+  margin:0 auto;
+}
+
+/* Tipografía del artículo */
+.art-p{
+  font-family:var(--ff-b);font-size:17px;line-height:1.9;
+  color:var(--body);margin-bottom:24px;
+}
+.art-p-i{
+  font-family:var(--ff-b);font-size:17px;line-height:1.9;
+  color:var(--body);margin-bottom:24px;font-style:italic;
+}
+.art-h2{
+  font-family:var(--ff-d);font-size:28px;color:var(--ocean);
+  font-weight:400;line-height:1.15;margin:44px 0 16px;
+}
+.art-h2 em{font-style:italic;font-weight:300}
+
+/* Pullquote — rompe el flujo, llama la atención */
+.art-pullquote{
+  font-family:var(--ff-d);font-size:24px;color:var(--ocean);
+  font-style:italic;font-weight:300;line-height:1.35;
+  border-left:3px solid var(--talavera);
+  padding:16px 0 16px 24px;
+  margin:36px 0;
+}
+
+/* Separador */
+.art-rule{width:36px;height:1px;background:var(--border);margin:40px 0}
+
+/* Datos del venue — dentro del texto, misma columna */
+.venue-data{
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-left:3px solid var(--talavera);
+  padding:24px 28px;
+  margin:36px 0;
+}
+.vd-title{
+  font-family:var(--ff-u);font-size:9px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--talavera);font-weight:500;
+  margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);
+}
 .vd-row{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid var(--border)}
 .vd-row:last-child{border-bottom:none}
-.vd-k{font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);flex-shrink:0;width:80px;padding-top:1px}
-.vd-v{font-family:var(--ff-u);font-size:12px;color:var(--ocean)}
+.vd-k{
+  font-family:var(--ff-u);font-size:9px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--muted);
+  flex-shrink:0;width:80px;padding-top:1px;
+}
+.vd-v{font-family:var(--ff-u);font-size:13px;color:var(--ocean)}
 
-/* TIPOGRAFÍA DEL ARTÍCULO */
-.art-p{font-family:var(--ff-b);font-size:16px;line-height:1.9;color:var(--body);margin-bottom:22px}
-.art-p-i{font-family:var(--ff-b);font-size:16px;line-height:1.9;color:var(--body);margin-bottom:22px;font-style:italic}
-.art-h2{font-family:var(--ff-d);font-size:26px;color:var(--ocean);font-weight:400;line-height:1.2;margin:40px 0 16px}
-.art-h2 em{font-style:italic;font-weight:300}
-.art-pullquote{font-family:var(--ff-d);font-size:22px;color:var(--ocean);font-style:italic;font-weight:300;line-height:1.35;border-left:3px solid var(--talavera);padding:14px 0 14px 22px;margin:32px 0}
-.art-rule{width:40px;height:1.5px;background:var(--border);margin:36px 0}
+/* Safo recomienda */
+.safo-block{
+  border-left:3px solid var(--selva);
+  padding:16px 20px;background:var(--paper-md);
+  margin:36px 0;
+}
+.safo-label{
+  font-family:var(--ff-u);font-size:8px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--selva);font-weight:500;margin-bottom:8px;
+}
+.safo-text{
+  font-family:var(--ff-b);font-size:15px;color:var(--muted);
+  font-style:italic;line-height:1.7;
+}
 
-/* SAFO RECOMIENDA */
-.safo-block{border-left:3px solid var(--talavera);padding:16px 20px;background:var(--paper-md);margin:32px 0}
-.safo-label{font-family:var(--ff-u);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:8px}
-.safo-text{font-family:var(--ff-b);font-size:14px;color:var(--muted);font-style:italic;line-height:1.7}
-
-/* FAQ */
-.faq-section{padding:56px 64px;background:var(--paper);border-bottom:1px solid var(--border)}
-.faq-inner{max-width:680px}
-.faq-eyebrow{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:10px}
-.faq-h2{font-family:var(--ff-d);font-size:26px;color:var(--ocean);font-weight:400;margin-bottom:28px}
+/* ════════════════════════════════
+   FAQ — misma columna centrada
+   ════════════════════════════════ */
+.faq-section{
+  padding:52px 24px;
+  background:var(--paper);
+  border-bottom:1px solid var(--border);
+}
+.faq-inner{max-width:var(--read-w);margin:0 auto}
+.faq-eyebrow{
+  font-family:var(--ff-u);font-size:10px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:8px;
+}
+.faq-h2{
+  font-family:var(--ff-d);font-size:28px;color:var(--ocean);
+  font-weight:400;margin-bottom:28px;
+}
 .faq-h2 em{font-style:italic;font-weight:300}
 .faq-item{padding:20px 0;border-bottom:1px solid var(--border)}
 .faq-item:first-child{padding-top:0}
 .faq-item:last-child{border-bottom:none}
-.faq-q{font-family:var(--ff-d);font-size:18px;color:var(--ocean);font-weight:400;line-height:1.2;margin-bottom:10px}
-.faq-a{font-family:var(--ff-b);font-size:14px;line-height:1.8;color:var(--muted);font-style:italic}
+.faq-q{
+  font-family:var(--ff-d);font-size:19px;color:var(--ocean);
+  font-weight:400;line-height:1.2;margin-bottom:10px;
+}
+.faq-a{
+  font-family:var(--ff-b);font-size:15px;line-height:1.8;
+  color:var(--muted);font-style:italic;
+}
 
-/* MÁS ARTÍCULOS */
-.more-section{padding:48px 64px;background:white;border-bottom:1px solid var(--border)}
-.more-label{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--border)}
-.more-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.more-card{background:var(--paper);padding:20px 18px;text-decoration:none;transition:background .2s;display:block}
+/* ════════════════════════════════
+   MÁS ARTÍCULOS — grid de 3, ancho completo
+   ════════════════════════════════ */
+.more-section{
+  padding:48px 64px;
+  background:white;
+  border-bottom:1px solid var(--border);
+}
+.more-label{
+  font-family:var(--ff-u);font-size:10px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--talavera);font-weight:500;
+  margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--border);
+}
+.more-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:1px;background:var(--border);border:1px solid var(--border);
+}
+.more-card{
+  background:var(--paper);padding:22px 20px;
+  text-decoration:none;transition:background .2s;display:block;
+}
 .more-card:hover{background:white}
-.mc-cat{font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:7px}
-.mc-title{font-family:var(--ff-d);font-size:17px;color:var(--ocean);font-weight:400;line-height:1.2;margin-bottom:6px}
+.mc-cat{
+  font-family:var(--ff-u);font-size:9px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:8px;
+}
+.mc-title{
+  font-family:var(--ff-d);font-size:18px;color:var(--ocean);
+  font-weight:400;line-height:1.2;margin-bottom:6px;
+}
 .mc-title em{font-style:italic;font-weight:300}
-.mc-excerpt{font-family:var(--ff-b);font-size:12px;color:var(--muted);font-style:italic;line-height:1.55}
+.mc-excerpt{
+  font-family:var(--ff-b);font-size:12px;color:var(--muted);
+  font-style:italic;line-height:1.55;
+}
 
-/* NL + FOOTER compact (igual que sub-hub) */
-.nl-compact{padding:40px 64px;background:var(--paper-md);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:40px}
+/* NL compact */
+.nl-compact{
+  padding:36px 64px;background:var(--paper-md);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;gap:40px;
+}
 .nl-c-eyebrow{font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:5px}
 .nl-c-h{font-family:var(--ff-d);font-size:22px;color:var(--ocean);font-weight:400}
 .nl-c-h em{font-style:italic;font-weight:300}
@@ -147,6 +333,7 @@ div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-
 .nl-c-form input::placeholder{color:var(--muted);font-style:italic}
 .nl-c-form button{background:var(--talavera);color:white;padding:10px 18px;font-family:var(--ff-u);font-size:10px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-weight:500;transition:background .2s;white-space:nowrap}
 .nl-c-form button:hover{background:#a83800}
+
 footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64px 16px}
 .foot-bottom{display:flex;align-items:center;justify-content:space-between}
 .foot-nav{display:flex;gap:20px;list-style:none}
@@ -155,19 +342,20 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
 .foot-copy{font-family:var(--ff-u);font-size:10px;color:var(--muted)}
 .foot-domain{font-family:var(--ff-u);font-size:10px;color:var(--border)}
 
-/* RESPONSIVE */
+/* ── RESPONSIVE ── */
 @media(max-width:900px){
   .nav-top{padding:0 20px}.nav-links{display:none}.nav-hamburger{display:flex}
   .breadcrumb{padding:10px 20px}
-  .article-hero{grid-template-columns:1fr}
-  .ah-photo{min-height:260px}
-  .ah-content{border-left:none;border-top:1px solid var(--border);padding:32px 24px}
-  .article-body{padding:40px 24px}
-  .faq-section{padding:40px 24px}
+  .article-header{padding:40px 20px 0}
+  .hero-img-frame{height:280px}
+  .article-body{padding:36px 20px 48px}
+  .ah-h1{font-size:clamp(28px,7vw,40px)}
+  .art-p,.art-p-i{font-size:16px}
+  .faq-section{padding:40px 20px}
   .more-section{padding:36px 20px}
   .more-grid{grid-template-columns:1fr}
-  .nl-compact{flex-direction:column;align-items:flex-start;gap:20px;padding:32px 20px}
-  .nl-c-form{flex-direction:column;align-items:flex-start;width:100%}
+  .nl-compact{flex-direction:column;align-items:flex-start;gap:16px;padding:28px 20px}
+  .nl-c-form{flex-direction:column;width:100%}
   .nl-c-form input{width:100%}
   footer{padding:22px 20px 14px}
   .foot-bottom{flex-direction:column;gap:8px;text-align:center}
@@ -202,8 +390,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
   <a href="../../index.html" data-es>Inicio</a><a href="../../index.html" data-en>Home</a>
   <a href="../index.html" data-es>Destino PV</a><a href="../index.html" data-en>Destination PV</a>
   <a href="./index.html" data-es>Bares & Noche</a><a href="./index.html" data-en>Bars & Nightlife</a>
-  <a href="../../index.html#newsletter" class="m-cta" style="color:var(--talavera)!important" data-es>Suscríbete →</a>
-  <a href="../../index.html#newsletter" class="m-cta" style="color:var(--talavera)!important" data-en>Subscribe →</a>
+  <a href="../../index.html#newsletter" style="color:var(--talavera)!important" data-es>Suscríbete →</a>
+  <a href="../../index.html#newsletter" style="color:var(--talavera)!important" data-en>Subscribe →</a>
 </div>
 
 <div class="breadcrumb">
@@ -216,18 +404,20 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
   <span class="bc-cur">Elixir Mixology Bar</span>
 </div>
 
-<!-- HERO DEL ARTÍCULO -->
-<header class="article-hero">
-  <div class="ah-photo">
-    <img src="../../destino-pv/elixir-photo.png" alt="Elixir Mixology Bar Puerto Vallarta — cócteles artesanales en el único bar lésbico" onerror="this.style.display='none'">
-    <div class="ah-badges">
-      <span class="ah-badge b-red" data-es>Bar lésbico</span><span class="ah-badge b-red" data-en>Lesbian bar</span>
-      <span class="ah-badge b-ocean" data-es>Propiedad lésbica</span><span class="ah-badge b-ocean" data-en>Lesbian-owned</span>
-      <span class="ah-badge b-selva" data-es>Espacio seguro</span><span class="ah-badge b-selva" data-en>Safe space</span>
+<!-- ══ ENCABEZADO DEL ARTÍCULO — columna centrada ══ -->
+<header class="article-header">
+  <div class="ah-inner">
+    <div class="ah-meta">
+      <span class="ah-cat" data-es>Destino PV · Bares · Zona Romántica</span>
+      <span class="ah-cat" data-en>Destination PV · Bars · Zona Romántica</span>
+      <span class="ah-sep">·</span>
+      <div class="ah-badges">
+        <span class="ah-badge b-red" data-es>Bar lésbico</span><span class="ah-badge b-red" data-en>Lesbian bar</span>
+        <span class="ah-badge b-ocean" data-es>Propiedad lésbica</span><span class="ah-badge b-ocean" data-en>Lesbian-owned</span>
+        <span class="ah-badge b-selva" data-es>Espacio seguro</span><span class="ah-badge b-selva" data-en>Safe space</span>
+      </div>
     </div>
-  </div>
-  <div class="ah-content">
-    <p class="ah-eyebrow"><span data-es>Destino PV · Bares · Zona Romántica</span><span data-en>Destination PV · Bars · Zona Romántica</span></p>
+
     <h1 class="ah-h1">
       <span data-es>Elixir Mixology Bar:<br>el único lugar en PV<br>donde <em>realmente somos nosotras.</em></span>
       <span data-en>Elixir Mixology Bar:<br>the only place in PV<br>where <em>we're really ourselves.</em></span>
@@ -235,17 +425,32 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
     <div class="ah-rule"></div>
     <p class="ah-intro" data-es>El único bar de propiedad lésbica en Puerto Vallarta — y el corazón de la comunidad queer femenina de la ciudad.</p>
     <p class="ah-intro" data-en>The only lesbian-owned bar in Puerto Vallarta — and the heart of the city's queer female community.</p>
+
     <div class="ah-byline">
       <div class="ah-avatar">A</div>
       <div>
-        <div class="ah-author-name" data-es>Alice B. Toklas</div><div class="ah-author-name" data-en>Alice B. Toklas</div>
-        <div class="ah-author-role" data-es>Voz de Gastronomía & Destino · París, 1954</div><div class="ah-author-role" data-en>Voice of Food & Travel · Paris, 1954</div>
+        <div class="ah-author-name">Alice B. Toklas</div>
+        <div class="ah-author-role" data-es>Voz de Gastronomía & Destino · 8 min de lectura</div>
+        <div class="ah-author-role" data-en>Voice of Food & Travel · 8 min read</div>
       </div>
     </div>
   </div>
 </header>
 
-<!-- CUERPO EDITORIAL -->
+<!-- ══ IMAGEN HERO — altura fija controlada ══ -->
+<div class="article-hero-img">
+  <div class="hero-img-inner">
+    <div class="hero-img-frame">
+      <img
+        src="../../destino-pv/elixir-photo.png"
+        alt="Elixir Mixology Bar Puerto Vallarta — el único bar de propiedad lésbica en la Zona Romántica"
+        onerror="this.parentElement.style.background='var(--paper-md)'"
+      >
+    </div>
+  </div>
+</div>
+
+<!-- ══ CUERPO DEL ARTÍCULO — columna centrada, texto respira ══ -->
 <article class="article-body">
   <div class="article-inner">
 
@@ -259,18 +464,36 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
     <div class="venue-data">
       <div class="vd-title" data-es>Datos esenciales · Elixir Mixology Bar</div>
       <div class="vd-title" data-en>Essential info · Elixir Mixology Bar</div>
-      <div class="vd-row"><span class="vd-k" data-es>Dirección</span><span class="vd-k" data-en>Address</span><span class="vd-v">Basilio Badillo 419, Zona Romántica</span></div>
-      <div class="vd-row"><span class="vd-k" data-es>Horario</span><span class="vd-k" data-en>Hours</span><span class="vd-v" data-es>Martes a domingo · 6pm – 12am</span><span class="vd-v" data-en>Tuesday to Sunday · 6pm – midnight</span></div>
-      <div class="vd-row"><span class="vd-k" data-es>Precio</span><span class="vd-k" data-en>Prices</span><span class="vd-v" data-es>Cócteles $250–350 MXN · Efectivo only</span><span class="vd-v" data-en>Cocktails $250–350 MXN · Cash only</span></div>
-      <div class="vd-row"><span class="vd-k" data-es>Fundado</span><span class="vd-k" data-en>Founded</span><span class="vd-v" data-es>2021 · Laura Jaimes y Elena Zolezzi</span><span class="vd-v" data-en>2021 · Laura Jaimes and Elena Zolezzi</span></div>
-      <div class="vd-row"><span class="vd-k">Instagram</span><span class="vd-v">@elixirmixologybar</span></div>
+      <div class="vd-row">
+        <span class="vd-k" data-es>Dirección</span><span class="vd-k" data-en>Address</span>
+        <span class="vd-v">Basilio Badillo 419, Zona Romántica</span>
+      </div>
+      <div class="vd-row">
+        <span class="vd-k" data-es>Horario</span><span class="vd-k" data-en>Hours</span>
+        <span class="vd-v" data-es>Martes a domingo · 6pm – 12am</span>
+        <span class="vd-v" data-en>Tuesday to Sunday · 6pm – midnight</span>
+      </div>
+      <div class="vd-row">
+        <span class="vd-k" data-es>Precio</span><span class="vd-k" data-en>Prices</span>
+        <span class="vd-v" data-es>Cócteles $250–350 MXN · Solo efectivo</span>
+        <span class="vd-v" data-en>Cocktails $250–350 MXN · Cash only</span>
+      </div>
+      <div class="vd-row">
+        <span class="vd-k" data-es>Fundado</span><span class="vd-k" data-en>Founded</span>
+        <span class="vd-v" data-es>2021 · Laura Jaimes y Elena Zolezzi</span>
+        <span class="vd-v" data-en>2021 · Laura Jaimes and Elena Zolezzi</span>
+      </div>
+      <div class="vd-row">
+        <span class="vd-k">Instagram</span>
+        <span class="vd-v">@elixirmixologybar</span>
+      </div>
     </div>
 
     <h2 class="art-h2" data-es>Elena y la década en alta mar</h2>
     <h2 class="art-h2" data-en>Elena and the decade at sea</h2>
 
     <p class="art-p" data-es>Elena Zolezzi llegó a la mixología por un camino inusual. Antes de Elixir, pasó casi una década trabajando como mixóloga para Carnival Cruise Lines — un entorno de altísima exigencia técnica donde aprendió a trabajar con ingredientes de todo el mundo y para paladares de todas las culturas. Esa experiencia se nota en cada carta que Elixir lanza.</p>
-    <p class="art-p" data-en>Elena Zolezzi came to mixology by an unusual path. Before Elixir, she spent nearly a decade working as a mixologist for Carnival Cruise Lines — an extremely technically demanding environment where she learned to work with ingredients from around the world and for palates from every culture. That experience shows in every menu Elixir launches.</p>
+    <p class="art-p" data-en>Elena Zolezzi came to mixology by an unusual path. Before Elixir, she spent nearly a decade working as a mixologist for Carnival Cruise Lines — an extremely demanding environment where she learned to work with ingredients from around the world and for palates from every culture. That experience shows in every menu Elixir launches.</p>
 
     <blockquote class="art-pullquote" data-es>"No hacemos los clásicos de turista que sirven en todos los bares de la Zona Romántica. Hacemos lo que nos gusta a nosotras."</blockquote>
     <blockquote class="art-pullquote" data-en>"We don't make the tourist classics they serve in every bar in the Zona Romántica. We make what we like."</blockquote>
@@ -291,14 +514,14 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
 
     <div class="safo-block">
       <div class="safo-label">Safo recomienda</div>
-      <p class="safo-text" data-es>Llega entre las 7 y las 8pm — cuando el bar está en su mejor momento, la luz es perfecta y Laura todavía tiene tiempo de conversar. Pide el "Embrujo" como primer cóctel. Efectivo only — el cajero más cercano está a dos cuadras sobre Basilio Badillo.</p>
-      <p class="safo-text" data-en>Arrive between 7 and 8pm — when the bar is at its best, the light is perfect and Laura still has time to talk. Order the "Embrujo" as your first cocktail. Cash only — the nearest ATM is two blocks up Basilio Badillo.</p>
+      <p class="safo-text" data-es>Llega entre las 7 y las 8pm — cuando el bar está en su mejor momento y Laura todavía tiene tiempo de conversar. Pide el "Embrujo" como primer cóctel. Solo efectivo — el cajero más cercano está a dos cuadras sobre Basilio Badillo.</p>
+      <p class="safo-text" data-en>Arrive between 7 and 8pm — when the bar is at its best and Laura still has time to talk. Order the "Embrujo" as your first cocktail. Cash only — the nearest ATM is two blocks up Basilio Badillo.</p>
     </div>
 
   </div>
 </article>
 
-<!-- FAQ — AEO -->
+<!-- ══ FAQ ══ -->
 <section class="faq-section">
   <div class="faq-inner">
     <p class="faq-eyebrow" data-es>Preguntas frecuentes</p>
@@ -317,21 +540,21 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
       <p class="faq-a" data-en>Elixir was founded in 2021 by Laura Jaimes and Elena Zolezzi. Elena has a decade of experience as a mixologist with Carnival Cruise Lines.</p>
     </div>
     <div class="faq-item">
-      <h3 class="faq-q" data-es>¿Cuánto cuestan los cócteles en Elixir?</h3>
-      <h3 class="faq-q" data-en>How much do cocktails cost at Elixir?</h3>
-      <p class="faq-a" data-es>Entre $250 y $350 pesos mexicanos (aproximadamente $13-19 USD). Solo aceptan efectivo.</p>
-      <p class="faq-a" data-en>Between $250 and $350 Mexican pesos (approximately $13-19 USD). Cash only.</p>
+      <h3 class="faq-q" data-es>¿Cuánto cuestan los cócteles?</h3>
+      <h3 class="faq-q" data-en>How much do cocktails cost?</h3>
+      <p class="faq-a" data-es>Entre $250 y $350 pesos mexicanos. Solo aceptan efectivo.</p>
+      <p class="faq-a" data-en>Between $250 and $350 Mexican pesos. Cash only.</p>
     </div>
     <div class="faq-item">
-      <h3 class="faq-q" data-es>¿Es Elixir un bar solo para mujeres?</h3>
-      <h3 class="faq-q" data-en>Is Elixir a women-only bar?</h3>
-      <p class="faq-a" data-es>No es exclusivamente para mujeres, pero es el único bar de propiedad lésbica en Puerto Vallarta y el corazón de la comunidad queer femenina. La mayoría de la clientela son mujeres queer y sus aliados.</p>
-      <p class="faq-a" data-en>Not exclusively for women, but it's the only lesbian-owned bar in Puerto Vallarta and the heart of the queer female community. Most patrons are queer women and their allies.</p>
+      <h3 class="faq-q" data-es>¿Es un bar solo para mujeres?</h3>
+      <h3 class="faq-q" data-en>Is it a women-only bar?</h3>
+      <p class="faq-a" data-es>No exclusivamente, pero es el único bar de propiedad lésbica en Puerto Vallarta y el corazón de la comunidad queer femenina de la ciudad.</p>
+      <p class="faq-a" data-en>Not exclusively, but it's the only lesbian-owned bar in Puerto Vallarta and the heart of the city's queer female community.</p>
     </div>
   </div>
 </section>
 
-<!-- MÁS ARTÍCULOS -->
+<!-- ══ MÁS ARTÍCULOS ══ -->
 <section class="more-section">
   <p class="more-label" data-es>Más en Bares & Vida Nocturna</p>
   <p class="more-label" data-en>More in Bars & Nightlife</p>
@@ -344,15 +567,15 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
     </a>
     <a href="./circuito-nocturno.html" class="more-card">
       <div class="mc-cat" data-es>Guía nocturna</div><div class="mc-cat" data-en>Night guide</div>
-      <h3 class="mc-title"><span data-es>La noche perfecta en PV: <em>de la playa al amanecer</em></span><span data-en>The perfect night in PV: <em>from beach to sunrise</em></span></h3>
+      <h3 class="mc-title"><span data-es>La noche perfecta: <em>de la playa al amanecer</em></span><span data-en>The perfect night: <em>from beach to sunrise</em></span></h3>
       <p class="mc-excerpt" data-es>El circuito completo: Savia → Elixir → Las Mambas → antros.</p>
       <p class="mc-excerpt" data-en>The full circuit: Savia → Elixir → Las Mambas → clubs.</p>
     </a>
-    <a href="../../destino-pv/index.html" class="more-card">
+    <a href="../index.html" class="more-card">
       <div class="mc-cat" data-es>Destino PV</div><div class="mc-cat" data-en>Destination PV</div>
       <h3 class="mc-title"><span data-es>Guía lésbica completa <em>de Puerto Vallarta</em></span><span data-en>Complete lesbian guide <em>to Puerto Vallarta</em></span></h3>
-      <p class="mc-excerpt" data-es>Playas, hoteles, experiencias y la escena queer completa.</p>
-      <p class="mc-excerpt" data-en>Beaches, hotels, experiences and the complete queer scene.</p>
+      <p class="mc-excerpt" data-es>Playas, hoteles, experiencias y toda la escena.</p>
+      <p class="mc-excerpt" data-en>Beaches, hotels, experiences and the full scene.</p>
     </a>
   </div>
 </section>
@@ -386,7 +609,6 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
 <script>
 function setLang(lang){document.body.className='lang-'+lang;document.documentElement.lang=lang;document.getElementById('btn-es').classList.toggle('active',lang==='es');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});localStorage.setItem('slpv-lang',lang)}
 function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
-function closeMenu(){document.getElementById('mobile-menu').classList.remove('open')}
 window.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('slpv-lang');const b=navigator.language?.slice(0,2);if((s||b)==='en')setLang('en')})
 </script>
 </body>
