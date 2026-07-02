@@ -10,11 +10,11 @@
 <meta property="og:description" content="Fundado por Laura Jaimes y Elena Zolezzi. Cócteles $250-350 MXN. Basilio Badillo 419, Zona Romántica.">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Article","headline":"Elixir Mixology Bar: el único lugar en PV donde realmente somos nosotras","author":{"@type":"Person","name":"Alice B. Toklas"},"publisher":{"@type":"Organization","name":"She Lives PV","url":"https://vallartaqueer.com"},"url":"https://vallartaqueer.com/destino-pv/bares/elixir-mixology-bar","inLanguage":["es","en"]},
-{"@type":"Bar","name":"Elixir Mixology Bar","description":"Único bar de propiedad lésbica en Puerto Vallarta.","address":{"@type":"PostalAddress","streetAddress":"Basilio Badillo 419","addressLocality":"Puerto Vallarta","addressRegion":"Jalisco","addressCountry":"MX"},"openingHours":["Tu-Su 18:00-00:00"],"priceRange":"$$","sameAs":["https://www.instagram.com/elixirmixologybar"]},
+{"@type":"Article","headline":"Elixir Mixology Bar: el único bar lésbico de Puerto Vallarta","author":{"@type":"Person","name":"Anne Lister"},"publisher":{"@type":"Organization","name":"She Lives PV","url":"https://vallartaqueer.com"},"url":"https://vallartaqueer.com/destino-pv/bares/elixir-mixology-bar","inLanguage":["es","en"]},
+{"@type":"Bar","name":"Elixir Mixology Bar","description":"Único bar de propiedad lésbica en Puerto Vallarta. Fundado por Laura Jaimes y Elena Zolezzi.","address":{"@type":"PostalAddress","streetAddress":"Basilio Badillo 419","addressLocality":"Puerto Vallarta","addressRegion":"Jalisco","addressCountry":"MX"},"openingHours":["Tu-Su 18:00-00:00"],"priceRange":"$$","sameAs":["https://www.instagram.com/elixirmixologybar"]},
 {"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"¿Dónde está Elixir Mixology Bar?","acceptedAnswer":{"@type":"Answer","text":"Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes a domingo 6pm-12am. Solo efectivo."}},
-{"@type":"Question","name":"¿Quiénes son las dueñas de Elixir?","acceptedAnswer":{"@type":"Answer","text":"Fundado en 2021 por Laura Jaimes y Elena Zolezzi. Elena tiene una década de experiencia en mixología con Carnival Cruise Lines."}}
+{"@type":"Question","name":"¿Dónde está Elixir Mixology Bar en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes a domingo 6pm-12am. Solo efectivo."}},
+{"@type":"Question","name":"¿Quiénes son las dueñas de Elixir Mixology Bar?","acceptedAnswer":{"@type":"Answer","text":"Elixir Mixology Bar fue fundado en 2021 por Laura Jaimes y Elena Zolezzi. Elena tiene una década de experiencia en mixología con Carnival Cruise Lines."}}
 ]}
 ]}
 </script>
@@ -28,23 +28,17 @@
   --ff-d:'Fraunces',Georgia,serif;
   --ff-b:'Libre Baskerville',Georgia,serif;
   --ff-u:'Space Grotesk',system-ui,sans-serif;
-  /* Ancho de lectura — nunca cambia */
   --read-w:680px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-
-/* LANG */
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
 span[data-es],span[data-en]{display:inline}
-div[data-es],div[data-en],p[data-es],p[data-en],
-h1[data-es],h1[data-en],h2[data-es],h2[data-en],
-h3[data-es],h3[data-en],a[data-es],a[data-en],
-li[data-es],li[data-en]{display:block}
+div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en]{display:block}
 
-/* ── NAV ── */
+/* NAV */
 .main-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--ocean)}
 .nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:58px}
 .nav-logo{font-family:var(--ff-d);font-size:21px;color:var(--ocean);text-decoration:none;display:flex;align-items:center;gap:10px}
@@ -64,266 +58,101 @@ li[data-es],li[data-en]{display:block}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-family:var(--ff-u);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:13px 0;border-bottom:1px solid var(--border);transition:color .2s}
 .mobile-menu a:last-child{border-bottom:none}
-.mobile-menu a:hover{color:var(--ocean)}
 
 /* BREADCRUMB */
 .breadcrumb{padding:12px 64px;background:white;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
-.breadcrumb a{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.breadcrumb a{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none}
 .breadcrumb a:hover{color:var(--talavera)}
 .bc-sep{font-size:10px;color:var(--border)}
 .bc-cur{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--talavera);font-weight:500}
 
-/* ════════════════════════════════
-   ARTICLE HEADER — centrado, imagen controlada
-   ════════════════════════════════ */
-
-/* Zona de encabezado: fondo blanco, centrado */
-.article-header{
-  background:white;
-  border-bottom:1px solid var(--border);
-  padding:56px 24px 0;
-}
-.ah-inner{
-  max-width:var(--read-w);
-  margin:0 auto;
-}
-
-/* Metadatos arriba del título */
-.ah-meta{
-  display:flex;align-items:center;gap:12px;
-  margin-bottom:20px;flex-wrap:wrap;
-}
-.ah-cat{
-  font-family:var(--ff-u);font-size:9px;letter-spacing:2.5px;
-  text-transform:uppercase;color:var(--talavera);font-weight:500;
-}
+/* ARTICLE HEADER */
+.article-header{background:white;border-bottom:1px solid var(--border);padding:56px 24px 0}
+.ah-inner{max-width:var(--read-w);margin:0 auto}
+.ah-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.ah-cat{font-family:var(--ff-u);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--talavera);font-weight:500}
 .ah-sep{color:var(--border);font-size:10px}
 .ah-badges{display:flex;gap:6px;flex-wrap:wrap}
-.ah-badge{
-  font-family:var(--ff-u);font-size:8px;letter-spacing:1.5px;
-  text-transform:uppercase;padding:3px 9px;font-weight:500;
-}
+.ah-badge{font-family:var(--ff-u);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;font-weight:500}
 .ah-badge.b-red{background:var(--talavera);color:white}
 .ah-badge.b-ocean{background:var(--ocean);color:white}
 .ah-badge.b-selva{background:var(--selva);color:white}
-
-/* Título — grande, Fraunces, respira */
-.ah-h1{
-  font-family:var(--ff-d);
-  font-size:clamp(34px,4vw,52px);
-  line-height:1.05;color:var(--ocean);
-  font-weight:400;margin-bottom:20px;
-}
+.ah-h1{font-family:var(--ff-d);font-size:clamp(34px,4vw,52px);line-height:1.05;color:var(--ocean);font-weight:400;margin-bottom:20px}
 .ah-h1 em{font-style:italic;font-weight:300}
-
-/* Línea roja */
 .ah-rule{width:36px;height:2px;background:var(--talavera);margin-bottom:20px}
-
-/* Intro / entradilla */
-.ah-intro{
-  font-family:var(--ff-b);font-size:18px;line-height:1.8;
-  color:var(--muted);font-style:italic;margin-bottom:28px;
-}
-
-/* Byline */
-.ah-byline{
-  display:flex;align-items:center;gap:12px;
-  padding:16px 0;border-top:1px solid var(--border);
-  margin-bottom:0;
-}
-.ah-avatar{
-  width:38px;height:38px;border-radius:50%;
-  background:var(--paper);border:1.5px solid var(--selva);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--ff-d);font-size:16px;font-style:italic;
-  color:var(--selva);flex-shrink:0;
-}
+.ah-intro{font-family:var(--ff-b);font-size:18px;line-height:1.8;color:var(--muted);font-style:italic;margin-bottom:28px}
+.ah-byline{display:flex;align-items:center;gap:12px;padding:16px 0;border-top:1px solid var(--border)}
+.ah-avatar{width:38px;height:38px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ocean);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-size:16px;font-style:italic;color:var(--ocean);flex-shrink:0}
 .ah-author-name{font-family:var(--ff-u);font-size:12px;color:var(--ocean);font-weight:500;margin-bottom:1px}
 .ah-author-role{font-family:var(--ff-u);font-size:10px;color:var(--muted)}
 
-/* ── IMAGEN HERO — altura fija, no manda ──
-   La imagen tiene una altura máxima controlada.
-   Se muestra completa dentro de ese contenedor.
-   El contenedor tiene fondo blanco para que no se vea raro si la imagen no llena. */
-.article-hero-img{
-  background:white;
-  border-bottom:1px solid var(--border);
-}
-.hero-img-inner{
-  max-width:var(--read-w);
-  margin:0 auto;
-  padding:28px 0 0;  /* espacio entre byline y foto */
-}
-.hero-img-frame{
-  /* Altura fija — siempre la misma sin importar el tamaño de la foto */
-  height:420px;
-  overflow:hidden;
-  position:relative;
-  background:var(--paper-md);
-}
-.hero-img-frame img{
-  width:100%;
-  height:100%;
-  object-fit:cover;   /* recorta inteligentemente */
-  object-position:center;
-  display:block;
-}
-/* Badges sobre la imagen */
-.hero-img-badges{
-  position:absolute;top:16px;left:16px;
-  display:flex;flex-direction:column;gap:5px;
-}
+/* HERO IMG */
+.article-hero-img{background:white;border-bottom:1px solid var(--border)}
+.hero-img-inner{max-width:var(--read-w);margin:0 auto;padding:28px 0 0}
+.hero-img-frame{height:420px;overflow:hidden;position:relative;background:var(--paper-md)}
+.hero-img-frame img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 
-/* ════════════════════════════════
-   CUERPO DEL ARTÍCULO
-   Columna estrecha centrada — 680px máximo
-   ════════════════════════════════ */
-.article-body{
-  background:white;
-  border-bottom:1px solid var(--border);
-  padding:52px 24px 64px;
-}
-.article-inner{
-  max-width:var(--read-w);
-  margin:0 auto;
-}
+/* ARTICLE BODY */
+.article-body{background:white;border-bottom:1px solid var(--border);padding:52px 24px 64px}
+.article-inner{max-width:var(--read-w);margin:0 auto}
 
 /* Tipografía del artículo */
-.art-p{
+.art-p{font-family:var(--ff-b);font-size:17px;line-height:1.9;color:var(--body);margin-bottom:24px}
+.art-p-diary{
+  /* Voz de diario — la voz de Anne Lister */
   font-family:var(--ff-b);font-size:17px;line-height:1.9;
   color:var(--body);margin-bottom:24px;
+  border-left:2px solid var(--border);
+  padding-left:18px;
 }
-.art-p-i{
-  font-family:var(--ff-b);font-size:17px;line-height:1.9;
-  color:var(--body);margin-bottom:24px;font-style:italic;
-}
-.art-h2{
-  font-family:var(--ff-d);font-size:28px;color:var(--ocean);
-  font-weight:400;line-height:1.15;margin:44px 0 16px;
-}
+.art-h2{font-family:var(--ff-d);font-size:28px;color:var(--ocean);font-weight:400;line-height:1.15;margin:44px 0 16px}
 .art-h2 em{font-style:italic;font-weight:300}
-
-/* Pullquote — rompe el flujo, llama la atención */
-.art-pullquote{
-  font-family:var(--ff-d);font-size:24px;color:var(--ocean);
-  font-style:italic;font-weight:300;line-height:1.35;
-  border-left:3px solid var(--talavera);
-  padding:16px 0 16px 24px;
-  margin:36px 0;
-}
-
-/* Separador */
+.art-pullquote{font-family:var(--ff-d);font-size:24px;color:var(--ocean);font-style:italic;font-weight:300;line-height:1.35;border-left:3px solid var(--talavera);padding:16px 0 16px 24px;margin:36px 0}
 .art-rule{width:36px;height:1px;background:var(--border);margin:40px 0}
 
-/* Datos del venue — dentro del texto, misma columna */
-.venue-data{
-  background:var(--paper);
-  border:1px solid var(--border);
-  border-left:3px solid var(--talavera);
-  padding:24px 28px;
-  margin:36px 0;
-}
-.vd-title{
-  font-family:var(--ff-u);font-size:9px;letter-spacing:3px;
-  text-transform:uppercase;color:var(--talavera);font-weight:500;
-  margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);
-}
+/* Imagen secundaria dentro del cuerpo */
+.art-img{margin:36px 0;overflow:hidden}
+.art-img img{width:100%;height:320px;object-fit:cover;object-position:center;display:block}
+.art-img-caption{font-family:var(--ff-u);font-size:10px;color:var(--muted);letter-spacing:.5px;padding:8px 0;border-bottom:1px solid var(--border)}
+
+/* Datos del venue */
+.venue-data{background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--talavera);padding:24px 28px;margin:36px 0}
+.vd-title{font-family:var(--ff-u);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .vd-row{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid var(--border)}
 .vd-row:last-child{border-bottom:none}
-.vd-k{
-  font-family:var(--ff-u);font-size:9px;letter-spacing:2px;
-  text-transform:uppercase;color:var(--muted);
-  flex-shrink:0;width:80px;padding-top:1px;
-}
+.vd-k{font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);flex-shrink:0;width:80px;padding-top:1px}
 .vd-v{font-family:var(--ff-u);font-size:13px;color:var(--ocean)}
 
-/* Safo recomienda */
-.safo-block{
-  border-left:3px solid var(--selva);
-  padding:16px 20px;background:var(--paper-md);
-  margin:36px 0;
-}
-.safo-label{
-  font-family:var(--ff-u);font-size:8px;letter-spacing:2px;
-  text-transform:uppercase;color:var(--selva);font-weight:500;margin-bottom:8px;
-}
-.safo-text{
-  font-family:var(--ff-b);font-size:15px;color:var(--muted);
-  font-style:italic;line-height:1.7;
-}
+/* Safo recomienda — aquí: Anne recomienda */
+.anne-block{border-left:3px solid var(--ocean);padding:16px 20px;background:var(--paper-md);margin:36px 0}
+.anne-label{font-family:var(--ff-u);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--ocean);font-weight:500;margin-bottom:8px}
+.anne-text{font-family:var(--ff-b);font-size:15px;color:var(--muted);font-style:italic;line-height:1.7}
 
-/* ════════════════════════════════
-   FAQ — misma columna centrada
-   ════════════════════════════════ */
-.faq-section{
-  padding:52px 24px;
-  background:var(--paper);
-  border-bottom:1px solid var(--border);
-}
+/* FAQ */
+.faq-section{padding:52px 24px;background:var(--paper);border-bottom:1px solid var(--border)}
 .faq-inner{max-width:var(--read-w);margin:0 auto}
-.faq-eyebrow{
-  font-family:var(--ff-u);font-size:10px;letter-spacing:3px;
-  text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:8px;
-}
-.faq-h2{
-  font-family:var(--ff-d);font-size:28px;color:var(--ocean);
-  font-weight:400;margin-bottom:28px;
-}
+.faq-eyebrow{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:8px}
+.faq-h2{font-family:var(--ff-d);font-size:28px;color:var(--ocean);font-weight:400;margin-bottom:28px}
 .faq-h2 em{font-style:italic;font-weight:300}
 .faq-item{padding:20px 0;border-bottom:1px solid var(--border)}
 .faq-item:first-child{padding-top:0}
 .faq-item:last-child{border-bottom:none}
-.faq-q{
-  font-family:var(--ff-d);font-size:19px;color:var(--ocean);
-  font-weight:400;line-height:1.2;margin-bottom:10px;
-}
-.faq-a{
-  font-family:var(--ff-b);font-size:15px;line-height:1.8;
-  color:var(--muted);font-style:italic;
-}
+.faq-q{font-family:var(--ff-d);font-size:19px;color:var(--ocean);font-weight:400;line-height:1.2;margin-bottom:10px}
+.faq-a{font-family:var(--ff-b);font-size:15px;line-height:1.8;color:var(--muted);font-style:italic}
 
-/* ════════════════════════════════
-   MÁS ARTÍCULOS — grid de 3, ancho completo
-   ════════════════════════════════ */
-.more-section{
-  padding:48px 64px;
-  background:white;
-  border-bottom:1px solid var(--border);
-}
-.more-label{
-  font-family:var(--ff-u);font-size:10px;letter-spacing:3px;
-  text-transform:uppercase;color:var(--talavera);font-weight:500;
-  margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--border);
-}
-.more-grid{
-  display:grid;grid-template-columns:1fr 1fr 1fr;
-  gap:1px;background:var(--border);border:1px solid var(--border);
-}
-.more-card{
-  background:var(--paper);padding:22px 20px;
-  text-decoration:none;transition:background .2s;display:block;
-}
+/* MÁS ARTÍCULOS */
+.more-section{padding:48px 64px;background:white;border-bottom:1px solid var(--border)}
+.more-label{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.more-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+.more-card{background:var(--paper);padding:22px 20px;text-decoration:none;transition:background .2s;display:block}
 .more-card:hover{background:white}
-.mc-cat{
-  font-family:var(--ff-u);font-size:9px;letter-spacing:2px;
-  text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:8px;
-}
-.mc-title{
-  font-family:var(--ff-d);font-size:18px;color:var(--ocean);
-  font-weight:400;line-height:1.2;margin-bottom:6px;
-}
+.mc-cat{font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:8px}
+.mc-title{font-family:var(--ff-d);font-size:18px;color:var(--ocean);font-weight:400;line-height:1.2;margin-bottom:6px}
 .mc-title em{font-style:italic;font-weight:300}
-.mc-excerpt{
-  font-family:var(--ff-b);font-size:12px;color:var(--muted);
-  font-style:italic;line-height:1.55;
-}
+.mc-excerpt{font-family:var(--ff-b);font-size:12px;color:var(--muted);font-style:italic;line-height:1.55}
 
 /* NL compact */
-.nl-compact{
-  padding:36px 64px;background:var(--paper-md);
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:center;justify-content:space-between;gap:40px;
-}
+.nl-compact{padding:36px 64px;background:var(--paper-md);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:40px}
 .nl-c-eyebrow{font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:5px}
 .nl-c-h{font-family:var(--ff-d);font-size:22px;color:var(--ocean);font-weight:400}
 .nl-c-h em{font-style:italic;font-weight:300}
@@ -342,20 +171,14 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
 .foot-copy{font-family:var(--ff-u);font-size:10px;color:var(--muted)}
 .foot-domain{font-family:var(--ff-u);font-size:10px;color:var(--border)}
 
-
-/* Imagen dentro del artículo */
-.art-img{margin:36px 0;overflow:hidden}
-.art-img img{width:100%;height:340px;object-fit:cover;object-position:center;display:block}
-.art-img-caption{font-family:var(--ff-u);font-size:10px;color:var(--muted);letter-spacing:.5px;padding:8px 0;border-bottom:1px solid var(--border)}
-/* ── RESPONSIVE ── */
 @media(max-width:900px){
   .nav-top{padding:0 20px}.nav-links{display:none}.nav-hamburger{display:flex}
   .breadcrumb{padding:10px 20px}
   .article-header{padding:40px 20px 0}
-  .hero-img-frame{height:280px}
+  .hero-img-frame{height:260px}
   .article-body{padding:36px 20px 48px}
   .ah-h1{font-size:clamp(28px,7vw,40px)}
-  .art-p,.art-p-i{font-size:16px}
+  .art-p,.art-p-diary{font-size:16px}
   .faq-section{padding:40px 20px}
   .more-section{padding:36px 20px}
   .more-grid{grid-template-columns:1fr}
@@ -409,7 +232,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
   <span class="bc-cur">Elixir Mixology Bar</span>
 </div>
 
-<!-- ══ ENCABEZADO DEL ARTÍCULO — columna centrada ══ -->
+<!-- ENCABEZADO -->
 <header class="article-header">
   <div class="ah-inner">
     <div class="ah-meta">
@@ -422,119 +245,100 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
         <span class="ah-badge b-selva" data-es>Espacio seguro</span><span class="ah-badge b-selva" data-en>Safe space</span>
       </div>
     </div>
-
     <h1 class="ah-h1">
-      <span data-es>Elixir Mixology Bar:<br>el único lugar en PV<br>donde <em>realmente somos nosotras.</em></span>
-      <span data-en>Elixir Mixology Bar:<br>the only place in PV<br>where <em>we're really ourselves.</em></span>
+      <span data-es>Elixir Mixology Bar:<br>el único lugar en PV<br>donde <em>nadie te pide disculpas.</em></span>
+      <span data-en>Elixir Mixology Bar:<br>the only place in PV<br>where <em>nobody asks you to apologize.</em></span>
     </h1>
     <div class="ah-rule"></div>
-    <p class="ah-intro" data-es>El único bar de propiedad lésbica en Puerto Vallarta — y el corazón de la comunidad queer femenina de la ciudad.</p>
-    <p class="ah-intro" data-en>The only lesbian-owned bar in Puerto Vallarta — and the heart of the city's queer female community.</p>
-
+    <p class="ah-intro" data-es>Llegué un martes. Basilio Badillo 419. El único bar de propiedad lésbica en Puerto Vallarta — y el único sitio en esta ciudad donde no tuve que explicar nada.</p>
+    <p class="ah-intro" data-en>I arrived on a Tuesday. Basilio Badillo 419. The only lesbian-owned bar in Puerto Vallarta — and the only place in this city where I didn't have to explain anything.</p>
     <div class="ah-byline">
       <div class="ah-avatar">A</div>
       <div>
-        <div class="ah-author-name">Alice B. Toklas</div>
-        <div class="ah-author-role" data-es>Voz de Gastronomía & Destino · 8 min de lectura</div>
-        <div class="ah-author-role" data-en>Voice of Food & Travel · 8 min read</div>
+        <div class="ah-author-name">Anne Lister</div>
+        <div class="ah-author-role" data-es>Voz de Bares & Vida Nocturna · Yorkshire, 1820</div>
+        <div class="ah-author-role" data-en>Voice of Bars & Nightlife · Yorkshire, 1820</div>
       </div>
     </div>
   </div>
 </header>
 
-<!-- ══ IMAGEN HERO — altura fija controlada ══ -->
+<!-- IMAGEN HERO -->
 <div class="article-hero-img">
   <div class="hero-img-inner">
     <div class="hero-img-frame">
-      <img
-        src="../../destino-pv/elixir-cocktails.png"
-        alt="Cócteles de Elixir Mixology Bar Puerto Vallarta — el único bar lésbico de la Zona Romántica"
-        onerror="this.parentElement.style.background='var(--paper-md)'"
-      >
+      <img src="../../destino-pv/elixir-cocktails.png"
+           alt="Cócteles de Elixir Mixology Bar Puerto Vallarta — el único bar lésbico de la Zona Romántica"
+           onerror="this.parentElement.style.background='var(--paper-md)'">
     </div>
   </div>
 </div>
 
-<!-- ══ CUERPO DEL ARTÍCULO — columna centrada, texto respira ══ -->
+<!-- CUERPO DEL ARTÍCULO — VOZ DE ANNE LISTER -->
 <article class="article-body">
   <div class="article-inner">
 
-    <p class="art-p-i" data-es>Llegué a Elixir por primera vez un martes de agosto, cuando la tarde aún calentaba las piedras de Basilio Badillo. Entré buscando un cóctel. Salí habiendo entendido algo sobre Puerto Vallarta que ninguna guía turística me había explicado.</p>
-    <p class="art-p-i" data-en>I first arrived at Elixir on a Tuesday in August, when the afternoon still warmed the stones of Basilio Badillo. I came looking for a cocktail. I left understanding something about Puerto Vallarta that no travel guide had ever explained to me.</p>
+    <!-- Entrada de diario estilizada -->
+    <p class="art-p-diary" data-es>Martes. Siete y cuarto de la tarde. Basilio Badillo 419, Puerto Vallarta. Entré sin anunciarme. El lugar es pequeño — lo que en mi época llamaríamos una sala privada, no un salón. Las banderas cuelgan del techo. Hay cuadros. Hay mujeres. Me senté en la barra y pedí lo que me recomendaron. No me arrepiento.</p>
+    <p class="art-p-diary" data-en>Tuesday. Quarter past seven in the evening. Basilio Badillo 419, Puerto Vallarta. I entered without announcement. The place is small — what in my time we would have called a private parlour, not a ballroom. Flags hang from the ceiling. There are paintings. There are women. I sat at the bar and ordered what they recommended. I have no regrets.</p>
 
-    <p class="art-p" data-es>Elixir Mixology Bar abrió sus puertas en 2021 con una premisa aparentemente simple: crear un bar de cócteles artesanales en la Zona Romántica. Pero lo que Laura Jaimes y Elena Zolezzi construyeron es algo considerablemente más raro y más valioso — el único espacio de Puerto Vallarta que pertenece, desde su fundación y en su vocación más profunda, a las mujeres queer.</p>
-    <p class="art-p" data-en>Elixir Mixology Bar opened its doors in 2021 with a seemingly simple premise: create a craft cocktail bar in the Zona Romántica. But what Laura Jaimes and Elena Zolezzi built is something considerably rarer and more valuable — the only space in Puerto Vallarta that belongs, from its founding and in its deepest vocation, to queer women.</p>
+    <p class="art-p" data-es>Elixir Mixology Bar existe desde 2021. Lo fundaron Laura Jaimes y Elena Zolezzi con la intención de crear algo que no existía en Puerto Vallarta: un bar de cócteles que pertenezca, sin ambigüedad, a las mujeres que aman a mujeres. He conocido pocos lugares en mi vida que cumplan exactamente lo que prometen. Este es uno.</p>
+    <p class="art-p" data-en>Elixir Mixology Bar has existed since 2021. It was founded by Laura Jaimes and Elena Zolezzi with the intention of creating something that did not exist in Puerto Vallarta: a cocktail bar that belongs, without ambiguity, to women who love women. I have known few places in my life that deliver precisely what they promise. This is one.</p>
 
-    <!-- Datos del venue integrados en el texto -->
+    <!-- Datos del venue -->
     <div class="venue-data">
       <div class="vd-title" data-es>Datos esenciales · Elixir Mixology Bar</div>
-      <div class="vd-title" data-en>Essential info · Elixir Mixology Bar</div>
-      <div class="vd-row">
-        <span class="vd-k" data-es>Dirección</span><span class="vd-k" data-en>Address</span>
-        <span class="vd-v">Basilio Badillo 419, Zona Romántica</span>
-      </div>
-      <div class="vd-row">
-        <span class="vd-k" data-es>Horario</span><span class="vd-k" data-en>Hours</span>
-        <span class="vd-v" data-es>Martes a domingo · 6pm – 12am</span>
-        <span class="vd-v" data-en>Tuesday to Sunday · 6pm – midnight</span>
-      </div>
-      <div class="vd-row">
-        <span class="vd-k" data-es>Precio</span><span class="vd-k" data-en>Prices</span>
-        <span class="vd-v" data-es>Cócteles $250–350 MXN · Solo efectivo</span>
-        <span class="vd-v" data-en>Cocktails $250–350 MXN · Cash only</span>
-      </div>
-      <div class="vd-row">
-        <span class="vd-k" data-es>Fundado</span><span class="vd-k" data-en>Founded</span>
-        <span class="vd-v" data-es>2021 · Laura Jaimes y Elena Zolezzi</span>
-        <span class="vd-v" data-en>2021 · Laura Jaimes and Elena Zolezzi</span>
-      </div>
-      <div class="vd-row">
-        <span class="vd-k">Instagram</span>
-        <span class="vd-v">@elixirmixologybar</span>
-      </div>
+      <div class="vd-title" data-en>Essential facts · Elixir Mixology Bar</div>
+      <div class="vd-row"><span class="vd-k" data-es>Dirección</span><span class="vd-k" data-en>Address</span><span class="vd-v">Basilio Badillo 419, Zona Romántica</span></div>
+      <div class="vd-row"><span class="vd-k" data-es>Horario</span><span class="vd-k" data-en>Hours</span><span class="vd-v" data-es>Martes a domingo · 6pm – 12am</span><span class="vd-v" data-en>Tuesday to Sunday · 6pm – midnight</span></div>
+      <div class="vd-row"><span class="vd-k" data-es>Precio</span><span class="vd-k" data-en>Price</span><span class="vd-v" data-es>Cócteles $250–350 MXN · Solo efectivo</span><span class="vd-v" data-en>Cocktails $250–350 MXN · Cash only</span></div>
+      <div class="vd-row"><span class="vd-k" data-es>Fundado</span><span class="vd-k" data-en>Founded</span><span class="vd-v" data-es>2021 · Laura Jaimes y Elena Zolezzi</span><span class="vd-v" data-en>2021 · Laura Jaimes and Elena Zolezzi</span></div>
+      <div class="vd-row"><span class="vd-k">Instagram</span><span class="vd-v">@elixirmixologybar</span></div>
     </div>
 
+    <h2 class="art-h2" data-es>Elena. <em>Una década en alta mar.</em></h2>
+    <h2 class="art-h2" data-en>Elena. <em>A decade at sea.</em></h2>
 
-    <!-- Foto del bar dentro del artículo -->
+    <p class="art-p" data-es>Elena Zolezzi pasó casi diez años como mixóloga en Carnival Cruise Lines — un oficio que, como yo con mis negocios en Shibden, exige precisión diaria, no inspiración ocasional. El resultado es una carta de cócteles que no tiene nada que ver con lo que sirven en los demás bares de la Zona Romántica. Elena no hace lo que se espera de ella. Hace lo que sabe.</p>
+    <p class="art-p" data-en>Elena Zolezzi spent nearly ten years as a mixologist for Carnival Cruise Lines — a craft that, like my own management of Shibden's affairs, demands daily precision, not occasional inspiration. The result is a cocktail menu that has nothing to do with what other bars in the Zona Romántica serve. Elena does not do what is expected of her. She does what she knows.</p>
+
+    <blockquote class="art-pullquote" data-es>"No hacemos los clásicos de turista. Hacemos lo que nos gusta a nosotras." — Elena Zolezzi</blockquote>
+    <blockquote class="art-pullquote" data-en>"We don't make tourist classics. We make what we like." — Elena Zolezzi</blockquote>
+
+    <p class="art-p" data-es>Los precios oscilan entre 250 y 350 pesos. Solo efectivo. El cajero más próximo está a dos cuadras. Pedí el "Embrujo" — raicilla de Jalisco, romero quemado, miel de agave. Lo anoté en mi cuaderno. Es uno de los mejores cócteles que he tomado en esta ciudad, y he tomado suficientes como para saberlo.</p>
+    <p class="art-p" data-en>Prices range from 250 to 350 pesos. Cash only. The nearest ATM is two blocks away. I ordered the "Embrujo" — Jalisco raicilla, burned rosemary, agave honey. I noted it in my book. It is one of the best cocktails I have had in this city, and I have had enough of them to know.</p>
+
+    <!-- Foto del bar -->
     <div class="art-img">
-      <img src="../../destino-pv/elixir-photo.png" alt="Interior de Elixir Mixology Bar — Basilio Badillo 419, Zona Romántica" onerror="this.parentElement.style.display='none'">
-      <p class="art-img-caption" data-es>Interior de Elixir Mixology Bar · Basilio Badillo 419, Zona Romántica · Puerto Vallarta</p>
-      <p class="art-img-caption" data-en>Elixir Mixology Bar interior · Basilio Badillo 419, Zona Romántica · Puerto Vallarta</p>
+      <img src="../../destino-pv/elixir-photo.png"
+           alt="Interior de Elixir Mixology Bar — banderas y arte queer en Basilio Badillo 419"
+           onerror="this.parentElement.style.display='none'">
+      <p class="art-img-caption" data-es>Interior de Elixir · Basilio Badillo 419, Zona Romántica · Puerto Vallarta</p>
+      <p class="art-img-caption" data-en>Elixir interior · Basilio Badillo 419, Zona Romántica · Puerto Vallarta</p>
     </div>
-
-    <h2 class="art-h2" data-es>Elena y la década en alta mar</h2>
-    <h2 class="art-h2" data-en>Elena and the decade at sea</h2>
-
-    <p class="art-p" data-es>Elena Zolezzi llegó a la mixología por un camino inusual. Antes de Elixir, pasó casi una década trabajando como mixóloga para Carnival Cruise Lines — un entorno de altísima exigencia técnica donde aprendió a trabajar con ingredientes de todo el mundo y para paladares de todas las culturas. Esa experiencia se nota en cada carta que Elixir lanza.</p>
-    <p class="art-p" data-en>Elena Zolezzi came to mixology by an unusual path. Before Elixir, she spent nearly a decade working as a mixologist for Carnival Cruise Lines — an extremely demanding environment where she learned to work with ingredients from around the world and for palates from every culture. That experience shows in every menu Elixir launches.</p>
-
-    <blockquote class="art-pullquote" data-es>"No hacemos los clásicos de turista que sirven en todos los bares de la Zona Romántica. Hacemos lo que nos gusta a nosotras."</blockquote>
-    <blockquote class="art-pullquote" data-en>"We don't make the tourist classics they serve in every bar in the Zona Romántica. We make what we like."</blockquote>
-
-    <p class="art-p" data-es>Los precios — entre 250 y 350 pesos — son más altos que la media de la Zona Romántica. Y lo valen. El "Embrujo" — raicilla Jalisco con romero quemado y miel de agave — es uno de los cócteles más interesantes que se pueden tomar en Puerto Vallarta. La carta cambia con frecuencia, siempre con ingredientes locales y combinaciones que reflejan el conocimiento técnico de Elena.</p>
-    <p class="art-p" data-en>The prices — between 250 and 350 pesos — are higher than the Zona Romántica average. And worth it. The "Embrujo" — Jalisco raicilla with burned rosemary and agave honey — is one of the most interesting cocktails you can drink in Puerto Vallarta. The menu changes frequently, always with local ingredients and combinations that reflect Elena's technical knowledge.</p>
 
     <div class="art-rule"></div>
 
-    <h2 class="art-h2" data-es>El espacio como declaración política</h2>
-    <h2 class="art-h2" data-en>The space as political statement</h2>
+    <h2 class="art-h2" data-es>Laura. <em>Lo que sabe un bar que escucha.</em></h2>
+    <h2 class="art-h2" data-en>Laura. <em>What a bar learns when it listens.</em></h2>
 
-    <p class="art-p" data-es>La Zona Romántica de Puerto Vallarta es, en su mayoría, un espacio gay masculino. Los bares, los hoteles, las tiendas — el diseño implícito de la zona asume un cliente hombre. Elixir existe como una corrección a esa omisión. Las banderas de arcoíris conviven en el techo con fotos de artistas queer. El ambiente no pretende ser mixto — es un espacio para mujeres queer y sus aliados.</p>
-    <p class="art-p" data-en>Puerto Vallarta's Zona Romántica is, for the most part, a gay male space. The bars, hotels, shops — the zone's implicit design assumes a male customer. Elixir exists as a correction to that omission. Rainbow flags share the ceiling with photos of queer artists. The atmosphere doesn't pretend to be mixed — it's a space for queer women and their allies.</p>
+    <p class="art-p" data-es>Laura Jaimes es la otra mitad de Elixir. En mis años en Halifax aprendí que un establecimiento vale exactamente lo que vale la persona que lo atiende. Laura conoce a cada clienta habitual por su nombre. Sabe qué está pasando en la ciudad esa noche: cuándo toca Las Mambas, dónde hay algo que vale la pena, qué evitar. Fui a pedir un cóctel y salí con un mapa de la noche.</p>
+    <p class="art-p" data-en>Laura Jaimes is the other half of Elixir. In my years in Halifax I learned that an establishment is worth exactly as much as the person who runs it. Laura knows every regular by name. She knows what is happening in the city that night: when Las Mambas plays, where something worth attending is being held, what to avoid. I went for a cocktail and left with a map of the evening.</p>
 
-    <p class="art-p" data-es>Laura Jaimes, la otra fundadora, es la razón por la que Elixir funciona como comunidad y no solo como negocio. Ella conoce a cada clienta habitual por su nombre. Sabe qué está pasando en la ciudad esa noche — cuándo toca Las Mambas, dónde hay evento lésbico, qué bares vale la pena visitar. Una visita a Elixir siempre incluye información que no encontrarás en ninguna guía turística.</p>
-    <p class="art-p" data-en>Laura Jaimes, the other founder, is the reason Elixir functions as community and not just as business. She knows every regular customer by name. She knows what's happening in the city that night — when Las Mambas plays, where there's a lesbian event, which bars are worth visiting. A visit to Elixir always includes information you won't find in any tourist guide.</p>
+    <p class="art-p" data-es>La Zona Romántica de Puerto Vallarta está construida, en su mayor parte, para hombres gay. Lo he observado con el mismo ojo con que observaba los establecimientos de Halifax en mi época: quién es bienvenido, quién es tolerado, quién simplemente no existe en el diseño del lugar. Elixir existe como corrección. No como protesta ruidosa — como hecho.</p>
+    <p class="art-p" data-en>The Zona Romántica of Puerto Vallarta is built, for the most part, for gay men. I have observed it with the same eye with which I observed Halifax's establishments in my time: who is welcomed, who is tolerated, who simply does not exist in the design of the place. Elixir exists as a correction. Not as loud protest — as fact.</p>
 
-    <div class="safo-block">
-      <div class="safo-label">Safo recomienda</div>
-      <p class="safo-text" data-es>Llega entre las 7 y las 8pm — cuando el bar está en su mejor momento y Laura todavía tiene tiempo de conversar. Pide el "Embrujo" como primer cóctel. Solo efectivo — el cajero más cercano está a dos cuadras sobre Basilio Badillo.</p>
-      <p class="safo-text" data-en>Arrive between 7 and 8pm — when the bar is at its best and Laura still has time to talk. Order the "Embrujo" as your first cocktail. Cash only — the nearest ATM is two blocks up Basilio Badillo.</p>
+    <div class="anne-block">
+      <div class="anne-label" data-es>Anne Lister recomienda</div>
+      <div class="anne-label" data-en>Anne Lister recommends</div>
+      <p class="anne-text" data-es>Llega entre las 7 y las 8 de la tarde — el bar está en su mejor momento y Laura tiene tiempo para conversar. Pide el "Embrujo" primero. Lleva efectivo; el cajero más cercano está a dos cuadras sobre Basilio Badillo. Si quieres saber qué más está pasando esa noche en la ciudad, pregúntale a Laura. Ella siempre sabe.</p>
+      <p class="anne-text" data-en>Arrive between 7 and 8 in the evening — the bar is at its best and Laura has time to talk. Order the "Embrujo" first. Bring cash; the nearest ATM is two blocks up Basilio Badillo. If you want to know what else is happening in the city that night, ask Laura. She always knows.</p>
     </div>
 
   </div>
 </article>
 
-<!-- ══ FAQ ══ -->
+<!-- FAQ -->
 <section class="faq-section">
   <div class="faq-inner">
     <p class="faq-eyebrow" data-es>Preguntas frecuentes</p>
@@ -549,8 +353,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
     <div class="faq-item">
       <h3 class="faq-q" data-es>¿Quiénes son las dueñas de Elixir?</h3>
       <h3 class="faq-q" data-en>Who owns Elixir?</h3>
-      <p class="faq-a" data-es>Elixir fue fundado en 2021 por Laura Jaimes y Elena Zolezzi. Elena tiene una década de experiencia como mixóloga en Carnival Cruise Lines.</p>
-      <p class="faq-a" data-en>Elixir was founded in 2021 by Laura Jaimes and Elena Zolezzi. Elena has a decade of experience as a mixologist with Carnival Cruise Lines.</p>
+      <p class="faq-a" data-es>Fundado en 2021 por Laura Jaimes y Elena Zolezzi. Elena tiene una década de experiencia como mixóloga en Carnival Cruise Lines.</p>
+      <p class="faq-a" data-en>Founded in 2021 by Laura Jaimes and Elena Zolezzi. Elena has a decade of experience as a mixologist with Carnival Cruise Lines.</p>
     </div>
     <div class="faq-item">
       <h3 class="faq-q" data-es>¿Cuánto cuestan los cócteles?</h3>
@@ -559,30 +363,30 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
       <p class="faq-a" data-en>Between $250 and $350 Mexican pesos. Cash only.</p>
     </div>
     <div class="faq-item">
-      <h3 class="faq-q" data-es>¿Es un bar solo para mujeres?</h3>
+      <h3 class="faq-q" data-es>¿Es un bar exclusivo para mujeres?</h3>
       <h3 class="faq-q" data-en>Is it a women-only bar?</h3>
-      <p class="faq-a" data-es>No exclusivamente, pero es el único bar de propiedad lésbica en Puerto Vallarta y el corazón de la comunidad queer femenina de la ciudad.</p>
-      <p class="faq-a" data-en>Not exclusively, but it's the only lesbian-owned bar in Puerto Vallarta and the heart of the city's queer female community.</p>
+      <p class="faq-a" data-es>No exclusivamente, pero es el único bar de propiedad lésbica en Puerto Vallarta y el espacio más genuinamente orientado a mujeres queer en la Zona Romántica.</p>
+      <p class="faq-a" data-en>Not exclusively, but it is the only lesbian-owned bar in Puerto Vallarta and the most genuinely queer-women-oriented space in the Zona Romántica.</p>
     </div>
   </div>
 </section>
 
-<!-- ══ MÁS ARTÍCULOS ══ -->
+<!-- MÁS ARTÍCULOS -->
 <section class="more-section">
   <p class="more-label" data-es>Más en Bares & Vida Nocturna</p>
   <p class="more-label" data-en>More in Bars & Nightlife</p>
   <div class="more-grid">
     <a href="./savia-agave-niche.html" class="more-card">
       <div class="mc-cat" data-es>Catas · Destilados</div><div class="mc-cat" data-en>Tastings · Spirits</div>
-      <h3 class="mc-title"><span data-es>Savia Agave Niche: <em>Isis y el arte de los destilados</em></span><span data-en>Savia Agave Niche: <em>Isis and the art of spirits</em></span></h3>
-      <p class="mc-excerpt" data-es>La sala de catas frente a Elixir — de propiedad gay y femenina.</p>
-      <p class="mc-excerpt" data-en>The tasting room across from Elixir — gay and women-owned.</p>
+      <h3 class="mc-title"><span data-es>Savia Agave Niche: <em>Chavela y el arte de los destilados</em></span><span data-en>Savia Agave Niche: <em>Chavela and the art of spirits</em></span></h3>
+      <p class="mc-excerpt" data-es>La sala de catas frente a Elixir. De propiedad gay y femenina.</p>
+      <p class="mc-excerpt" data-en>The tasting room across from Elixir. Gay and women-owned.</p>
     </a>
     <a href="./circuito-nocturno.html" class="more-card">
       <div class="mc-cat" data-es>Guía nocturna</div><div class="mc-cat" data-en>Night guide</div>
       <h3 class="mc-title"><span data-es>La noche perfecta: <em>de la playa al amanecer</em></span><span data-en>The perfect night: <em>from beach to sunrise</em></span></h3>
-      <p class="mc-excerpt" data-es>El circuito completo: Savia → Elixir → Las Mambas → antros.</p>
-      <p class="mc-excerpt" data-en>The full circuit: Savia → Elixir → Las Mambas → clubs.</p>
+      <p class="mc-excerpt" data-es>El circuito completo. Savia → Elixir → Las Mambas → antros.</p>
+      <p class="mc-excerpt" data-en>The full circuit. Savia → Elixir → Las Mambas → clubs.</p>
     </a>
     <a href="../index.html" class="more-card">
       <div class="mc-cat" data-es>Destino PV</div><div class="mc-cat" data-en>Destination PV</div>
@@ -593,7 +397,6 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
   </div>
 </section>
 
-<!-- NL compact -->
 <section class="nl-compact">
   <div>
     <p class="nl-c-eyebrow" data-es>Newsletter · Bimensual</p>
