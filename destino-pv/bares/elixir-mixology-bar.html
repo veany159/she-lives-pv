@@ -342,6 +342,11 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
 .foot-copy{font-family:var(--ff-u);font-size:10px;color:var(--muted)}
 .foot-domain{font-family:var(--ff-u);font-size:10px;color:var(--border)}
 
+
+/* Imagen dentro del artículo */
+.art-img{margin:36px 0;overflow:hidden}
+.art-img img{width:100%;height:340px;object-fit:cover;object-position:center;display:block}
+.art-img-caption{font-family:var(--ff-u);font-size:10px;color:var(--muted);letter-spacing:.5px;padding:8px 0;border-bottom:1px solid var(--border)}
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .nav-top{padding:0 20px}.nav-links{display:none}.nav-hamburger{display:flex}
@@ -442,8 +447,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
   <div class="hero-img-inner">
     <div class="hero-img-frame">
       <img
-        src="../../destino-pv/elixir-photo.png"
-        alt="Elixir Mixology Bar Puerto Vallarta — el único bar de propiedad lésbica en la Zona Romántica"
+        src="../../destino-pv/elixir-cocktails.png"
+        alt="Cócteles de Elixir Mixology Bar Puerto Vallarta — el único bar lésbico de la Zona Romántica"
         onerror="this.parentElement.style.background='var(--paper-md)'"
       >
     </div>
@@ -487,6 +492,14 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
         <span class="vd-k">Instagram</span>
         <span class="vd-v">@elixirmixologybar</span>
       </div>
+    </div>
+
+
+    <!-- Foto del bar dentro del artículo -->
+    <div class="art-img">
+      <img src="../../destino-pv/elixir-photo.png" alt="Interior de Elixir Mixology Bar — Basilio Badillo 419, Zona Romántica" onerror="this.parentElement.style.display='none'">
+      <p class="art-img-caption" data-es>Interior de Elixir Mixology Bar · Basilio Badillo 419, Zona Romántica · Puerto Vallarta</p>
+      <p class="art-img-caption" data-en>Elixir Mixology Bar interior · Basilio Badillo 419, Zona Romántica · Puerto Vallarta</p>
     </div>
 
     <h2 class="art-h2" data-es>Elena y la década en alta mar</h2>
