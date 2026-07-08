@@ -11,9 +11,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Article","headline":"Elixir Mixology Bar: el único bar lésbico de Puerto Vallarta","author":{"@type":"Person","name":"Anne Lister"},"publisher":{"@type":"Organization","name":"She Lives PV","url":"https://vallartaqueer.com"},"url":"https://vallartaqueer.com/destino-pv/bares/elixir-mixology-bar","inLanguage":["es","en"]},
-{"@type":"Bar","name":"Elixir Mixology Bar","description":"Único bar de propiedad lésbica en Puerto Vallarta. Fundado por Laura Jaimes y Elena Zolezzi.","address":{"@type":"PostalAddress","streetAddress":"Basilio Badillo 419","addressLocality":"Puerto Vallarta","addressRegion":"Jalisco","addressCountry":"MX"},"openingHours":["Tu-Su 18:00-00:00"],"priceRange":"$$","sameAs":["https://www.instagram.com/elixirmixologybar"]},
+{"@type":"Bar","name":"Elixir Mixology Bar","description":"Único bar de propiedad lésbica en Puerto Vallarta. Fundado por Laura Jaimes y Elena Zolezzi.","address":{"@type":"PostalAddress","streetAddress":"Basilio Badillo 419","addressLocality":"Puerto Vallarta","addressRegion":"Jalisco","addressCountry":"MX"},"openingHours":["Tu 18:00-23:00","We 18:00-23:00","Th-Sa 18:00-00:00","Su 18:00-23:00"],"priceRange":"$$","sameAs":["https://www.instagram.com/elixirmixologybar"]},
 {"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"¿Dónde está Elixir Mixology Bar en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes a domingo 6pm-12am. Solo efectivo."}},
+{"@type":"Question","name":"¿Dónde está Elixir Mixology Bar en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes, miércoles y domingo 6-11pm; jueves a sábado 6pm-12am. Lunes cerrado. Solo efectivo."}},
 {"@type":"Question","name":"¿Quiénes son las dueñas de Elixir Mixology Bar?","acceptedAnswer":{"@type":"Answer","text":"Elixir Mixology Bar fue fundado en 2021 por Laura Jaimes y Elena Zolezzi. Elena tiene una década de experiencia en mixología con Carnival Cruise Lines."}}
 ]}
 ]}
@@ -290,7 +290,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
       <div class="vd-title" data-es>Datos esenciales · Elixir Mixology Bar</div>
       <div class="vd-title" data-en>Essential facts · Elixir Mixology Bar</div>
       <div class="vd-row"><span class="vd-k" data-es>Dirección</span><span class="vd-k" data-en>Address</span><span class="vd-v">Basilio Badillo 419, Zona Romántica</span></div>
-      <div class="vd-row"><span class="vd-k" data-es>Horario</span><span class="vd-k" data-en>Hours</span><span class="vd-v" data-es>Martes a domingo · 6pm – 12am</span><span class="vd-v" data-en>Tuesday to Sunday · 6pm – midnight</span></div>
+      <div class="vd-row"><span class="vd-k" data-es>Horario</span><span class="vd-k" data-en>Hours</span><span class="vd-v" data-es>Mar, Mié y Dom · 6–11pm · Jue a Sáb · 6pm–12am · Lunes cerrado</span><span class="vd-v" data-en>Tue, Wed & Sun · 6–11pm · Thu–Sat · 6pm–midnight · Closed Mondays</span></div>
       <div class="vd-row"><span class="vd-k" data-es>Precio</span><span class="vd-k" data-en>Price</span><span class="vd-v" data-es>Cócteles $250–350 MXN · Solo efectivo</span><span class="vd-v" data-en>Cocktails $250–350 MXN · Cash only</span></div>
       <div class="vd-row"><span class="vd-k" data-es>Fundado</span><span class="vd-k" data-en>Founded</span><span class="vd-v" data-es>2021 · Laura Jaimes y Elena Zolezzi</span><span class="vd-v" data-en>2021 · Laura Jaimes and Elena Zolezzi</span></div>
       <div class="vd-row"><span class="vd-k">Instagram</span><span class="vd-v">@elixirmixologybar</span></div>
@@ -347,8 +347,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
     <div class="faq-item">
       <h3 class="faq-q" data-es>¿Dónde está Elixir Mixology Bar?</h3>
       <h3 class="faq-q" data-en>Where is Elixir Mixology Bar?</h3>
-      <p class="faq-a" data-es>Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes a domingo de 6pm a 12am. Solo efectivo.</p>
-      <p class="faq-a" data-en>Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Tuesday to Sunday 6pm to midnight. Cash only.</p>
+      <p class="faq-a" data-es>Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Martes, miércoles y domingo de 6 a 11pm; jueves a sábado de 6pm a 12am. Lunes cerrado. Solo efectivo.</p>
+      <p class="faq-a" data-en>Basilio Badillo 419, Zona Romántica, Puerto Vallarta. Tuesday, Wednesday and Sunday 6–11pm; Thursday to Saturday 6pm–midnight. Closed Mondays. Cash only.</p>
     </div>
     <div class="faq-item">
       <h3 class="faq-q" data-es>¿Quiénes son las dueñas de Elixir?</h3>
@@ -423,9 +423,4 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
 </footer>
 
 <script>
-function setLang(lang){document.body.className='lang-'+lang;document.documentElement.lang=lang;document.getElementById('btn-es').classList.toggle('active',lang==='es');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});localStorage.setItem('slpv-lang',lang)}
-function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
-window.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('slpv-lang');const b=navigator.language?.slice(0,2);if((s||b)==='en')setLang('en')})
-</script>
-</body>
-</html>
+function setLang(lang){document.body.className='lang-'+lang;document.documentElement.lang=lang;document.getElementById('btn-es').classList.toggle('active',lang==='es');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});localStorage.setIt
