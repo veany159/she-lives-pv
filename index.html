@@ -148,42 +148,46 @@ blockquote[data-es],blockquote[data-en]{display:block}
 }
 .btn-outline:hover{color:var(--talavera);border-color:var(--talavera)}
 
-/* Hero right — portada */
+/* Hero right — portada con fotografía */
 .hero-right{
   display:flex;flex-direction:column;justify-content:flex-end;
-  padding:44px 56px 52px;background:var(--paper-md);
+  padding:44px 56px 52px;
+  background:linear-gradient(170deg,rgba(27,42,74,.38) 0%,rgba(27,42,74,.62) 55%,rgba(27,42,74,.88) 100%),var(--paper-md) url('pride-cover.jpg') center/cover no-repeat;
 }
 .cover-pride{
   display:inline-flex;align-items:center;gap:8px;
-  border:1px solid var(--border);padding:6px 14px;
+  border:1px solid rgba(248,247,244,.45);padding:6px 14px;
   margin-bottom:auto;align-self:flex-start;padding-top:32px;
+  background:rgba(27,42,74,.35);backdrop-filter:blur(2px);
 }
 .cover-pride-text{
   font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  color:var(--talavera);font-weight:500;
+  color:var(--copal);font-weight:500;
 }
 .cover-section{
   font-family:var(--ff-u);font-size:9px;letter-spacing:3px;text-transform:uppercase;
-  color:var(--talavera);margin-bottom:12px;margin-top:32px;
+  color:var(--copal);margin-bottom:12px;margin-top:32px;
 }
 .cover-title{
   font-family:var(--ff-d);font-size:clamp(26px,3vw,40px);
-  line-height:1.05;color:var(--ocean);font-weight:400;margin-bottom:12px;
+  line-height:1.05;color:#FDFCFA;font-weight:400;margin-bottom:12px;
+  text-shadow:0 1px 18px rgba(27,42,74,.45);
 }
-.cover-title em{font-style:italic;font-weight:300;color:var(--muted)}
-.cover-rule{width:28px;height:1.5px;background:var(--talavera);margin-bottom:12px}
+.cover-title em{font-style:italic;font-weight:300;color:var(--copal)}
+.cover-rule{width:28px;height:1.5px;background:var(--copal);margin-bottom:12px}
 .cover-desc{
-  font-family:var(--ff-b);font-size:14px;color:var(--muted);
+  font-family:var(--ff-b);font-size:14px;color:rgba(248,247,244,.88);
   line-height:1.7;font-style:italic;max-width:340px;margin-bottom:20px;
+  text-shadow:0 1px 12px rgba(27,42,74,.4);
 }
-.cover-byline{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.cover-byline{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid rgba(248,247,244,.35)}
 .c-avatar{
-  width:34px;height:34px;border-radius:50%;background:var(--paper);
-  border:1.5px solid var(--selva);display:flex;align-items:center;justify-content:center;
-  font-family:var(--ff-d);font-size:14px;font-style:italic;color:var(--selva);flex-shrink:0;
+  width:34px;height:34px;border-radius:50%;background:rgba(248,247,244,.14);
+  border:1.5px solid var(--copal);display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-d);font-size:14px;font-style:italic;color:var(--copal);flex-shrink:0;
 }
-.c-name{font-family:var(--ff-u);font-size:11px;color:var(--ocean);font-weight:500}
-.c-role{font-family:var(--ff-u);font-size:10px;color:var(--muted)}
+.c-name{font-family:var(--ff-u);font-size:11px;color:#FDFCFA;font-weight:500}
+.c-role{font-family:var(--ff-u);font-size:10px;color:rgba(248,247,244,.75)}
 
 /* ── TICKER ── */
 .ticker{border-bottom:1px solid var(--border);padding:10px 0;overflow:hidden;white-space:nowrap;background:var(--paper)}
@@ -558,7 +562,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
       </div>
     </a>
     <a class="mag-story">
-      <div class="ms-photo"></div>
+      <div class="ms-photo" style="background:url('holding-hands.jpg') center/cover no-repeat"></div>
       <div class="ms-body">
         <div class="ms-cat">Amor & Deseo</div>
         <h3 class="ms-h3"><span data-es>Te amo Elizabeth, pero no se vale <em>lo que me has hecho.</em></span><span data-en>I love you Elizabeth, but what you did <em>wasn't right.</em></span></h3>
@@ -568,7 +572,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
       </div>
     </a>
     <a class="mag-story" id="comunidad">
-      <div class="ms-photo"></div>
+      <div class="ms-photo" style="background:url('beach-girls.jpg') center/cover no-repeat"></div>
       <div class="ms-body">
         <div class="ms-cat" data-es>Viajera Sola</div><div class="ms-cat" data-en>Solo Traveler</div>
         <h3 class="ms-h3"><span data-es>El 51% que llega <em>sola a PV</em> — guía real para conectar</span><span data-en>The 51% who arrive <em>solo to PV</em> — a real guide to connecting</span></h3>
@@ -677,8 +681,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
       <p class="section-eyebrow" data-en>The Voices — Historical writers</p>
       <h2 class="section-h2"><span data-es>Ellas escriben <em>en estas páginas.</em></span><span data-en>They write <em>in these pages.</em></span></h2>
     </div>
-    <a class="see-all" data-es>Conocerlas →</a>
-    <a class="see-all" data-en>Meet them →</a>
+    <a href="sobre-nosotras.html#voces" class="see-all" data-es>Conocerlas →</a>
+    <a href="sobre-nosotras.html#voces" class="see-all" data-en>Meet them →</a>
   </div>
   <p class="voces-desc" data-es>Convocamos a las mujeres que amaron, crearon y resistieron a lo largo de la historia — para que vivan en estas páginas con su propia voz y su visión del mundo que She Lives PV habita hoy.</p>
   <p class="voces-desc" data-en>We summon the women who loved, created and resisted throughout history — so they may live in these pages with their own voice and their vision of the world She Lives PV inhabits today.</p>
@@ -832,7 +836,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
     <div class="foot-col">
       <h4 data-es>La revista</h4><h4 data-en>Magazine</h4>
       <ul>
-        <li><a href="#sobre" data-es>Sobre She Lives PV</a><a href="#sobre" data-en>About She Lives PV</a></li>
+        <li><a href="sobre-nosotras.html" data-es>Sobre She Lives PV</a><a href="sobre-nosotras.html" data-en>About She Lives PV</a></li>
         <li><a href="#newsletter">Newsletter</a></li>
         <li><a href="#anunciate" data-es>Anúnciate</a><a href="#anunciate" data-en>Advertise</a></li>
       </ul>

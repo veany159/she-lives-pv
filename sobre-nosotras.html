@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotras — She Lives PV | Revista Lésbica de Puerto Vallarta</title>
+<meta name="description" content="Qué es She Lives PV: nuestra misión, nuestra promesa editorial y Las Voces Sáficas — las hermanas que ya no están en esta línea del tiempo y que escriben en estas páginas para honrarlas.">
+<link rel="canonical" href="https://vallartaqueer.com/sobre-nosotras">
+<meta property="og:title" content="Sobre Nosotras — She Lives PV">
+<meta property="og:description" content="Leemos a las que ya no están. Escribimos para las que vienen.">
+<meta property="og:url" content="https://vallartaqueer.com/sobre-nosotras">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ocean:#1B2A4A;--talavera:#C1440E;--selva:#3D6B4F;--copal:#F2C078;
+  --paper:#F8F7F4;--paper-md:#F2F0EA;--border:#E4E1DA;
+  --muted:#8A8378;--body:#2A2420;
+  --ff-d:'Fraunces',Georgia,serif;
+  --ff-b:'Libre Baskerville',Georgia,serif;
+  --ff-u:'Space Grotesk',system-ui,sans-serif;
+  --read-w:680px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.lang-es [data-en],.lang-en [data-es]{display:none!important}
+.lang-es [data-es],.lang-en [data-en]{display:initial}
+.lang-es span[data-es],.lang-en span[data-en]{display:inline}
+.lang-es div[data-es],.lang-es p[data-es],.lang-es h1[data-es],.lang-es h2[data-es],.lang-es h3[data-es],.lang-es li[data-es],.lang-es blockquote[data-es],.lang-en div[data-en],.lang-en p[data-en],.lang-en h1[data-en],.lang-en h2[data-en],.lang-en h3[data-en],.lang-en li[data-en],.lang-en blockquote[data-en]{display:block}
+span[data-es],span[data-en]{display:inline}
+
+/* NAV */
+.main-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--ocean)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:58px}
+.nav-logo{font-family:var(--ff-d);font-size:21px;color:var(--ocean);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-dot{width:5px;height:5px;border-radius:50%;background:var(--talavera)}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{font-family:var(--ff-u);font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.on{color:var(--ocean)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-toggle{display:flex;border:1px solid var(--border);overflow:hidden}
+.lang-btn{font-family:var(--ff-u);font-size:10px;letter-spacing:2px;font-weight:500;padding:5px 11px;background:transparent;border:none;cursor:pointer;color:var(--muted);transition:all .2s}
+.lang-btn.active{background:var(--talavera);color:white}
+.nav-cta{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;border:1.5px solid var(--ocean);color:var(--ocean);padding:7px 16px;text-decoration:none;transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--ocean);color:white}
+.nav-hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:8px;background:none;border:none}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ocean)}
+.mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:var(--paper);z-index:99;padding:16px 24px;border-bottom:1px solid var(--border);flex-direction:column;border-top:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--ff-u);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:13px 0;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border-bottom:none}
+
+/* BREADCRUMB */
+.breadcrumb{padding:12px 64px;background:white;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.breadcrumb a{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--talavera)}
+.bc-sep{font-size:10px;color:var(--border)}
+.bc-cur{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--talavera);font-weight:500}
+
+/* HEADER */
+.page-header{background:white;border-bottom:1px solid var(--border);padding:64px 24px 52px}
+.ph-inner{max-width:var(--read-w);margin:0 auto}
+.ph-eyebrow{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.ph-eyebrow::before{content:'';display:block;width:24px;height:1.5px;background:var(--talavera)}
+.ph-h1{font-family:var(--ff-d);font-size:clamp(38px,4.5vw,58px);line-height:1;color:var(--ocean);font-weight:400;margin-bottom:20px}
+.ph-h1 em{font-style:italic;font-weight:300;color:var(--talavera)}
+.ph-rule{width:36px;height:2px;background:var(--talavera);margin-bottom:18px}
+.ph-intro{font-family:var(--ff-b);font-size:18px;line-height:1.8;color:var(--muted);font-style:italic}
+
+/* BODY */
+.page-body{background:white;border-bottom:1px solid var(--border);padding:52px 24px 64px}
+.page-inner{max-width:var(--read-w);margin:0 auto}
+.art-p{font-family:var(--ff-b);font-size:17px;line-height:1.9;color:var(--body);margin-bottom:24px}
+.art-h2{font-family:var(--ff-d);font-size:28px;color:var(--ocean);font-weight:400;line-height:1.15;margin:48px 0 16px}
+.art-h2 em{font-style:italic;font-weight:300}
+.art-h2:first-child{margin-top:0}
+.art-pullquote{font-family:var(--ff-d);font-size:23px;color:var(--ocean);font-style:italic;font-weight:300;line-height:1.4;border-left:3px solid var(--talavera);padding:16px 0 16px 24px;margin:36px 0}
+.art-quote-src{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:-24px 0 32px 27px}
+.art-rule{width:36px;height:1px;background:var(--border);margin:44px 0}
+
+/* Promesa editorial */
+.promise-list{list-style:none;border-top:1px solid var(--border);margin:24px 0 8px}
+.promise-list li{padding:16px 0;border-bottom:1px solid var(--border);display:flex;gap:14px;align-items:baseline}
+.promise-list li::before{content:'✦';color:var(--talavera);font-size:11px}
+.pl-text{font-family:var(--ff-b);font-size:15px;font-style:italic;color:var(--body);line-height:1.7}
+.pl-text strong{font-family:var(--ff-u);font-style:normal;font-size:12px;letter-spacing:.5px;color:var(--ocean);font-weight:600}
+
+/* Voces block */
+.voces-box{background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--talavera);padding:32px 30px;margin:40px 0}
+.vb-tag{font-family:var(--ff-u);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:14px}
+
+/* NL compact */
+.nl-compact{padding:36px 64px;background:var(--paper-md);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:40px}
+.nl-c-eyebrow{font-family:var(--ff-u);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:5px}
+.nl-c-h{font-family:var(--ff-d);font-size:22px;color:var(--ocean);font-weight:400}
+.nl-c-h em{font-style:italic;font-weight:300}
+.nl-c-form{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.nl-c-form input{background:white;border:1px solid var(--border);color:var(--body);padding:10px 14px;font-size:13px;font-family:var(--ff-u);outline:none;width:200px;transition:border-color .2s}
+.nl-c-form input:focus{border-color:var(--talavera)}
+.nl-c-form input::placeholder{color:var(--muted);font-style:italic}
+.nl-c-form button{background:var(--talavera);color:white;padding:10px 18px;font-family:var(--ff-u);font-size:10px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-weight:500;transition:background .2s;white-space:nowrap}
+.nl-c-form button:hover{background:#a83800}
+
+footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64px 16px}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between}
+.foot-nav{display:flex;gap:20px;list-style:none}
+.foot-nav a{font-family:var(--ff-u);font-size:10px;letter-spacing:1px;color:var(--muted);text-decoration:none;transition:color .2s}
+.foot-nav a:hover{color:var(--ocean)}
+.foot-copy{font-family:var(--ff-u);font-size:10px;color:var(--muted)}
+.foot-domain{font-family:var(--ff-u);font-size:10px;color:var(--border)}
+
+@media(max-width:900px){
+  .nav-top{padding:0 20px}.nav-links{display:none}.nav-hamburger{display:flex}
+  .breadcrumb{padding:10px 20px}
+  .page-header{padding:44px 20px 36px}
+  .page-body{padding:36px 20px 48px}
+  .art-p{font-size:16px}
+  .voces-box{padding:24px 20px}
+  .nl-compact{flex-direction:column;align-items:flex-start;gap:16px;padding:28px 20px}
+  .nl-c-form{flex-direction:column;width:100%}
+  .nl-c-form input{width:100%}
+  footer{padding:22px 20px 14px}
+  .foot-bottom{flex-direction:column;gap:8px;text-align:center}
+  .foot-nav{flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+<body class="lang-es">
+
+<nav class="main-nav">
+  <div class="nav-top">
+    <a href="index.html" class="nav-logo">She Lives PV <span class="nav-dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="destino-pv/index.html" data-es>Destino PV</a><a href="destino-pv/index.html" data-en>Destination PV</a></li>
+      <li><a href="index.html#amor">Amor & Deseo</a></li>
+      <li><a href="index.html#cultura" data-es>Cultura</a><a href="index.html#cultura" data-en>Culture</a></li>
+      <li><a href="sobre-nosotras.html" class="on" data-es>Sobre Nosotras</a><a href="sobre-nosotras.html" class="on" data-en>About Us</a></li>
+      <li><a href="index.html#anunciate" data-es>Anúnciate</a><a href="index.html#anunciate" data-en>Advertise</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="index.html#newsletter" class="nav-cta" data-es>Suscríbete</a>
+      <a href="index.html#newsletter" class="nav-cta" data-en>Subscribe</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" data-es>Inicio</a><a href="index.html" data-en>Home</a>
+  <a href="destino-pv/index.html" data-es>Destino PV</a><a href="destino-pv/index.html" data-en>Destination PV</a>
+  <a href="sobre-nosotras.html" data-es>Sobre Nosotras</a><a href="sobre-nosotras.html" data-en>About Us</a>
+  <a href="index.html#newsletter" style="color:var(--talavera)!important" data-es>Suscríbete →</a>
+  <a href="index.html#newsletter" style="color:var(--talavera)!important" data-en>Subscribe →</a>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html" data-es>Inicio</a><a href="index.html" data-en>Home</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-cur" data-es>Sobre Nosotras</span><span class="bc-cur" data-en>About Us</span>
+</div>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="ph-inner">
+    <p class="ph-eyebrow"><span data-es>She Lives PV · Sobre Nosotras</span><span data-en>She Lives PV · About Us</span></p>
+    <h1 class="ph-h1">
+      <span data-es>Leemos a las que ya no están.<br><em>Escribimos para las que vienen.</em></span>
+      <span data-en>We read the women who are gone.<br><em>We write for the women to come.</em></span>
+    </h1>
+    <div class="ph-rule"></div>
+    <p class="ph-intro" data-es>She Lives PV es la primera revista digital lésbica de Puerto Vallarta — hecha desde la Zona Romántica, para la mujer que vive sin pedir permiso.</p>
+    <p class="ph-intro" data-en>She Lives PV is the first lesbian digital magazine from Puerto Vallarta — made in the Zona Romántica, for the woman who lives without asking permission.</p>
+  </div>
+</header>
+
+<!-- CUERPO -->
+<article class="page-body">
+  <div class="page-inner">
+
+    <h2 class="art-h2" data-es>Nuestra <em>misión.</em></h2>
+    <h2 class="art-h2" data-en>Our <em>mission.</em></h2>
+    <p class="art-p" data-es>Ser la guía definitiva de Puerto Vallarta para la mujer que ama a mujeres: mostrarle cómo vivir esta ciudad en su máximo esplendor y sentirse segura en todo momento — y al hacerlo, dar visibilidad y clientas a los negocios de nuestra comunidad.</p>
+    <p class="art-p" data-en>To be the definitive Puerto Vallarta guide for women who love women: to show her how to live this city at its fullest and feel safe at every moment — and in doing so, bring visibility and customers to our community's businesses.</p>
+
+    <h2 class="art-h2" data-es>Nuestra <em>visión.</em></h2>
+    <h2 class="art-h2" data-en>Our <em>vision.</em></h2>
+    <p class="art-p" data-es>Que ninguna viajera lésbica vuelva a llegar a Vallarta sintiendo que llega sola: que aterrice sabiendo dónde está su gente. Y que Puerto Vallarta se consolide como la capital lésbica del Pacífico, con una economía local donde los proyectos de mujeres y personas LGBT prosperan por ser visibles.</p>
+    <p class="art-p" data-en>That no lesbian traveler ever again lands in Vallarta feeling she arrives alone: that she touches down knowing where her people are. And that Puerto Vallarta cements itself as the lesbian capital of the Pacific, with a local economy where women's and LGBT-owned projects thrive by being visible.</p>
+
+    <h2 class="art-h2" data-es>Nuestra <em>promesa editorial.</em></h2>
+    <h2 class="art-h2" data-en>Our <em>editorial promise.</em></h2>
+    <ul class="promise-list">
+      <li><span class="pl-text" data-es><strong>Seguridad en todo, no en una sección.</strong> Cada guía lleva lo práctico para sentirte segura: es el hilo conductor de esta revista.</span><span class="pl-text" data-en><strong>Safety in everything, not in a section.</strong> Every guide carries the practical facts to feel safe: it is the thread that runs through this magazine.</span></li>
+      <li><span class="pl-text" data-es><strong>La recomendación no se vende.</strong> Los espacios patrocinados se marcan como tales; la opinión editorial no tiene precio.</span><span class="pl-text" data-en><strong>Recommendations are not for sale.</strong> Sponsored placements are labeled as such; editorial opinion has no price.</span></li>
+      <li><span class="pl-text" data-es><strong>Datos verificados, atribución estricta.</strong> Horarios, dueñas, direcciones y citas se verifican. Cuando no podemos verificar algo, lo decimos o lo omitimos.</span><span class="pl-text" data-en><strong>Verified facts, strict attribution.</strong> Hours, owners, addresses and quotes are verified. When we cannot verify something, we say so or leave it out.</span></li>
+      <li><span class="pl-text" data-es><strong>Comunidad primero.</strong> Priorizamos y señalamos los negocios lesbian-owned, LGBT-owned y aliades — y el sello se verifica, no se autodeclara.</span><span class="pl-text" data-en><strong>Community first.</strong> We prioritize and label lesbian-owned, LGBT-owned and ally businesses — and the label is verified, not self-declared.</span></li>
+      <li><span class="pl-text" data-es><strong>Voz, no folleto.</strong> Las Voces Sáficas habitan los lugares; no los promocionan. Los artículos se sienten vividos, no vendidos.</span><span class="pl-text" data-en><strong>Voice, not brochure.</strong> The Sapphic Voices inhabit places; they do not promote them. Articles feel lived, not sold.</span></li>
+      <li><span class="pl-text" data-es><strong>Puente bilingüe.</strong> Todo en español e inglés, porque conectamos a la viajera con la ciudad — en los dos sentidos.</span><span class="pl-text" data-en><strong>A bilingual bridge.</strong> Everything in Spanish and English, because we connect the traveler and the city — in both directions.</span></li>
+    </ul>
+
+    <div class="art-rule" id="voces"></div>
+
+    <!-- LAS VOCES SÁFICAS -->
+    <div class="voces-box">
+      <p class="vb-tag" data-es>Las Voces Sáficas · Una nota de la editora</p>
+      <p class="vb-tag" data-en>The Sapphic Voices · A note from the editor</p>
+
+      <p class="art-p" data-es>Las firmas que habitan estas páginas — Anne Lister, Chavela Vargas, Audre Lorde, Frida Kahlo, Sor Juana Inés de la Cruz, Alice B. Toklas — son recreaciones literarias. No pretenden ser ellas. Intentan honrarlas.</p>
+      <p class="art-p" data-en>The bylines that inhabit these pages — Anne Lister, Chavela Vargas, Audre Lorde, Frida Kahlo, Sor Juana Inés de la Cruz, Alice B. Toklas — are literary recreations. They do not claim to be these women. They try to honor them.</p>
+
+      <p class="art-p" data-es>Son nuestras hermanas que ya no están en esta línea del tiempo, y las extrañamos — incluso a las que nunca alcanzamos a conocer. Nos habría encantado que estuvieran hoy aquí, recorriendo Puerto Vallarta con nosotras: Chavela de parranda hasta que el mar diga basta, Anne apuntando en su diario cada bar con esa precisión suya, Frida y Sor Juana en una mesa de la que nadie quiere levantarse, discutiendo intensamente de mil temas. Como no pueden venir, hicimos lo único que sabemos hacer: les guardamos un lugar en la página.</p>
+      <p class="art-p" data-en>They are our sisters who are no longer on this timeline, and we miss them — even the ones we never got to meet. We would have loved to have them here today, wandering Puerto Vallarta with us: Chavela out on a parranda until the sea says enough, Anne noting every bar in her diary with that precision of hers, Frida and Sor Juana at a table nobody wants to leave, arguing intensely about a thousand things. Since they cannot come, we did the only thing we know how to do: we saved them a seat on the page.</p>
+
+      <p class="art-p" data-es>Hay una historia que circuló por internet — quizá cierta, quizá leyenda, como tantas cosas que importan. Alguien le preguntó a una inteligencia artificial qué era lo que más admiraba de los seres humanos. Y respondió algo así: que construyen cosas para personas que todavía no nacen, y leen las palabras de personas que ya no están. No podemos confirmar esa conversación. Pero sí podemos citar a alguien que dijo lo mismo con todas sus letras:</p>
+      <p class="art-p" data-en>There is a story that made its way around the internet — maybe true, maybe legend, like so many things that matter. Someone asked an artificial intelligence what it most admired about human beings. And it answered something like this: that they build things for people not yet born, and read the words of people who are no longer here. We cannot confirm that conversation. But we can quote someone who said the same thing on the record:</p>
+
+      <blockquote class="art-pullquote" data-es>"Un libro es prueba de que los seres humanos somos capaces de hacer magia [...] A través de los milenios, un autor habla, con claridad y en silencio, dentro de tu cabeza, directamente a ti. La escritura es quizá el más grande de los inventos humanos: une a personas que nunca se conocieron, ciudadanas de épocas distantes. Los libros rompen las cadenas del tiempo."</blockquote>
+      <blockquote class="art-pullquote" data-en>"A book is proof that humans are capable of working magic [...] Across the millennia, an author is speaking clearly and silently inside your head, directly to you. Writing is perhaps the greatest of human inventions, binding together people who never knew each other, citizens of distant epochs. Books break the shackles of time."</blockquote>
+      <p class="art-quote-src">Carl Sagan · Cosmos (1980)</p>
+
+      <p class="art-p" data-es>Eso son Las Voces Sáficas: nuestra manera de romper las cadenas del tiempo. Leemos a las que ya no están, y escribimos para las que vienen — para que la conversación imposible exista en el único lugar donde puede existir.</p>
+      <p class="art-p" data-en>That is what the Sapphic Voices are: our way of breaking the shackles of time. We read the women who are gone, and we write for the women to come — so the impossible conversation can exist in the only place it can.</p>
+
+      <p class="art-p" data-es>Dos cosas más, porque la honestidad es nuestra casa. Los datos de cada lugar — horarios, dueñas, direcciones, precios — son reales y verificados: la voz transforma la experiencia, nunca los hechos. Y entre las voces históricas escribe una voz del presente, A. Wilde, desde la Zona Romántica: porque este linaje no es un museo. Sigue vivo, y sigue escribiendo.</p>
+      <p class="art-p" data-en>Two more things, because honesty is our home. The facts about every place — hours, owners, addresses, prices — are real and verified: the voice transforms the experience, never the facts. And among the historical voices writes one voice from the present, A. Wilde, from the Zona Romántica: because this lineage is not a museum. It is alive, and it is still writing.</p>
+    </div>
+
+    <p class="art-p" data-es>¿Tienes un proyecto, un lugar o una historia que deba estar aquí? Escríbenos a <a href="mailto:hola@shelivespv.com" style="color:var(--talavera)">hola@shelivespv.com</a>. Esta revista se hace con la comunidad — y para ella.</p>
+    <p class="art-p" data-en>Do you have a project, a place or a story that belongs here? Write to us at <a href="mailto:hola@shelivespv.com" style="color:var(--talavera)">hola@shelivespv.com</a>. This magazine is made with the community — and for it.</p>
+
+  </div>
+</article>
+
+<section class="nl-compact">
+  <div>
+    <p class="nl-c-eyebrow" data-es>Newsletter · Bimensual</p>
+    <p class="nl-c-eyebrow" data-en>Newsletter · Biweekly</p>
+    <h3 class="nl-c-h"><span data-es>La revista en tu <em>correo.</em></span><span data-en>The magazine in your <em>inbox.</em></span></h3>
+  </div>
+  <form class="nl-c-form" onsubmit="return false;">
+    <input type="email" data-placeholder-es="tu@correo.com" data-placeholder-en="your@email.com" placeholder="tu@correo.com">
+    <button><span data-es>Suscribirme →</span><span data-en>Subscribe →</span></button>
+  </form>
+</section>
+
+<footer>
+  <div class="foot-bottom">
+    <ul class="foot-nav">
+      <li><a href="index.html" data-es>She Lives PV</a><a href="index.html" data-en>She Lives PV</a></li>
+      <li><a href="destino-pv/index.html" data-es>Destino PV</a><a href="destino-pv/index.html" data-en>Destination PV</a></li>
+      <li><a href="index.html#anunciate" data-es>Anúnciate</a><a href="index.html#anunciate" data-en>Advertise</a></li>
+      <li><a href="mailto:hola@shelivespv.com">Contacto</a></li>
+    </ul>
+    <p class="foot-copy" data-es>© 2026 She Lives PV · Hecho con amor lésbico en Puerto Vallarta</p><p class="foot-copy" data-en>© 2026 She Lives PV · Made with lesbian love in Puerto Vallarta</p>
+    <p class="foot-domain">vallartaqueer.com/sobre-nosotras</p>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){document.body.className='lang-'+lang;document.documentElement.lang=lang;document.getElementById('btn-es').classList.toggle('active',lang==='es');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});localStorage.setItem('slpv-lang',lang)}
+function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
+window.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('slpv-lang');const b=navigator.language?.slice(0,2);if((s||b)==='en')setLang('en')})
+</script>
+</body>
+</html>

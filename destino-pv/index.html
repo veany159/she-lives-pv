@@ -18,7 +18,7 @@
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"¿Es Puerto Vallarta seguro para mujeres lesbianas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puerto Vallarta es la ciudad #2 más segura de México y el destino LGBT+ más importante del Pacífico. La Zona Romántica es un entorno genuinamente seguro para mujeres queer."}},
 {"@type":"Question","name":"¿Hay bares lésbicos en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Elixir Mixology Bar (Basilio Badillo 419) es el único bar de propiedad lésbica en Puerto Vallarta, fundado por Laura Jaimes y Elena Zolezzi en 2021."}},
-{"@type":"Question","name":"¿Cuándo es Vallarta Pride?","acceptedAnswer":{"@type":"Answer","text":"Vallarta Pride se celebra cada mayo. La edición 2026 fue del 17 al 24 de mayo, con el Vallarta Lesbian Pride el 20 de mayo en el Hilton Vallarta Riviera."}}
+{"@type":"Question","name":"¿Cuándo es Vallarta Pride?","acceptedAnswer":{"@type":"Answer","text":"Vallarta Pride se celebra cada mayo. La edición 2026 fue del 17 al 24 de mayo, y el PV Lesbian Pride del 20 al 25 de mayo con sede en el Hilton Vallarta Riviera."}}
 ]}
 ]}
 </script>
@@ -86,18 +86,18 @@ li[data-es],li[data-en]{display:block}
 .sub-tab.active{color:var(--ocean);border-bottom-color:var(--talavera);font-weight:500}
 
 /* ── HUB HERO — tipográfico, limpio ── */
-.hub-hero{padding:72px 64px 56px;background:white;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.hh-eyebrow{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--talavera);font-weight:500;margin-bottom:18px;display:flex;align-items:center;gap:12px}
-.hh-eyebrow::before{content:'';display:block;width:24px;height:1.5px;background:var(--talavera)}
-.hh-h1{font-family:var(--ff-d);font-size:clamp(44px,5.5vw,72px);line-height:.95;color:var(--ocean);font-weight:400;margin-bottom:22px}
-.hh-h1 em{font-style:italic;font-weight:300;color:var(--talavera)}
-.hh-rule{width:36px;height:2px;background:var(--talavera);margin-bottom:20px}
-.hh-intro{font-family:var(--ff-b);font-size:17px;line-height:1.85;color:var(--muted);font-style:italic;margin-bottom:32px;max-width:480px}
+.hub-hero{padding:72px 64px 56px;background:linear-gradient(170deg,rgba(27,42,74,.5) 0%,rgba(27,42,74,.8) 100%),url('hidden-gems.jpg') center/cover no-repeat;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hh-eyebrow{font-family:var(--ff-u);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#F2C078;font-weight:500;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.hh-eyebrow::before{content:'';display:block;width:24px;height:1.5px;background:#F2C078}
+.hh-h1{font-family:var(--ff-d);font-size:clamp(44px,5.5vw,72px);line-height:.95;color:#FDFCFA;font-weight:400;margin-bottom:22px;text-shadow:0 1px 20px rgba(27,42,74,.55)}
+.hh-h1 em{font-style:italic;font-weight:300;color:#F2C078}
+.hh-rule{width:36px;height:2px;background:#F2C078;margin-bottom:20px}
+.hh-intro{font-family:var(--ff-b);font-size:17px;line-height:1.85;color:rgba(248,247,244,.92);font-style:italic;margin-bottom:32px;max-width:480px;text-shadow:0 1px 12px rgba(27,42,74,.5)}
 .hh-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .btn-primary{font-family:var(--ff-u);font-size:11px;letter-spacing:2px;text-transform:uppercase;background:var(--talavera);color:white;padding:12px 24px;text-decoration:none;transition:background .2s}
 .btn-primary:hover{background:#a83800}
-.btn-ghost{font-family:var(--ff-u);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ocean);text-decoration:none;border-bottom:1.5px solid var(--ocean);padding-bottom:2px;transition:all .2s}
-.btn-ghost:hover{color:var(--talavera);border-color:var(--talavera)}
+.btn-ghost{font-family:var(--ff-u);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#FDFCFA;text-decoration:none;border-bottom:1.5px solid #FDFCFA;padding-bottom:2px;transition:all .2s}
+.btn-ghost:hover{color:#F2C078;border-color:#F2C078}
 
 /* Stats lado derecho */
 .hh-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
@@ -367,8 +367,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       <p class="cc-desc" data-en>Genuinely gay-friendly hotels — not the ones that just put up a flag in June.</p>
       <p class="cc-count" data-es>Próximamente</p><p class="cc-count" data-en>Coming soon</p>
     </a>
-    <!-- Vallarta Pride — próximamente -->
-    <a href="./vallarta-pride/index.html" class="cat-card soon">
+    <!-- Vallarta Pride — disponible -->
+    <a href="./vallarta-pride/index.html" class="cat-card">
       <div class="cc-header">
         <span class="cc-label">Vallarta Pride</span>
         <span class="cc-arrow">→</span>
@@ -377,7 +377,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       <div class="cc-rule"></div>
       <p class="cc-desc" data-es>La crónica del Pride 2026 y todo para planear el 2027 — cada mayo la ciudad es nuestra.</p>
       <p class="cc-desc" data-en>The Pride 2026 recap and everything to plan 2027 — every May the city is ours.</p>
-      <p class="cc-count" data-es>Próximamente</p><p class="cc-count" data-en>Coming soon</p>
+      <p class="cc-count" data-es>1 artículo disponible</p><p class="cc-count" data-en>1 article available</p>
     </a>
     <!-- Viajera Sola — disponible -->
     <a href="./viajera-sola/index.html" class="cat-card">
@@ -409,7 +409,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
         <span class="cc-label" data-es>Outdoors & Experiencias</span><span class="cc-label" data-en>Outdoors & Experiences</span>
         <span class="cc-arrow">→</span>
       </div>
-      <h3 class="cc-title"><span data-es>La aventura <em>también es nuestra</em></span><span data-en>Adventure is <em>ours too</em></span></h3>
+      <h3 class="cc-title"><span data-es>Vallarta <em>no solo es playa</em></span><span data-en>Vallarta is <em>more than the beach</em></span></h3>
       <div class="cc-rule"></div>
       <p class="cc-desc" data-es>Cascadas, aves, tours de tacos y raicilla, clases de cocina y la bahía — con guías de la comunidad.</p>
       <p class="cc-desc" data-en>Waterfalls, birding, taco and raicilla tours, cooking classes and the bay — with community guides.</p>
@@ -430,8 +430,18 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
     <a href="./bares/index.html" style="font-family:var(--ff-u);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px;white-space:nowrap" data-en>See all →</a>
   </div>
   <div class="recent-feed">
+    <a href="./vallarta-pride/cronica-2026.html" class="recent-story">
+      <div class="rs-photo"><img src="./vallarta-pride/prides.jpg" alt="Crónica del Vallarta Pride 2026" onerror="this.style.display='none'"></div>
+      <div class="rs-body">
+        <div class="rs-cat" data-es>Crónica · Vallarta Pride</div><div class="rs-cat" data-en>Recap · Vallarta Pride</div>
+        <h3 class="rs-title"><span data-es>Pride 2026: la semana en que Vallarta <em>no guardó silencio</em></span><span data-en>Pride 2026: the week Vallarta <em>refused to be silent</em></span></h3>
+        <p class="rs-excerpt" data-es>La marcha, los 35 mil visitantes y el PV Lesbian Pride en el Hilton — contado por nosotras.</p>
+        <p class="rs-excerpt" data-en>The march, 35,000 visitors and PV Lesbian Pride at the Hilton — told by us.</p>
+        <div class="rs-byline"><div class="rs-avatar">A</div><div class="rs-author" data-es>Audre Lorde · 7 min</div><div class="rs-author" data-en>Audre Lorde · 7 min</div></div>
+      </div>
+    </a>
     <a href="./viajera-sola/72-horas-vallarta.html" class="recent-story">
-      <div class="rs-photo" style="background:linear-gradient(135deg,var(--talavera),var(--ocean));display:flex;align-items:center;justify-content:center"><span style="font-family:var(--ff-d);font-size:30px;color:rgba(255,255,255,.22);font-style:italic">72h</span></div>
+      <div class="rs-photo"><img src="./viajera-sola/beachsolo.jpg" alt="72 horas en Vallarta — Viajera Sola" onerror="this.style.display='none'"></div>
       <div class="rs-body">
         <div class="rs-cat" data-es>Portada · Viajera Sola</div><div class="rs-cat" data-en>Cover · Solo Traveler</div>
         <h3 class="rs-title"><span data-es>72 horas en Vallarta: <em>viviendo como nosotras</em></span><span data-en>72 hours in Vallarta: <em>living like us</em></span></h3>
@@ -510,8 +520,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
     <div class="faq-item">
       <h3 class="faq-q" data-es>¿Cuándo es Vallarta Pride?</h3>
       <h3 class="faq-q" data-en>When is Vallarta Pride?</h3>
-      <p class="faq-a" data-es>Vallarta Pride se celebra cada mayo. La edición 2026 fue del 17 al 24 de mayo, con el Vallarta Lesbian Pride el 20 de mayo en el Hilton Vallarta Riviera, organizado por Ladies Touch Events. Las fechas 2027 se publican aquí en cuanto se confirmen.</p>
-      <p class="faq-a" data-en>Vallarta Pride happens every May. The 2026 edition ran May 17–24, with Vallarta Lesbian Pride on May 20 at the Hilton Vallarta Riviera, organized by Ladies Touch Events. 2027 dates will be published here once confirmed.</p>
+      <p class="faq-a" data-es>Vallarta Pride se celebra cada mayo. La edición 2026 fue del 17 al 24 de mayo, y el PV Lesbian Pride del 20 al 25 de mayo con hotel sede en el Hilton Vallarta Riviera, organizado por Ladies Touch Events. Las fechas 2027 se publican aquí en cuanto se confirmen.</p>
+      <p class="faq-a" data-en>Vallarta Pride happens every May. The 2026 edition ran May 17–24, and PV Lesbian Pride May 20–25 with the Hilton Vallarta Riviera as home hotel, organized by Ladies Touch Events. 2027 dates will be published here once confirmed.</p>
     </div>
   </div>
 </section>
