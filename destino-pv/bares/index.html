@@ -21,6 +21,8 @@ html{scroll-behavior:smooth}
 body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
+.lang-es span[data-es],.lang-en span[data-en]{display:inline}
+.lang-es div[data-es],.lang-es p[data-es],.lang-es h1[data-es],.lang-es h2[data-es],.lang-es h3[data-es],.lang-es li[data-es],.lang-es blockquote[data-es],.lang-en div[data-en],.lang-en p[data-en],.lang-en h1[data-en],.lang-en h2[data-en],.lang-en h3[data-en],.lang-en li[data-en],.lang-en blockquote[data-en]{display:block}
 span[data-es],span[data-en]{display:inline}
 div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en]{display:block}
 
@@ -96,9 +98,9 @@ div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-
 .af-read{font-family:var(--ff-u);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--talavera);margin-top:10px;display:inline-block}
 
 /* GRID de artículos secundarios */
-.arts-grid{display:flex;flex-direction:column;gap:0;border:1px solid var(--border)}
-.art-card{background:white;text-decoration:none;transition:background .2s;display:grid;grid-template-columns:1.1fr 1fr;border-bottom:1px solid var(--border)}
-.art-card:last-child{border-bottom:none}.art-card:hover{background:var(--paper)}
+.arts-grid{display:flex;flex-direction:column;gap:24px}
+.art-card{background:white;text-decoration:none;transition:background .2s;display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--border)}
+.art-card:hover{background:var(--paper)}
 .ac-photo{height:320px;background:var(--paper-md);position:relative;overflow:hidden}
 .ac-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .ac-body{padding:32px 28px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border)}
@@ -215,6 +217,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
   <a href="../hoteles/index.html" class="sub-tab" data-es>Hoteles</a><a href="../hoteles/index.html" class="sub-tab" data-en>Hotels</a>
   <a href="../vallarta-pride/index.html" class="sub-tab">Vallarta Pride</a>
   <a href="../viajera-sola/index.html" class="sub-tab" data-es>Viajera Sola</a><a href="../viajera-sola/index.html" class="sub-tab" data-en>Solo Traveler</a>
+  <a href="../experiencias/index.html" class="sub-tab" data-es>Experiencias</a><a href="../experiencias/index.html" class="sub-tab" data-en>Experiences</a>
 </nav>
 
 <!-- HUB HEADER — siempre igual, no cambia -->
@@ -287,8 +290,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
         <div class="ac-cat" data-es>Guía nocturna · Circuito completo</div><div class="ac-cat" data-en>Night guide · Full circuit</div>
         <h3 class="ac-title"><span data-es>La noche perfecta en PV: <em>de la playa al amanecer</em></span><span data-en>The perfect night in PV: <em>from beach to sunrise</em></span></h3>
         <div class="ac-rule"></div>
-        <p class="ac-excerpt" data-es>Savia (5-7pm) → Elixir (7-9pm) → Las Mambas o Act2PV (9-10pm) → The Corner Bar o Noche de Lenchas (10-11pm) → antros (11pm+).</p>
-        <p class="ac-excerpt" data-en>Savia (5-7pm) → Elixir (7-9pm) → Las Mambas or Act2PV (9-10pm) → The Corner Bar or Noche de Lenchas (10-11pm) → clubs (11pm+).</p>
+        <p class="ac-excerpt" data-es>Savia (5-7pm) → Elixir (7-9pm) → Las Mambas o Act2PV (9-10pm) → Noche de Lenchas en Terraza 122 (10-11pm) → antros (11pm+).</p>
+        <p class="ac-excerpt" data-en>Savia (5-7pm) → Elixir (7-9pm) → Las Mambas or Act2PV (9-10pm) → Noche de Lenchas at Terraza 122 (10-11pm) → clubs (11pm+).</p>
         <div class="ac-byline">
           <div class="ac-avatar">C</div>
           <div class="ac-author" data-es>Chavela Vargas · 5 min</div><div class="ac-author" data-en>Chavela Vargas · 5 min</div>
@@ -307,7 +310,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
     <div class="cq-row"><span class="cq-time">5–7pm</span><span class="cq-place">Savia Agave Niche</span><span class="cq-what" data-es>Cata guiada · destilados mexicanos</span><span class="cq-what" data-en>Guided tasting · Mexican spirits</span></div>
     <div class="cq-row"><span class="cq-time">7–9pm</span><span class="cq-place">Elixir Mixology Bar</span><span class="cq-what" data-es>El corazón lésbico de PV</span><span class="cq-what" data-en>PV's lesbian heart</span></div>
     <div class="cq-row"><span class="cq-time">9–10pm</span><span class="cq-place" data-es>Las Mambas · Alison Lo</span><span class="cq-place" data-en>Las Mambas · Alison Lo</span><span class="cq-what" data-es>Música en vivo · ver Instagram</span><span class="cq-what" data-en>Live music · check Instagram</span></div>
-    <div class="cq-row"><span class="cq-time">10–11pm</span><span class="cq-place">The Corner Bar</span><span class="cq-what" data-es>Copas · viernes: Noche de Lenchas en Terraza 122</span><span class="cq-what" data-en>Drinks · Fridays: Noche de Lenchas at Terraza 122</span></div>
+    <div class="cq-row"><span class="cq-time">10–11pm</span><span class="cq-place">Terraza 122</span><span class="cq-what" data-es>Noche de Lenchas · viernes · Versalles</span><span class="cq-what" data-en>Noche de Lenchas · Fridays · Versalles</span></div>
     <div class="cq-row"><span class="cq-time">11pm+</span><span class="cq-place" data-es>Los antros</span><span class="cq-place" data-en>The clubs</span><span class="cq-what">Mr. Flamingo · CC Slaughters · Paco's Ranch</span></div>
   </div>
 </section>
@@ -345,4 +348,4 @@ function closeMenu(){document.getElementById('mobile-menu').classList.remove('op
 window.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('slpv-lang');const b=navigator.language?.slice(0,2);if((s||b)==='en')setLang('en')})
 </script>
 </body>
-</html>        
+</html>

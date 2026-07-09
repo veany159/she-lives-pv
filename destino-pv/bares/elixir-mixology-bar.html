@@ -35,8 +35,11 @@ html{scroll-behavior:smooth}
 body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
+.lang-es span[data-es],.lang-en span[data-en]{display:inline}
+.lang-es div[data-es],.lang-es p[data-es],.lang-es h1[data-es],.lang-es h2[data-es],.lang-es h3[data-es],.lang-es li[data-es],.lang-es blockquote[data-es],.lang-en div[data-en],.lang-en p[data-en],.lang-en h1[data-en],.lang-en h2[data-en],.lang-en h3[data-en],.lang-en li[data-en],.lang-en blockquote[data-en]{display:block}
 span[data-es],span[data-en]{display:inline}
-div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en]{display:block}
+div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en],
+blockquote[data-es],blockquote[data-en]{display:block}
 
 /* NAV */
 .main-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--ocean)}
@@ -423,4 +426,9 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
 </footer>
 
 <script>
-function setLang(lang){document.body.className='lang-'+lang;document.documentElement.lang=lang;document.getElementById('btn-es').classList.toggle('active',lang==='es');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});localStorage.setIt
+function setLang(lang){document.body.className='lang-'+lang;document.documentElement.lang=lang;document.getElementById('btn-es').classList.toggle('active',lang==='es');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});localStorage.setItem('slpv-lang',lang)}
+function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
+window.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('slpv-lang');const b=navigator.language?.slice(0,2);if((s||b)==='en')setLang('en')})
+</script>
+</body>
+</html>

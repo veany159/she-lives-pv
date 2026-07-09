@@ -19,7 +19,7 @@
 {"@type":"TouristDestination","name":"Puerto Vallarta — Destino Lésbico","description":"Puerto Vallarta es el destino LGBT+ más importante del Pacífico mexicano, con más de 2 millones de turistas LGBTQ+ al año.","touristType":["Lesbian travelers","LGBTQ+ tourists","Solo women travelers"]},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"¿Es Puerto Vallarta seguro para mujeres lesbianas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puerto Vallarta es el #2 ciudad más segura de México y el destino LGBT+ más importante del Pacífico. La Zona Romántica es un entorno genuinamente seguro para mujeres queer."}},
-{"@type":"Question","name":"¿Cuántos turistas LGBT visitan Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Más de 2 millones de turistas LGBTQ+ visitaron Puerto Vallarta en 2023, según el PV Tourism Trust. El 51% viajan solos y gastan en promedio $274 USD diarios."}}
+{"@type":"Question","name":"¿Cuántos turistas LGBT visitan Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Más de 2 millones de turistas LGBTQ+ visitaron Puerto Vallarta en 2023, según el PV Tourism Trust. El 51% de las viajeras lésbicas llegan solas — el segmento más grande."}}
 ]}
 ]}
 </script>
@@ -41,11 +41,14 @@ body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-f
 /* ── LANG ── */
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
+.lang-es span[data-es],.lang-en span[data-en]{display:inline}
+.lang-es div[data-es],.lang-es p[data-es],.lang-es h1[data-es],.lang-es h2[data-es],.lang-es h3[data-es],.lang-es li[data-es],.lang-es blockquote[data-es],.lang-en div[data-en],.lang-en p[data-en],.lang-en h1[data-en],.lang-en h2[data-en],.lang-en h3[data-en],.lang-en li[data-en],.lang-en blockquote[data-en]{display:block}
 span[data-es],span[data-en]{display:inline}
 div[data-es],div[data-en],p[data-es],p[data-en],
 h1[data-es],h1[data-en],h2[data-es],h2[data-en],
 h3[data-es],h3[data-en],a[data-es],a[data-en],
-li[data-es],li[data-en]{display:block}
+li[data-es],li[data-en],
+blockquote[data-es],blockquote[data-en]{display:block}
 
 /* ══════════════════════════════
    NAV — una sola barra, todo en ella
@@ -451,30 +454,30 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
       <a href="#newsletter" class="btn-outline"><span data-es>Recibe la revista →</span><span data-en>Get the magazine →</span></a>
     </div>
   </div>
-  <div class="hero-right">
+  <a href="destino-pv/viajera-sola/72-horas-vallarta.html" class="hero-right" style="text-decoration:none;color:inherit">
     <div class="cover-pride">
-      <span class="cover-pride-text">Vallarta Pride 2026 · <span data-es>17–24 Mayo</span><span data-en>May 17–24</span></span>
+      <span class="cover-pride-text">Vallarta Pride · <span data-es>Cada mayo</span><span data-en>Every May</span></span>
     </div>
-    <p class="cover-section"><span data-es>✦ Portada — Amor & Deseo</span><span data-en>✦ Cover — Love & Desire</span></p>
+    <p class="cover-section"><span data-es>✦ Portada — Viajera Sola</span><span data-en>✦ Cover — Solo Traveler</span></p>
     <h2 class="cover-title">
-      <span data-es>Te amo Elizabeth,<br>pero no se vale<br><em>lo que me has hecho.</em></span>
-      <span data-en>I love you Elizabeth,<br>but what you did<br><em>wasn't right.</em></span>
+      <span data-es>72 horas en Vallarta:<br><em>viviendo como nosotras.</em></span>
+      <span data-en>72 hours in Vallarta:<br><em>living like us.</em></span>
     </h2>
     <div class="cover-rule"></div>
     <p class="cover-desc">
-      <span data-es>Cuando el dolor de una infidelidad se vuelve viral — y lo que ningún TikTok te va a decir sobre sanar.</span>
-      <span data-en>When the pain of betrayal goes viral — and what no TikTok will ever tell you about healing.</span>
+      <span data-es>No como turista. Como una más. El fin de semana que te va a hacer volver — hora por hora, con la comunidad que ya está aquí.</span>
+      <span data-en>Not as a tourist. As one of us. The weekend that will bring you back — hour by hour, with the community that's already here.</span>
     </p>
     <div class="cover-byline">
-      <div class="c-avatar">A</div>
+      <div class="c-avatar">C</div>
       <div>
-        <div class="c-name" data-es>A. Wilde — Amor & Deseo</div>
-        <div class="c-name" data-en>A. Wilde — Love & Desire</div>
-        <div class="c-role" data-es>Escritora · Zona Romántica, hoy</div>
-        <div class="c-role" data-en>Writer · Zona Romántica, today</div>
+        <div class="c-name" data-es>Chavela Vargas — Viajera Sola</div>
+        <div class="c-name" data-en>Chavela Vargas — Solo Traveler</div>
+        <div class="c-role" data-es>Cantante · México</div>
+        <div class="c-role" data-en>Singer · Mexico</div>
       </div>
     </div>
-  </div>
+  </a>
 </section>
 
 <!-- TICKER -->
@@ -482,7 +485,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
   <div class="ticker-track">
     <span class="ticker-item" data-es>Destino PV</span><span class="ticker-item" data-en>Destination PV</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">Amor & Deseo</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item">Vallarta Pride 2026</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item">Vallarta Pride</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Viajera Sola</span><span class="ticker-item" data-en>Solo Traveler</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">She Lives PV</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Las Voces Sáficas</span><span class="ticker-item" data-en>The Sapphic Voices</span><span class="ticker-sep"> · </span>
@@ -490,7 +493,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
     <span class="ticker-item" data-es>Cultura Lésbica</span><span class="ticker-item" data-en>Lesbian Culture</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Destino PV</span><span class="ticker-item" data-en>Destination PV</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">Amor & Deseo</span><span class="ticker-sep"> · </span>
-    <span class="ticker-item">Vallarta Pride 2026</span><span class="ticker-sep"> · </span>
+    <span class="ticker-item">Vallarta Pride</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Viajera Sola</span><span class="ticker-item" data-en>Solo Traveler</span><span class="ticker-sep"> · </span>
     <span class="ticker-item">She Lives PV</span><span class="ticker-sep"> · </span>
     <span class="ticker-item" data-es>Las Voces Sáficas</span><span class="ticker-item" data-en>The Sapphic Voices</span><span class="ticker-sep"> · </span>
@@ -503,7 +506,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
 <div class="stats-band">
   <div class="stat-item"><div class="stat-num"><em>2M</em></div><div class="stat-label" data-es>turistas LGBT en PV en 2023</div><div class="stat-label" data-en>LGBT tourists in PV in 2023</div><div class="stat-src">PV Tourism Trust</div></div>
   <div class="stat-item"><div class="stat-num">51<em>%</em></div><div class="stat-label" data-es>viajan solas — el segmento mayor</div><div class="stat-label" data-en>travel solo — the largest segment</div><div class="stat-src">MMGY Global 2022</div></div>
-  <div class="stat-item"><div class="stat-num"><em>$274</em></div><div class="stat-label" data-es>gasto diario — 40% más que el promedio</div><div class="stat-label" data-en>daily spend — 40% above average</div><div class="stat-src">Tel Aviv Tourism Study</div></div>
+  <div class="stat-item"><div class="stat-num">40<em>+</em></div><div class="stat-label" data-es>años siendo destino LGBTQ+ de referencia</div><div class="stat-label" data-en>years as a leading LGBTQ+ destination</div><div class="stat-src">PV Tourism Trust</div></div>
   <div class="stat-item"><div class="stat-num"><em>#2</em></div><div class="stat-label" data-es>ciudad más segura de México</div><div class="stat-label" data-en>safest city in Mexico</div><div class="stat-src">INEGI 2023</div></div>
 </div>
 
@@ -544,6 +547,16 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
 
   <!-- Feed de historias -->
   <div class="mag-feed">
+    <a href="destino-pv/viajera-sola/72-horas-vallarta.html" class="mag-story">
+      <div class="ms-photo" style="background:linear-gradient(135deg,var(--ocean),var(--selva));display:flex;align-items:center;justify-content:center"><span style="font-family:var(--ff-d);font-size:32px;color:rgba(255,255,255,.2);font-style:italic">72h</span></div>
+      <div class="ms-body">
+        <div class="ms-cat" data-es>Portada · Viajera Sola</div><div class="ms-cat" data-en>Cover · Solo Traveler</div>
+        <h3 class="ms-h3"><span data-es>72 horas en Vallarta: <em>viviendo como nosotras</em></span><span data-en>72 hours in Vallarta: <em>living like us</em></span></h3>
+        <p class="ms-excerpt" data-es>No como turista. Como una más. El fin de semana perfecto, hora por hora.</p>
+        <p class="ms-excerpt" data-en>Not as a tourist. As one of us. The perfect weekend, hour by hour.</p>
+        <div class="ms-byline"><div class="ms-avatar">C</div><div class="ms-author" data-es>Chavela Vargas · 9 min</div><div class="ms-author" data-en>Chavela Vargas · 9 min</div></div>
+      </div>
+    </a>
     <a class="mag-story">
       <div class="ms-photo"></div>
       <div class="ms-body">
@@ -619,7 +632,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
       <span class="dir-row-name" data-es>Spas, retiros <em>y turismo médico</em></span><span class="dir-row-name" data-en>Spas, retreats <em>and medical tourism</em></span>
       <span class="dir-row-count" data-es>Próximamente</span><span class="dir-row-count" data-en>Coming soon</span>
     </a>
-    <a class="dir-row">
+    <a href="destino-pv/experiencias/index.html" class="dir-row">
       <span class="dir-cat-lbl" data-es>Experiencias</span><span class="dir-cat-lbl" data-en>Experiences</span>
       <span class="dir-row-name" data-es>Tours, aventuras <em>y cultura local</em></span><span class="dir-row-name" data-en>Tours, adventures <em>and local culture</em></span>
       <span class="dir-row-count" data-es>Próximamente</span><span class="dir-row-count" data-en>Coming soon</span>
@@ -740,18 +753,18 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
       <p class="adv-desc" data-es>She Lives PV es el primer medio digital lésbico de Puerto Vallarta. Miles de viajeras y residentes leen nuestras guías cada mes.</p>
       <p class="adv-desc" data-en>She Lives PV is Puerto Vallarta's first lesbian digital outlet. Thousands of travelers and residents read our guides every month.</p>
       <div class="adv-cats">
-        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Bares & vida nocturna</span><span class="adv-cat-name" data-en>Bars & nightlife</span><span class="adv-cat-arrow">→</span></div>
-        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Restaurantes & cafeterías</span><span class="adv-cat-name" data-en>Restaurants & cafés</span><span class="adv-cat-arrow">→</span></div>
-        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Hoteles & hospedaje</span><span class="adv-cat-name" data-en>Hotels & lodging</span><span class="adv-cat-arrow">→</span></div>
-        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Turismo médico & wellness</span><span class="adv-cat-name" data-en>Medical & wellness tourism</span><span class="adv-cat-arrow">→</span></div>
-        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Experiencias & tours</span><span class="adv-cat-name" data-en>Experiences & tours</span><span class="adv-cat-arrow">→</span></div>
-        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Spas & bienestar</span><span class="adv-cat-name" data-en>Spas & beauty</span><span class="adv-cat-arrow">→</span></div>
+        <a href="destino-pv/bares/index.html" class="adv-cat-row" style="text-decoration:none;cursor:pointer"><span class="adv-cat-name" data-es>Bares & vida nocturna</span><span class="adv-cat-name" data-en>Bars & nightlife</span><span class="adv-cat-arrow">→</span></a>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Restaurantes & cafeterías</span><span class="adv-cat-name" data-en>Restaurants & cafés</span><span class="adv-cat-arrow" style="font-family:var(--ff-u);font-size:9px;letter-spacing:1px"><span data-es>Próximamente</span><span data-en>Coming soon</span></span></div>
+        <a href="destino-pv/hoteles/index.html" class="adv-cat-row" style="text-decoration:none;cursor:pointer"><span class="adv-cat-name" data-es>Hoteles & hospedaje</span><span class="adv-cat-name" data-en>Hotels & lodging</span><span class="adv-cat-arrow">→</span></a>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Turismo médico & wellness</span><span class="adv-cat-name" data-en>Medical & wellness tourism</span><span class="adv-cat-arrow" style="font-family:var(--ff-u);font-size:9px;letter-spacing:1px"><span data-es>Próximamente</span><span data-en>Coming soon</span></span></div>
+        <a href="destino-pv/experiencias/index.html" class="adv-cat-row" style="text-decoration:none;cursor:pointer"><span class="adv-cat-name" data-es>Experiencias & tours</span><span class="adv-cat-name" data-en>Experiences & tours</span><span class="adv-cat-arrow">→</span></a>
+        <div class="adv-cat-row"><span class="adv-cat-name" data-es>Spas & bienestar</span><span class="adv-cat-name" data-en>Spas & beauty</span><span class="adv-cat-arrow" style="font-family:var(--ff-u);font-size:9px;letter-spacing:1px"><span data-es>Próximamente</span><span data-en>Coming soon</span></span></div>
       </div>
     </div>
     <div>
       <div class="adv-stats">
         <div class="adv-stat"><div class="adv-stat-num">51<em>%</em></div><div class="adv-stat-label" data-es>viajan solas, listas para descubrir</div><div class="adv-stat-label" data-en>travel solo, ready to discover</div></div>
-        <div class="adv-stat"><div class="adv-stat-num"><em>$274</em></div><div class="adv-stat-label" data-es>gasto diario promedio</div><div class="adv-stat-label" data-en>average daily spend</div></div>
+        <div class="adv-stat"><div class="adv-stat-num">40<em>+</em></div><div class="adv-stat-label" data-es>años como destino LGBTQ+ de referencia</div><div class="adv-stat-label" data-en>years as a leading LGBTQ+ destination</div></div>
         <div class="adv-stat"><div class="adv-stat-num"><em>2M</em></div><div class="adv-stat-label" data-es>turistas LGBTQ+ en PV/año</div><div class="adv-stat-label" data-en>LGBTQ+ tourists in PV/year</div></div>
         <div class="adv-stat"><div class="adv-stat-num">EN<em>/ES</em></div><div class="adv-stat-label" data-es>audiencia bilingüe</div><div class="adv-stat-label" data-en>bilingual audience</div></div>
       </div>
@@ -842,4 +855,25 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:48px 64
 
 <script>
 function setLang(lang){
-  documen
+  document.body.className='lang-'+lang;
+  document.documentElement.lang=lang;
+  document.getElementById('btn-es').classList.toggle('active',lang==='es');
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+  document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{
+    el.placeholder=el.getAttribute('data-placeholder-'+lang);
+  });
+  document.title=lang==='es'
+    ?'She Lives PV — Revista Lésbica de Puerto Vallarta'
+    :'She Lives PV — Lesbian Magazine from Puerto Vallarta';
+  localStorage.setItem('slpv-lang',lang);
+}
+function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
+function closeMenu(){document.getElementById('mobile-menu').classList.remove('open')}
+window.addEventListener('DOMContentLoaded',()=>{
+  const s=localStorage.getItem('slpv-lang');
+  const b=navigator.language?.slice(0,2);
+  if((s||b)==='en')setLang('en');
+});
+</script>
+</body>
+</html>

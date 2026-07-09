@@ -27,8 +27,11 @@ html{scroll-behavior:smooth}
 body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
+.lang-es span[data-es],.lang-en span[data-en]{display:inline}
+.lang-es div[data-es],.lang-es p[data-es],.lang-es h1[data-es],.lang-es h2[data-es],.lang-es h3[data-es],.lang-es li[data-es],.lang-es blockquote[data-es],.lang-en div[data-en],.lang-en p[data-en],.lang-en h1[data-en],.lang-en h2[data-en],.lang-en h3[data-en],.lang-en li[data-en],.lang-en blockquote[data-en]{display:block}
 span[data-es],span[data-en]{display:inline}
-div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en]{display:block}
+div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en],
+blockquote[data-es],blockquote[data-en]{display:block}
 .main-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--ocean)}
 .nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:58px}
 .nav-logo{font-family:var(--ff-d);font-size:21px;color:var(--ocean);text-decoration:none;display:flex;align-items:center;gap:10px}

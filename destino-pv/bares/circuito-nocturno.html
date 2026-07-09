@@ -12,7 +12,7 @@
 {"@context":"https://schema.org","@graph":[
 {"@type":"Article","headline":"La noche perfecta en Puerto Vallarta: de la playa al amanecer","author":{"@type":"Person","name":"Chavela Vargas"},"publisher":{"@type":"Organization","name":"She Lives PV"},"url":"https://vallartaqueer.com/destino-pv/bares/circuito-nocturno","inLanguage":["es","en"]},
 {"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"¿Dónde salen las lesbianas en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"El circuito lésbico de PV incluye Savia Agave Niche (5-7pm), Elixir Mixology Bar (7-9pm), Las Mambas o Act2PV (9-10pm), The Corner Bar o Terraza 122 los viernes (10-11pm) y los antros: Mr. Flamingo, CC Slaughters, Paco's Ranch (11pm+)."}},
+{"@type":"Question","name":"¿Dónde salen las lesbianas en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"El circuito lésbico de PV incluye Savia Agave Niche (5-7pm), Elixir Mixology Bar (7-9pm), Las Mambas o Act2PV (9-10pm), Terraza 122 los viernes o The Corner Bar (10-11pm) y los antros: Mr. Flamingo, CC Slaughters, Paco's Ranch (11pm+)."}},
 {"@type":"Question","name":"¿Hay vida nocturna lésbica en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puerto Vallarta tiene el único bar de propiedad lésbica en el Pacífico mexicano (Elixir Mixology Bar), una sala de catas gay-femenina (Savia Agave Niche), una banda all-girl queer (Las Mambas) y una noche lésbica semanal los viernes (Noche de Lenchas en Terraza 122)."}}
 ]}
 ]}
@@ -26,8 +26,11 @@ html{scroll-behavior:smooth}
 body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
+.lang-es span[data-es],.lang-en span[data-en]{display:inline}
+.lang-es div[data-es],.lang-es p[data-es],.lang-es h1[data-es],.lang-es h2[data-es],.lang-es h3[data-es],.lang-es li[data-es],.lang-es blockquote[data-es],.lang-en div[data-en],.lang-en p[data-en],.lang-en h1[data-en],.lang-en h2[data-en],.lang-en h3[data-en],.lang-en li[data-en],.lang-en blockquote[data-en]{display:block}
 span[data-es],span[data-en]{display:inline}
-div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en]{display:block}
+div[data-es],div[data-en],p[data-es],p[data-en],h1[data-es],h1[data-en],h2[data-es],h2[data-en],h3[data-es],h3[data-en],a[data-es],a[data-en],li[data-es],li[data-en],
+blockquote[data-es],blockquote[data-en]{display:block}
 .main-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--ocean)}
 .nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:58px}
 .nav-logo{font-family:var(--ff-d);font-size:21px;color:var(--ocean);text-decoration:none;display:flex;align-items:center;gap:10px}
@@ -264,8 +267,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
         <div class="ct-time-col"><span class="ct-time" data-es>Tarde</span><span class="ct-time" data-en>P.M.</span></div>
         <div class="ct-dot"><span class="ct-dot-letter">☀</span></div>
         <div class="ct-body">
-          <div class="ct-place" data-es>Playa Los Muertos — la sección lésbica</div>
-          <div class="ct-place" data-en>Los Muertos Beach — the lesbian section</div>
+          <div class="ct-place" data-es>Playa Los Muertos — la playa LGBT</div>
+          <div class="ct-place" data-en>Los Muertos Beach — the LGBT beach</div>
           <p class="ct-what" data-es>Entre Mantamar y Sapphire. Ritmos Café (las sillas verdes). Empieza aquí. No hay mejor manera de comenzar una noche que con el sol todavía encima.</p>
           <p class="ct-what" data-en>Between Mantamar and Sapphire. Ritmos Café (the green chairs). Start here. There's no better way to begin a night than with the sun still overhead.</p>
         </div>
@@ -312,8 +315,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
         <div class="ct-time-col"><span class="ct-time">10–11pm</span></div>
         <div class="ct-dot"><span class="ct-dot-letter">◇</span></div>
         <div class="ct-body">
-          <div class="ct-place" data-es>The Corner Bar · o Terraza 122 (viernes)</div>
-          <div class="ct-place" data-en>The Corner Bar · or Terraza 122 (Fridays)</div>
+          <div class="ct-place" data-es>Terraza 122 (viernes) · o The Corner Bar</div>
+          <div class="ct-place" data-en>Terraza 122 (Fridays) · or The Corner Bar</div>
           <p class="ct-what" data-es>The Corner Bar: Basilio Badillo 339 esq. Insurgentes. El bar de martinis número 1 de PV en 2024. LGBTQ+ friendly, ambiente cálido. Si es viernes y quieres algo más explícitamente lésbico — Terraza 122 en Versalles tiene Noche de Lenchas: DJ con cumbia y reguetón, drag show de Ivanna. Desde 80 MXN. Rafael Osuna 122-D.</p>
           <p class="ct-what" data-en>The Corner Bar: Basilio Badillo 339 corner Insurgentes. PV's #1 Martini Bar 2024. LGBTQ+ friendly, warm atmosphere. If it's Friday and you want something more explicitly lesbian — Terraza 122 in Versalles has Noche de Lenchas: DJ with cumbia and reggaeton, Ivanna drag show. From 80 MXN. Rafael Osuna 122-D.</p>
         </div>
@@ -360,7 +363,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:28px 64
       <h3 class="faq-q" data-es>¿Dónde salen las lesbianas en Puerto Vallarta?</h3>
       <h3 class="faq-q" data-en>Where do lesbians go out in Puerto Vallarta?</h3>
       <p class="faq-a" data-es>El circuito lésbico de PV incluye Savia Agave Niche (5-7pm), Elixir Mixology Bar (7-9pm), Las Mambas o Act2PV (9-10pm), The Corner Bar o Terraza 122 los viernes (10-11pm) y los antros: Mr. Flamingo, CC Slaughters, Paco's Ranch (11pm+).</p>
-      <p class="faq-a" data-en>PV's lesbian circuit includes Savia Agave Niche (5-7pm), Elixir Mixology Bar (7-9pm), Las Mambas or Act2PV (9-10pm), The Corner Bar or Terraza 122 on Fridays (10-11pm) and clubs: Mr. Flamingo, CC Slaughters, Paco's Ranch (11pm+).</p>
+      <p class="faq-a" data-en>PV's lesbian circuit includes Savia Agave Niche (5-7pm), Elixir Mixology Bar (7-9pm), Las Mambas or Act2PV (9-10pm), Terraza 122 on Fridays or The Corner Bar (10-11pm) and clubs: Mr. Flamingo, CC Slaughters, Paco's Ranch (11pm+).</p>
     </div>
     <div class="faq-item">
       <h3 class="faq-q" data-es>¿Cuándo es la Noche de Lenchas en Terraza 122?</h3>

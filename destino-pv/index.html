@@ -18,7 +18,7 @@
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"¿Es Puerto Vallarta seguro para mujeres lesbianas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puerto Vallarta es la ciudad #2 más segura de México y el destino LGBT+ más importante del Pacífico. La Zona Romántica es un entorno genuinamente seguro para mujeres queer."}},
 {"@type":"Question","name":"¿Hay bares lésbicos en Puerto Vallarta?","acceptedAnswer":{"@type":"Answer","text":"Elixir Mixology Bar (Basilio Badillo 419) es el único bar de propiedad lésbica en Puerto Vallarta, fundado por Laura Jaimes y Elena Zolezzi en 2021."}},
-{"@type":"Question","name":"¿Cuándo es Vallarta Pride?","acceptedAnswer":{"@type":"Answer","text":"Vallarta Pride 2026 es del 17 al 24 de mayo. El Vallarta Lesbian Pride es el 20 de mayo en el Hilton Vallarta Riviera."}}
+{"@type":"Question","name":"¿Cuándo es Vallarta Pride?","acceptedAnswer":{"@type":"Answer","text":"Vallarta Pride se celebra cada mayo. La edición 2026 fue del 17 al 24 de mayo, con el Vallarta Lesbian Pride el 20 de mayo en el Hilton Vallarta Riviera."}}
 ]}
 ]}
 </script>
@@ -40,6 +40,8 @@ body{font-family:var(--ff-u);background:var(--paper);color:var(--body);-webkit-f
 /* LANG */
 .lang-es [data-en],.lang-en [data-es]{display:none!important}
 .lang-es [data-es],.lang-en [data-en]{display:initial}
+.lang-es span[data-es],.lang-en span[data-en]{display:inline}
+.lang-es div[data-es],.lang-es p[data-es],.lang-es h1[data-es],.lang-es h2[data-es],.lang-es h3[data-es],.lang-es li[data-es],.lang-es blockquote[data-es],.lang-en div[data-en],.lang-en p[data-en],.lang-en h1[data-en],.lang-en h2[data-en],.lang-en h3[data-en],.lang-en li[data-en],.lang-en blockquote[data-en]{display:block}
 span[data-es],span[data-en]{display:inline}
 div[data-es],div[data-en],p[data-es],p[data-en],
 h1[data-es],h1[data-en],h2[data-es],h2[data-en],
@@ -267,6 +269,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
   <a href="./hoteles/index.html" class="sub-tab" data-es>Hoteles</a><a href="./hoteles/index.html" class="sub-tab" data-en>Hotels</a>
   <a href="./vallarta-pride/index.html" class="sub-tab">Vallarta Pride</a>
   <a href="./viajera-sola/index.html" class="sub-tab" data-es>Viajera Sola</a><a href="./viajera-sola/index.html" class="sub-tab" data-en>Solo Traveler</a>
+  <a href="./experiencias/index.html" class="sub-tab" data-es>Experiencias</a><a href="./experiencias/index.html" class="sub-tab" data-en>Experiences</a>
 </nav>
 
 <!-- HUB HERO -->
@@ -348,8 +351,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       </div>
       <h3 class="cc-title"><span data-es>Playa Los Muertos <em>y más</em></span><span data-en>Los Muertos Beach <em>and more</em></span></h3>
       <div class="cc-rule"></div>
-      <p class="cc-desc" data-es>La sección lésbica entre Mantamar y Sapphire, y las mejores playas de la costa.</p>
-      <p class="cc-desc" data-en>The lesbian section between Mantamar and Sapphire, and the best beaches on the coast.</p>
+      <p class="cc-desc" data-es>Playa Los Muertos — la playa LGBT de la ciudad — y las mejores playas de la bahía.</p>
+      <p class="cc-desc" data-en>Los Muertos Beach — the city's LGBT beach — and the best beaches on the bay.</p>
       <p class="cc-count" data-es>Próximamente</p><p class="cc-count" data-en>Coming soon</p>
     </a>
     <!-- Hoteles — próximamente -->
@@ -372,12 +375,12 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       </div>
       <h3 class="cc-title"><span data-es>Vallarta Pride <em>2026</em></span><span data-en>Vallarta Pride <em>2026</em></span></h3>
       <div class="cc-rule"></div>
-      <p class="cc-desc" data-es>17–24 mayo 2026. Lesbian Pride: 20 de mayo, Hilton Vallarta Riviera.</p>
-      <p class="cc-desc" data-en>May 17–24, 2026. Lesbian Pride: May 20, Hilton Vallarta Riviera.</p>
+      <p class="cc-desc" data-es>La crónica del Pride 2026 y todo para planear el 2027 — cada mayo la ciudad es nuestra.</p>
+      <p class="cc-desc" data-en>The Pride 2026 recap and everything to plan 2027 — every May the city is ours.</p>
       <p class="cc-count" data-es>Próximamente</p><p class="cc-count" data-en>Coming soon</p>
     </a>
-    <!-- Viajera Sola — próximamente -->
-    <a href="./viajera-sola/index.html" class="cat-card soon">
+    <!-- Viajera Sola — disponible -->
+    <a href="./viajera-sola/index.html" class="cat-card">
       <div class="cc-header">
         <span class="cc-label" data-es>Viajera Sola</span><span class="cc-label" data-en>Solo Traveler</span>
         <span class="cc-arrow">→</span>
@@ -386,7 +389,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       <div class="cc-rule"></div>
       <p class="cc-desc" data-es>El 51% de las viajeras lésbicas llegan solas. Guía real para conectar con la comunidad.</p>
       <p class="cc-desc" data-en>51% of lesbian travelers arrive solo. Real guide to connecting with the community.</p>
-      <p class="cc-count" data-es>Próximamente</p><p class="cc-count" data-en>Coming soon</p>
+      <p class="cc-count" data-es>1 artículo disponible</p><p class="cc-count" data-en>1 article available</p>
     </a>
     <!-- Gastronomía — próximamente -->
     <a class="cat-card soon">
@@ -398,6 +401,18 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       <div class="cc-rule"></div>
       <p class="cc-desc" data-es>Restaurantes, cafeterías y el Café Colibrí — los espacios donde la comunidad se reúne de día.</p>
       <p class="cc-desc" data-en>Restaurants, cafés and Café Colibrí — the spaces where the community gathers by day.</p>
+      <p class="cc-count" data-es>Próximamente</p><p class="cc-count" data-en>Coming soon</p>
+    </a>
+    <!-- Outdoors & Experiencias — próximamente -->
+    <a href="./experiencias/index.html" class="cat-card soon">
+      <div class="cc-header">
+        <span class="cc-label" data-es>Outdoors & Experiencias</span><span class="cc-label" data-en>Outdoors & Experiences</span>
+        <span class="cc-arrow">→</span>
+      </div>
+      <h3 class="cc-title"><span data-es>La aventura <em>también es nuestra</em></span><span data-en>Adventure is <em>ours too</em></span></h3>
+      <div class="cc-rule"></div>
+      <p class="cc-desc" data-es>Cascadas, aves, tours de tacos y raicilla, clases de cocina y la bahía — con guías de la comunidad.</p>
+      <p class="cc-desc" data-en>Waterfalls, birding, taco and raicilla tours, cooking classes and the bay — with community guides.</p>
       <p class="cc-count" data-es>Próximamente</p><p class="cc-count" data-en>Coming soon</p>
     </a>
   </div>
@@ -415,6 +430,16 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
     <a href="./bares/index.html" style="font-family:var(--ff-u);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px;white-space:nowrap" data-en>See all →</a>
   </div>
   <div class="recent-feed">
+    <a href="./viajera-sola/72-horas-vallarta.html" class="recent-story">
+      <div class="rs-photo" style="background:linear-gradient(135deg,var(--talavera),var(--ocean));display:flex;align-items:center;justify-content:center"><span style="font-family:var(--ff-d);font-size:30px;color:rgba(255,255,255,.22);font-style:italic">72h</span></div>
+      <div class="rs-body">
+        <div class="rs-cat" data-es>Portada · Viajera Sola</div><div class="rs-cat" data-en>Cover · Solo Traveler</div>
+        <h3 class="rs-title"><span data-es>72 horas en Vallarta: <em>viviendo como nosotras</em></span><span data-en>72 hours in Vallarta: <em>living like us</em></span></h3>
+        <p class="rs-excerpt" data-es>No como turista. Como una más. El fin de semana perfecto hora por hora, de la playa a Elixir.</p>
+        <p class="rs-excerpt" data-en>Not as a tourist. As one of us. The perfect weekend hour by hour, from the beach to Elixir.</p>
+        <div class="rs-byline"><div class="rs-avatar">C</div><div class="rs-author" data-es>Chavela Vargas · 9 min</div><div class="rs-author" data-en>Chavela Vargas · 9 min</div></div>
+      </div>
+    </a>
     <a href="./bares/elixir-mixology-bar.html" class="recent-story">
       <div class="rs-photo"><img src="./elixir-photo.png" alt="Elixir Mixology Bar" onerror="this.style.display='none'"></div>
       <div class="rs-body">
@@ -440,8 +465,8 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       <div class="rs-body">
         <div class="rs-cat" data-es>Guía nocturna</div><div class="rs-cat" data-en>Night guide</div>
         <h3 class="rs-title"><span data-es>La noche perfecta en PV: <em>de la playa al amanecer</em></span><span data-en>The perfect night in PV: <em>from beach to sunrise</em></span></h3>
-        <p class="rs-excerpt" data-es>Savia → Elixir → Las Mambas → The Corner Bar → antros. El circuito completo.</p>
-        <p class="rs-excerpt" data-en>Savia → Elixir → Las Mambas → The Corner Bar → clubs. The complete circuit.</p>
+        <p class="rs-excerpt" data-es>Savia → Elixir → Las Mambas → Terraza 122 → antros. El circuito completo.</p>
+        <p class="rs-excerpt" data-en>Savia → Elixir → Las Mambas → Terraza 122 → clubs. The complete circuit.</p>
         <div class="rs-byline"><div class="rs-avatar">C</div><div class="rs-author" data-es>Chavela Vargas · 5 min</div><div class="rs-author" data-en>Chavela Vargas · 5 min</div></div>
       </div>
     </a>
@@ -483,10 +508,10 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
       <p class="faq-a" data-en>Just one: Elixir Mixology Bar (Basilio Badillo 419), founded in 2021 by Laura Jaimes and Elena Zolezzi. Across the street, Savia Agave Niche operates — Isis Hernández's tasting room, also gay and women-owned. Both are in the Zona Romántica.</p>
     </div>
     <div class="faq-item">
-      <h3 class="faq-q" data-es>¿Cuándo es Vallarta Pride 2026?</h3>
-      <h3 class="faq-q" data-en>When is Vallarta Pride 2026?</h3>
-      <p class="faq-a" data-es>Vallarta Pride 2026 es del 17 al 24 de mayo. El Vallarta Lesbian Pride es el 20 de mayo en el Hilton Vallarta Riviera, organizado por Ladies Touch Events.</p>
-      <p class="faq-a" data-en>Vallarta Pride 2026 is May 17–24. Vallarta Lesbian Pride is May 20 at the Hilton Vallarta Riviera, organized by Ladies Touch Events.</p>
+      <h3 class="faq-q" data-es>¿Cuándo es Vallarta Pride?</h3>
+      <h3 class="faq-q" data-en>When is Vallarta Pride?</h3>
+      <p class="faq-a" data-es>Vallarta Pride se celebra cada mayo. La edición 2026 fue del 17 al 24 de mayo, con el Vallarta Lesbian Pride el 20 de mayo en el Hilton Vallarta Riviera, organizado por Ladies Touch Events. Las fechas 2027 se publican aquí en cuanto se confirmen.</p>
+      <p class="faq-a" data-en>Vallarta Pride happens every May. The 2026 edition ran May 17–24, with Vallarta Lesbian Pride on May 20 at the Hilton Vallarta Riviera, organized by Ladies Touch Events. 2027 dates will be published here once confirmed.</p>
     </div>
   </div>
 </section>
@@ -521,4 +546,7 @@ footer{background:var(--paper);border-top:2px solid var(--ocean);padding:32px 64
 function setLang(lang){document.body.className='lang-'+lang;document.documentElement.lang=lang;document.getElementById('btn-es').classList.toggle('active',lang==='es');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.querySelectorAll('[data-placeholder-'+lang+']').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});localStorage.setItem('slpv-lang',lang)}
 function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
 function closeMenu(){document.getElementById('mobile-menu').classList.remove('open')}
-window.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('slpv-lang');const b=navigator.lan
+window.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('slpv-lang');const b=navigator.language?.slice(0,2);if((s||b)==='en')setLang('en')})
+</script>
+</body>
+</html>
